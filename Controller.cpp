@@ -33,3 +33,11 @@ Controller::~Controller()
     delete scene;
     delete ctimer;
 }
+
+void Controller::addZombie(int velocity)
+{
+    zombieList.push_back(new Zombie{velocity,ctimer,holder});
+    //add to the scene
+    scene->addItem(zombieList.last());
+    zombieList.last()->setPos(1200,365);
+}

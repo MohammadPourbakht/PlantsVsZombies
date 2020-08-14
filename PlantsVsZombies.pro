@@ -26,6 +26,7 @@ CONFIG += c++11
 
 SOURCES += \
     Bullet.cpp \
+    Plant.cpp \
     Shooter.cpp \
         main.cpp \
     Zombie.cpp \
@@ -36,6 +37,7 @@ SOURCES += \
 
 HEADERS += \
     Bullet.h \
+    Plant.h \
     Shooter.h \
     Zombie.h \
     Sun.h \

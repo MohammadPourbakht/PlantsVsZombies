@@ -9,7 +9,7 @@ Bullet::Bullet(QTimer * bulletTimer, const int & velocity, QGraphicsItem *parent
     setPixmap(QPixmap(":/images/bullet.png"));
 
     //connect to moveToRight
-    connect(bulletTimer , SIGNAL(timeout()) , this , SLOT(moveToRight());
+    connect(bulletTimer , SIGNAL(timeout()) , this , SLOT(moveToRight));
 
 }
 
@@ -19,7 +19,7 @@ void Bullet::moveToRight()
 
 
     // move to right
-    setPos(x()+24 , y());
+    setPos(x()+velocity , y());
 
     //delete if the bullet is off the screen
     if(x()>1200){

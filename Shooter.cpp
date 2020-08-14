@@ -10,7 +10,7 @@ Shooter::Shooter(QMediaPlayer *shooterPlayer,QTimer * shooterTimer, QGraphicsIte
 
     //create shooter player
     shooterPlayer = new QMediaPlayer();
-    shooterPlayer->setMedia(QUrl("qrc:/music/Shooter.mp3"));        //sound shooter
+    shooterPlayer->setMedia(QUrl("qrc:/music/shooter.mp3"));        //sound shooter
 
     //connect shoot slot
     connect(shooterTimer , SIGNAL(timeout()) , this , SLOT(shoot()));
@@ -20,7 +20,7 @@ Shooter::Shooter(QMediaPlayer *shooterPlayer,QTimer * shooterTimer, QGraphicsIte
 void Shooter::shoot()
 {
     //shoot every 400 millisecond
-    if( timeIntervals % 10 ==0 ){
+    if( timeIntervals % 10 == 0 ){
 
         //create bullet
         auto bullet = new Bullet(shooterTimer , 24);

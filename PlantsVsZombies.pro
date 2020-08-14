@@ -25,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    Bullet.cpp \
     Shooter.cpp \
         main.cpp \
     Zombie.cpp \
@@ -34,6 +35,7 @@ SOURCES += \
     View.cpp
 
 HEADERS += \
+    Bullet.h \
     Shooter.h \
     Zombie.h \
     Sun.h \

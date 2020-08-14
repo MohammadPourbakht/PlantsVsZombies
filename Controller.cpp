@@ -24,12 +24,12 @@ Controller::Controller(QObject *parent) : QObject(parent)
     //add score
     controllerScore = new Score();
     scene->addItem(controllerScore);
-    controllerScore->setPos(40,101);
+    controllerScore->setPos(35,101);
 
     //add a test shooter
     auto myShooter = new Shooter(ctimer , holder);
     scene->addItem(myShooter);
-    myShooter->setPos(20,400);
+    myShooter->setPos(14,330);
 
 
 }

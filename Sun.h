@@ -7,6 +7,7 @@
 #include "Score.h"
 #include <QTimer>
 #include <QGraphicsSceneMouseEvent>
+#include <QMediaPlayer>
 
 class Sun : public QObject , public QGraphicsPixmapItem
 {
@@ -19,7 +20,7 @@ private:
 public:
     Sun(QGraphicsScene *sunScene , Score *sunScore , QGraphicsItem *parent ,
         QTimer *timer);
-    //~Sun();
+
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
 public slots:
     void move();

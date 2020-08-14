@@ -21,6 +21,9 @@ void Sun::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     sunScore->addToScore(25);
 
+    //play sun media player
+        sunScore->scorePlayer->play();
+
     sunScene->removeItem(this);
     delete this;
 }

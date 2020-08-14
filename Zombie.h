@@ -20,7 +20,7 @@ private:
 public:
     int  gameOv;
     Zombie(const int& pixPer40MiliSec , QTimer *timer
-           , QGraphicsItem *parent);
+           ,const int lives, QGraphicsItem *parent);
    // ~Zombie();
 
     void decrementLives();

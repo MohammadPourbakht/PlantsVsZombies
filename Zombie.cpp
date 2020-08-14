@@ -2,9 +2,9 @@
 #include <QGraphicsScene>
 
 Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
-               , QGraphicsItem *parent)
+              ,const int lives , QGraphicsItem *parent)
     : QObject () , QGraphicsPixmapItem (parent) ,
-      pixPer40MiliSec{pixPer40MiliSec}
+      pixPer40MiliSec{pixPer40MiliSec} , lives{lives}
 {
 
   gameOv=1;

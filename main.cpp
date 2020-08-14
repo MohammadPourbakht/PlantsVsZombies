@@ -1,11 +1,17 @@
-#include "Controller.h"
 #include <QApplication>
+#include "View.h"
+#include <cstdlib>
+#include <ctime>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    Controller w;
-    w.show();
+QApplication a(argc , argv);
 
-    return a.exec();
+srand(time(0));
+
+auto myV = new View();
+myV->show();
+return a.exec();
+
+
 }

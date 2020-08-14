@@ -7,7 +7,7 @@ Sun::Sun(QGraphicsScene *sunScene, Score *sunScore, QGraphicsItem *parent,
       sunScene(sunScene) , sunScore(sunScore) , timeIntervals{0}
 {
     //set picture
-    setPixmap(QPixmap(":/images/"));
+    setPixmap(QPixmap(":/images/sun.png"));
 
     //add to scene
     sunScene->addItem(this);

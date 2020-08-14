@@ -9,3 +9,10 @@ Score::Score(QGraphicsItem *parent)
     setDefaultTextColor(Qt::black);
     setFont(QFont("times",25));
 }
+
+
+void Score::addToScore(int s)
+{
+    playerScore +=s;
+    setPlainText(QString::number(playerScore));
+}

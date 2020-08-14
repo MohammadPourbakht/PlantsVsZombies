@@ -31,3 +31,20 @@ View::~View()
      delete viewController;
      delete viewTimer;
  }
+
+void View::schedule()
+{
+    ++seconds;
+
+    if(seconds == 54 || seconds == 57 || seconds == 59 || seconds == 60){
+
+        viewController->addZombie(6);
+
+    }
+
+    if(seconds % 2 == 0){
+        viewController->addSun();
+
+    }
+}
+

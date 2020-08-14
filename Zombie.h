@@ -6,7 +6,7 @@
 #include <QTimer>
 #include <QMovie>
 #include <QLabel>
-
+#include <QMediaPlayer>
 
 class Zombie : public QObject , public QGraphicsPixmapItem
 {
@@ -15,6 +15,7 @@ private:
     int lives;
     int pixPer40MiliSec;
     int Layer;
+     QMediaPlayer *zombieMusic;
 
 public:
     int  gameOv;

@@ -14,6 +14,12 @@ Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
    //connect timer to moveToLeft
    connect(timer , SIGNAL(timeout()) , this , SLOT(moveToLeft()));
 
+   //set zombie sound
+      zombieMusic = new QMediaPlayer();
+      zombieMusic->setMedia(QUrl("qrc:/music/Groan4.mp3"));
+      zombieMusic->play();
+
+
 }
 
 

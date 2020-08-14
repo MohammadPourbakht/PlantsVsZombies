@@ -26,10 +26,12 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        Controller.cpp
+    Zombie.cpp \
+    Sun.cpp
 
 HEADERS += \
-        Controller.h
+    Zombie.h \
+    Sun.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,17 +1,29 @@
 #ifndef ZOMBIE_H
 #define ZOMBIE_H
 
+#include <QGraphicsPixmapItem>
 #include <QObject>
+#include <QTimer>
+#include <QMovie>
+#include <QLabel>
 
-class Zombie : public QObject
+
+class Zombie : public QObject , public QGraphicsPixmapItem
 {
     Q_OBJECT
-public:
-    explicit Zombie(QObject *parent = nullptr);
+private:
+    int lives;
+    int pixPer40MiliSec;
 
-signals:
+
+public:
+    Zombie(const int& pixPer40MiliSec , QTimer *timer
+           , QGraphicsItem *parent);
+   // ~Zombie();
 
 public slots:
+    void moveToLeft();
+
 };
 
 #endif // ZOMBIE_H

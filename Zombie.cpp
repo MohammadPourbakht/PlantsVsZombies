@@ -12,3 +12,5 @@ Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
    connect(timer , SIGNAL(timeout()) , this , SLOT(moveToLeft()));
 
 }
+
+

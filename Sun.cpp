@@ -16,3 +16,23 @@ Sun::Sun(QGraphicsScene *sunScene, Score *sunScore, QGraphicsItem *parent,
     //connect timer to move
     connect(timer , SIGNAL(timeout()) , this , SLOT(move()));
 }
+
+void Sun::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    sunScore->addToScore(25);
+
+    sunScene->removeItem(this);
+    delete this;
+}
+
+void Sun::move()
+{
+   ++timeIntervals;
+    setPos(x() , y()+6);
+
+    if(timeIntervals == 50 || y() > 700)
+    {
+        sunScene->removeItem(this);
+        delete this;
+    }
+}

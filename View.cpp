@@ -46,5 +46,18 @@ void View::schedule()
         viewController->addSun();
 
     }
+
+
+    if(viewController->boolGameOver()==true){
+     viewTimer->stop();
+     viewController->ctimer->stop();
+
+    QGraphicsPixmapItem * gameover = new QGraphicsPixmapItem();
+     gameover->setPixmap(QPixmap(":/images/GO.png"));
+     viewController->scene->addItem(gameover);
+     gameover->setPos(0,0);
+
+  }
+
 }
 

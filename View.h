@@ -18,6 +18,8 @@ private:
     int seconds;
     Controller *viewController;
     QMediaPlayer *backgroundMusic;
+    QMediaPlayer *gameOverMusic;
+
 public:
     explicit View();
     ~View();

@@ -15,5 +15,6 @@
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>
+        <file>Game Over.mp3</file>
     </qresource>
 </RCC>

@@ -22,6 +22,10 @@ View::View() : QGraphicsView()
         backgroundMusic->setMedia(QUrl("qrc:/music/GrasswalkPvZ1.mp3"));
         backgroundMusic->play();
 
+    //set game over music
+        gameOverMusic = new QMediaPlayer();
+        gameOverMusic->setMedia(QUrl("qrc:/music/Game Over.mp3"));
+
 
     //initialize seconds to zero
     seconds = 0;
@@ -59,6 +63,8 @@ void View::schedule()
     if(viewController->boolGameOver()==true){
      viewTimer->stop();
      viewController->ctimer->stop();
+
+     gameOverMusic->play();
 
     QGraphicsPixmapItem * gameover = new QGraphicsPixmapItem();
      gameover->setPixmap(QPixmap(":/images/gameOver.png"));

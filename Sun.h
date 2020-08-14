@@ -2,16 +2,28 @@
 #define SUN_H
 
 #include <QObject>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsScene>
+#include "Score.h"
+#include <QTimer>
+#include <QGraphicsSceneMouseEvent>
 
-class Sun : public QObject
+class Sun : public QObject , public QGraphicsPixmapItem
 {
     Q_OBJECT
+private:
+    QGraphicsScene *sunScene;
+    Score *sunScore;
+    int timeIntervals;
+
 public:
-    explicit Sun(QObject *parent = nullptr);
-
-signals:
-
+    Sun(QGraphicsScene *sunScene , Score *sunScore , QGraphicsItem *parent ,
+        QTimer *timer);
+    //~Sun();
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
 public slots:
+    void move();
+
 };
 
 #endif // SUN_H

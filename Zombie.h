@@ -23,6 +23,8 @@ public:
            , QGraphicsItem *parent);
    // ~Zombie();
 
+    void decrementLives();
+
 public slots:
     void moveToLeft();
 

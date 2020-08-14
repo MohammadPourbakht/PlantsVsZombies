@@ -1,4 +1,5 @@
 #include "Zombie.h"
+#include <QGraphicsScene>
 
 Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
                , QGraphicsItem *parent)
@@ -20,6 +21,20 @@ Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
       zombieMusic->play();
 
 
+}
+
+void Zombie::decrementLives()
+{
+
+    //decrement zombies lives
+    --lives;
+    //remove and delete if lives == 0
+    if(lives==0){
+        scene()->removeItem(this);
+        delete this;
+
+
+    }
 }
 
 

@@ -10,7 +10,7 @@ class Bullet : public QObject , public QGraphicsPixmapItem
     Q_OBJECT
 
 private:
-    int velocity;       //25x = pix per seconds
+    int velocity;       // 25x = pix per seconds
 
 public:
     explicit Bullet(QTimer * bulletTimer , const int & velocity ,  QGraphicsItem *parent = nullptr);

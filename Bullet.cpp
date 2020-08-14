@@ -1,7 +1,7 @@
 #include "Bullet.h"
 #include<QGraphicsScene>
 #include<QList>
-
+#include"Zombie.h"
 
 
 Bullet::Bullet(QTimer * bulletTimer, const int & velocity, QGraphicsItem *parent)
@@ -17,9 +17,15 @@ Bullet::Bullet(QTimer * bulletTimer, const int & velocity, QGraphicsItem *parent
 
 void Bullet::moveToRight()
 {
-    //
-    QList < QGraphicsItem* > collidingList = collidigItems();
+    //collect all colliding objects in a list
+    QList < QGraphicsItem * > collidingList = collidingItems();
 
+    //decrement zombies lives
+    for(size_t i ; i<collidingList.size();++i){
+        if(typeid(*collidingList[i])==typeid (Zombie)){
+            collidingList[i]->
+        }
+    }
 
     // move to right
     setPos(x()+velocity , y());

@@ -26,3 +26,8 @@ View::View() : QGraphicsView()
     viewTimer->start(1000);
     connect(viewTimer , SIGNAL(timeout()) , this , SLOT(schedule()));
 }
+View::~View()
+ {
+     delete viewController;
+     delete viewTimer;
+ }

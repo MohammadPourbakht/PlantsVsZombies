@@ -26,3 +26,10 @@ Controller::Controller(QObject *parent) : QObject(parent)
     controllerScore->setPos(35,112);
 
 }
+
+Controller::~Controller()
+{
+    delete holder;
+    delete scene;
+    delete ctimer;
+}

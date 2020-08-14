@@ -64,6 +64,7 @@ void View::schedule()
      viewTimer->stop();
      viewController->ctimer->stop();
 
+     backgroundMusic->stop();
      gameOverMusic->play();
 
     QGraphicsPixmapItem * gameover = new QGraphicsPixmapItem();

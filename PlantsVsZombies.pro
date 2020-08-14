@@ -30,14 +30,14 @@ SOURCES += \
     Sun.cpp \
     Score.cpp \
     Controller.cpp \
-    view.cpp
+    View.cpp
 
 HEADERS += \
     Zombie.h \
     Sun.h \
     Score.h \
     Controller.h \
-    view.h
+    View.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

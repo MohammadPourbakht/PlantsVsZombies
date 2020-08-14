@@ -14,7 +14,7 @@ class Zombie : public QObject , public QGraphicsPixmapItem
 private:
     int lives;
     int pixPer40MiliSec;
-
+    int Layer;
 
 public:
     Zombie(const int& pixPer40MiliSec , QTimer *timer

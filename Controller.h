@@ -32,6 +32,7 @@ public:
     void addZombie(int velocity);
     void addSun();
     void addNuts(int velocity);
+    bool boolGameOver();
 
 signals:
 

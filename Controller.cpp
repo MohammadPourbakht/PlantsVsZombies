@@ -46,3 +46,14 @@ void Controller::addSun()
 {
     sunList.push_back(new Sun{scene,controllerScore,holder,ctimer});
 }
+
+
+bool Controller::boolGameOver()
+{
+    for( const auto& crs : zombieList ){
+          if(crs->gameOv==0){
+             return true;
+           }
+}
+return false;
+}

@@ -5,7 +5,9 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QTimer>
+#include <QMediaPlayer>
 #include "Controller.h"
+
 
 class View : public QGraphicsView
 {
@@ -15,6 +17,7 @@ private:
     QTimer *viewTimer;
     int seconds;
     Controller *viewController;
+    QMediaPlayer *backgroundMusic;
 public:
     explicit View();
     ~View();

@@ -11,9 +11,17 @@ View::View() : QGraphicsView()
 
     //set background
     setBackgroundBrush(QBrush(QImage(":/images/Fsl-3.png")));
+
+    //set fixed size
     setFixedSize(1200,700);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+    //set background music
+        backgroundMusic = new QMediaPlayer();
+        backgroundMusic->setMedia(QUrl("qrc:/music/GrasswalkPvZ1.mp3"));
+        backgroundMusic->play();
+
 
     //initialize seconds to zero
     seconds = 0;

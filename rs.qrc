@@ -4,5 +4,6 @@
         <file>Fsl-2.png</file>
         <file>Fsl-1.png</file>
         <file>sun.png</file>
+        <file>score.png</file>
     </qresource>
 </RCC>

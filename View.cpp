@@ -53,7 +53,7 @@ void View::schedule()
      viewController->ctimer->stop();
 
     QGraphicsPixmapItem * gameover = new QGraphicsPixmapItem();
-     gameover->setPixmap(QPixmap(":/images/GO.png"));
+     gameover->setPixmap(QPixmap(":/images/gameOver.png"));
      viewController->scene->addItem(gameover);
      gameover->setPos(0,0);
 

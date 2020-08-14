@@ -11,5 +11,6 @@
         <file>Layer 4.png</file>
         <file>Layer 5.png</file>
         <file>Layer 6.png</file>
+        <file>gameOver.png</file>
     </qresource>
 </RCC>

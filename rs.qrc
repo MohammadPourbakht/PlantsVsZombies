@@ -4,7 +4,6 @@
         <file>Fsl-2.png</file>
         <file>Fsl-1.png</file>
         <file>sun.png</file>
-        <file>score.png</file>
         <file>Layer 1.png</file>
         <file>Layer 2.png</file>
         <file>Layer 3.png</file>
@@ -13,6 +12,7 @@
         <file>Layer 6.png</file>
         <file>gameOver.png</file>
         <file>bullet.png</file>
+        <file>score.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

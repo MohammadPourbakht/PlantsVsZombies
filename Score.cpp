@@ -6,8 +6,8 @@ Score::Score(QGraphicsItem *parent)
     : QGraphicsTextItem (parent) , playerScore{0}
 {
     setPlainText(QString::number(playerScore));
-    setDefaultTextColor(Qt::black);
-    setFont(QFont("times",25));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",20));
 
     //create score player
        scorePlayer = new QMediaPlayer();

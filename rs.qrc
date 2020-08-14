@@ -2,5 +2,6 @@
     <qresource prefix="/images">
         <file>Fsl-3.png</file>
         <file>Fsl-2.png</file>
+        <file>Fsl-1.png</file>
     </qresource>
 </RCC>

@@ -1,5 +1,7 @@
 #include "Bullet.h"
 #include<QGraphicsScene>
+#include<QList>
+
 
 
 Bullet::Bullet(QTimer * bulletTimer, const int & velocity, QGraphicsItem *parent)
@@ -9,13 +11,14 @@ Bullet::Bullet(QTimer * bulletTimer, const int & velocity, QGraphicsItem *parent
     setPixmap(QPixmap(":/images/bullet.png"));
 
     //connect to moveToRight
-    connect(bulletTimer , SIGNAL(timeout()) , this , SLOT(moveToRight));
+    connect(bulletTimer , SIGNAL(timeout()) , this , SLOT(moveToRight()));
 
 }
 
 void Bullet::moveToRight()
 {
-    //jone zombie kam konim inja
+    //
+    QList < QGraphicsItem* > collidingList = collidigItems();
 
 
     // move to right

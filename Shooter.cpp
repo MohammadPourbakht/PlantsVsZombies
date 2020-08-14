@@ -2,8 +2,8 @@
 #include<QGraphicsScene>
 #include"Bullet.h"
 
-Shooter::Shooter(QMediaPlayer *shooterPlayer,QTimer * shooterTimer, QGraphicsItem *parent)
-    : QObject() , QGraphicsPixmapItem(parent) , Plant() , shooterTimer{shooterTimer}
+Shooter::Shooter(QTimer * shooterTimer, QGraphicsItem *parent)
+    : QObject() , QGraphicsPixmapItem(parent) , Plant() , shooterTimer{shooterTimer} , timeIntervals{0}
 {
     //set picture
     setPixmap(QPixmap(":/images/shooter.png"));                 //image shooter
@@ -26,7 +26,7 @@ void Shooter::shoot()
         auto bullet = new Bullet(shooterTimer , 24);
 
         scene()->addItem(bullet);
-        bullet->setPos(x()+ 90,y());
+        bullet->setPos(x()+ 90 , y());
 
         //plsy shooterPlayer
         if(shooterPlayer->state() == QMediaPlayer::PlayingState){

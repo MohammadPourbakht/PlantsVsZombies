@@ -1,4 +1,5 @@
 #include "Controller.h"
+#include "Shooter.h"
 
 Controller::Controller(QObject *parent) : QObject(parent)
 {
@@ -24,6 +25,12 @@ Controller::Controller(QObject *parent) : QObject(parent)
     controllerScore = new Score();
     scene->addItem(controllerScore);
     controllerScore->setPos(35,112);
+
+    //add a test shooter
+    auto myShooter = new Shooter(ctimer , holder);
+    scene->addItem(myShooter);
+    myShooter->setPos(20,400);
+
 
 }
 

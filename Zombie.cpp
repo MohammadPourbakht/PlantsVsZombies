@@ -6,7 +6,7 @@ Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
       pixPer40MiliSec{pixPer40MiliSec}
 {
 
-
+  gameOv=1;
     Layer=0;
   //set picture
    setPixmap(QPixmap(":/images/Layer 1.png"));
@@ -47,7 +47,7 @@ void Zombie::moveToLeft()
 
         if( x() == 0){
 
-         exit(1);
+          gameOv=0;
     }
 
     Layer=Layer+1;

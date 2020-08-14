@@ -17,6 +17,7 @@ private:
     int Layer;
 
 public:
+    int  gameOv;
     Zombie(const int& pixPer40MiliSec , QTimer *timer
            , QGraphicsItem *parent);
    // ~Zombie();

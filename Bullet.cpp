@@ -22,8 +22,9 @@ void Bullet::moveToRight()
 
     //decrement zombies lives
     for(size_t i ; i<collidingList.size();++i){
-        if(typeid(*collidingList[i])==typeid (Zombie)){
-            collidingList[i]->
+        if(typeid(*(collidingList)[i])==typeid (Zombie)){
+           Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);
+           zom->decrementLives();
         }
     }
 

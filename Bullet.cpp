@@ -21,10 +21,15 @@ void Bullet::moveToRight()
     QList < QGraphicsItem * > collidingList = collidingItems();
 
     //decrement zombies lives
-    for(size_t i ; i<collidingList.size();++i){
+    for(size_t i{0} ; i<collidingList.size();++i){
         if(typeid(*(collidingList)[i])==typeid (Zombie)){
            Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);
            zom->decrementLives();
+
+           //remove and delete
+           scene()->removeItem(this);
+           delete this;
+           return;
         }
     }
 

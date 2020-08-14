@@ -50,7 +50,7 @@ void View::schedule()
 
     if(seconds == 5 || seconds == 7 || seconds == 9 || seconds == 10){
 
-        viewController->addZombie(6);
+        viewController->addZombie(6 , 10);
 
     }
 

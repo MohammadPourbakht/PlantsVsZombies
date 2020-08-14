@@ -1,5 +1,7 @@
 #include "Zombie.h"
 #include <QGraphicsScene>
+#include <QList>
+#include "Plant.h"
 
 Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
               ,const int lives , QGraphicsItem *parent)
@@ -40,6 +42,19 @@ void Zombie::decrementLives()
 
 void Zombie::moveToLeft()
 {
+    //collect colliding items in the list
+    QList<QGraphicsItem *> collidingObjects = collidingItems();
+    //remove and delete collidingItem if it was a plant
+    for(size_t i{0} ; i<collidingObjects.size();++i){
+        Plant* plant = dynamic_cast<Plant*>(collidingObjects[i]);
+        if(plant){
+
+            scene()->removeItem(collidingObjects[i]);
+            delete collidingObjects[i];
+        }
+
+    }
+
     setPos( x() - pixPer40MiliSec , y() );
 
         if(Layer%6==0){

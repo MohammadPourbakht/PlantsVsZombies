@@ -52,7 +52,7 @@ void Zombie::moveToLeft()
             scene()->removeItem(collidingObjects[i]);
             delete collidingObjects[i];
           QMediaPlayer*  zombieBiteMusic = new QMediaPlayer();
-            zombieBiteMusic->setMedia(QUrl("qrc:/music/Bite.mp3"));
+            zombieBiteMusic->setMedia(QUrl("qrc:/music/ZombieBite.mp3"));
             zombieBiteMusic->play();
 
         }

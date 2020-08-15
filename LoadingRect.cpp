@@ -18,7 +18,7 @@ void LoadingRect::moveToRight()
     setPos(x()+velocity , y());
 
     //delete if the bullet is off the screen
-    if(x()>800){                            //800 ? must be change
+    if(x()>1000){                            //800 ? must be change
         scene()->removeItem(this);
         delete this;
     }

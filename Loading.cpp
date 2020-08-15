@@ -40,9 +40,9 @@ void Loading::loadingSchedule()
 {
     ++seconds;
 
-    auto rect = new LoadingRect(loadingTimer , 24);
+    auto rect = new LoadingRect(loadingTimer , 15);
     scene()->addItem(rect);
-    rect->setPos(x()+100+seconds , y()+500);  // change ??
+    rect->setPos(x()+seconds - 95 , y()+484);  // change ??
 
 
 

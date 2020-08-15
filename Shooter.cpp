@@ -35,7 +35,7 @@ void Shooter::shoot()
         scene()->addItem(bullet);
         bullet->setPos(x()+ 90 , y() + 23);
 
-        //plsy shooterPlayer
+        //play shooterPlayer
         if(shooterPlayer->state() == QMediaPlayer::PlayingState){
             shooterPlayer->setPosition(0);
         }

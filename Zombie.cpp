@@ -20,9 +20,13 @@ Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
    //set zombie sound
       zombieMusic = new QMediaPlayer();
       zombieMusic->setMedia(QUrl("qrc:/music/Groan4.mp3"));
-      zombieMusic->play();
 
-
+      if(zombieMusic->state() == QMediaPlayer::PlayingState){
+          zombieMusic->setPosition(0);
+      }
+      else if(zombieMusic->state() == QMediaPlayer::StoppedState){
+          zombieMusic->play();
+      }
 }
 
 Zombie::~Zombie()
@@ -56,10 +60,14 @@ void Zombie::moveToLeft()
             delete collidingObjects[i];
           QMediaPlayer*  zombieBiteMusic = new QMediaPlayer();
             zombieBiteMusic->setMedia(QUrl("qrc:/music/ZombieBite.mp3"));
-            zombieBiteMusic->play();
 
+            if(zombieBiteMusic->state() == QMediaPlayer::PlayingState){
+                zombieBiteMusic->setPosition(0);
+            }
+            else if(zombieBiteMusic->state() == QMediaPlayer::StoppedState){
+                zombieBiteMusic->play();
+            }
         }
-
     }
 
     setPos( x() - pixPer40MiliSec , y() );

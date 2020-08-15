@@ -54,8 +54,9 @@ void Loading::loadingSchedule()
 
   if(rect->x()>800){
       delete rect;
-loadingMusic->stop();
-
-
   }
+
+  if(loadingMusic->state() == QMediaPlayer::StoppedState){
+              loadingMusic->play();
+          }
 }

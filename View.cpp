@@ -65,6 +65,10 @@ void View::schedule()
 
     }
 
+    if(backgroundMusic->state() == QMediaPlayer::StoppedState){
+                backgroundMusic->play();
+            }
+
 
 //    if(viewController->boolGameOver()==true){
 //     stopGame();

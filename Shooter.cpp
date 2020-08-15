@@ -17,6 +17,13 @@ Shooter::Shooter(QTimer * shooterTimer, QGraphicsItem *parent)
 
 }
 
+Shooter::~Shooter()
+{
+    delete shooterPlayer;
+
+
+}
+
 void Shooter::shoot()
 {
     //shoot every 400 millisecond

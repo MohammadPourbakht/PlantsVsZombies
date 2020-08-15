@@ -18,6 +18,7 @@ private:
 
 public:
     explicit Shooter( QTimer * shooterTimer , QGraphicsItem *parent = nullptr);
+    ~Shooter();
 
 signals:
 

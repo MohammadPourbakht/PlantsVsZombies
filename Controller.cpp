@@ -64,12 +64,12 @@ void Controller::checkLives()
 }
 
 
-//bool Controller::boolGameOver()
-//{
-//    for( const auto& crs : zombieList ){
-//          if(crs->gameOv==true){
-//             return true;
-//           }
-//}
-//return false;
-//}
+bool Controller::boolGameOver()
+{
+    for( const auto& crs : zombieList ){
+          if(crs->gameOv==true){
+             return true;
+           }
+}
+return false;
+}

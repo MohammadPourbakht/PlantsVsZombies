@@ -55,12 +55,12 @@ void Controller::addSun()
 }
 
 
-bool Controller::boolGameOver()
-{
-    for( const auto& crs : zombieList ){
-          if(crs->gameOv==0){
-             return true;
-           }
-}
-return false;
-}
+//bool Controller::boolGameOver()
+//{
+//    for( const auto& crs : zombieList ){
+//          if(crs->gameOv==true){
+//             return true;
+//           }
+//}
+//return false;
+//}

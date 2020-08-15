@@ -23,6 +23,7 @@ private:
 public:
     explicit View();
     ~View();
+    void stopGame();
 
 signals:
 

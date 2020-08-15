@@ -18,7 +18,7 @@ private:
      QMediaPlayer *zombieMusic;
 
 public:
-    int  gameOv;
+    bool  gameOv;
     Zombie(const int& pixPer40MiliSec , QTimer *timer
            ,const int lives, QGraphicsItem *parent);
     ~Zombie();

@@ -40,15 +40,21 @@ View::View() : QGraphicsView()
 }
 View::~View()
  {
-     delete viewController;
-     delete viewTimer;
- }
+   delete viewController;
+    delete viewTimer;
+}
+
+void View::stopGame()
+{
+    viewTimer->stop();
+    viewController->ctimer->stop();
+}
 
 void View::schedule()
 {
     ++seconds;
 
-    if(seconds == 5 || seconds == 7 || seconds == 9 || seconds == 10){
+    if(seconds == 5 || seconds == 7 || seconds == 10 || seconds == 13){
 
         viewController->addZombie(6 , 10);
 
@@ -60,19 +66,17 @@ void View::schedule()
     }
 
 
-    if(viewController->boolGameOver()==true){
-     viewTimer->stop();
-     viewController->ctimer->stop();
+//    if(viewController->boolGameOver()==true){
+//     stopGame();
+//     backgroundMusic->stop();
+//     gameOverMusic->play();
 
-     backgroundMusic->stop();
-     gameOverMusic->play();
+//    QGraphicsPixmapItem * gameover = new QGraphicsPixmapItem();
+//     gameover->setPixmap(QPixmap(":/images/gameOver.png"));
+//     viewController->scene->addItem(gameover);
+//     gameover->setPos(0,0);
 
-    QGraphicsPixmapItem * gameover = new QGraphicsPixmapItem();
-     gameover->setPixmap(QPixmap(":/images/gameOver.png"));
-     viewController->scene->addItem(gameover);
-     gameover->setPos(0,0);
-
-  }
+//  }
 
 }
 

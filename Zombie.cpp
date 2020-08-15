@@ -9,7 +9,7 @@ Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
       pixPer40MiliSec{pixPer40MiliSec} , lives{lives}
 {
 
-    gameOv=1;
+    gameOv=false;
     Layer=0;
   //set picture
    setPixmap(QPixmap(":/images/Layer 1.png"));
@@ -39,8 +39,6 @@ void Zombie::decrementLives()
     if(lives==0){
         scene()->removeItem(this);
         delete this;
-
-
     }
 }
 
@@ -91,7 +89,8 @@ void Zombie::moveToLeft()
         setPixmap(QPixmap(":/images/Layer 6.png"));}
 
         if( x() == 0 && lives!= 0){
-          gameOv=0;
+//          gameOv=true;
+            exit(1);
     }
 
     Layer=Layer+1;

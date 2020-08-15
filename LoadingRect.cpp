@@ -10,5 +10,20 @@ LoadingRect::LoadingRect(QTimer *bulletTimer, const int &velocity)
     //connect to moveToRight
     connect(bulletTimer , SIGNAL(timeout()) , this , SLOT(moveToRight()));
 
+}
+
+void LoadingRect::moveToRight()
+{
+    // move to right
+    setPos(x()+velocity , y());
+
+    //delete if the bullet is off the screen
+    if(x()>800){                            //800 ? must be change
+        scene()->removeItem(this);
+        delete this;
+    }
+
 
 }
+
+

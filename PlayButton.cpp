@@ -1,15 +1,9 @@
 #include "PlayButton.h"
-
+#include "View.h"
 
 PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene{playScene}
 {
-    //set picture
-    setPixmap(QPixmap(":/images/play.png"));
-
-    //add to scene
-    playScene->addItem(this);
-    setPos(510,340);
-
+    c=1;
 
     //create play button music
        playButtonMusic = new QMediaPlayer();
@@ -19,10 +13,12 @@ PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene{playScene}
 
 void PlayButton::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
+    c=0;
     //play button music
        playButtonMusic->play();
 
-     //menu
+       auto myV = new View();
+            myV->show();
 
 }
 
@@ -32,4 +28,15 @@ PlayButton::~PlayButton()
     delete  playScene;
 }
 
+
+void PlayButton::setButton()
+{
+
+    //set picture
+    setPixmap(QPixmap(":/images/play.png"));
+
+    //add to scene
+    playScene->addItem(this);
+    setPos(510,340);
+}
 

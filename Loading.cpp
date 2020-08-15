@@ -53,12 +53,15 @@ void Loading::loadingSchedule()
     scene()->addItem(rect);
     rect->setPos(x()+seconds + 240 , y()+610);  // change ??
 
-  if(rect->x()>810){
+  if(rect->x()>816){
       delete rect;
-      auto pButton = new PlayButton(loadingScene);
+      playbutton->setButton();
+      if(playbutton->c==0){
+          loadingMusic->stop();
+      }
   }
 
-  if(loadingMusic->state() == QMediaPlayer::StoppedState){
+  if(loadingMusic->state() == QMediaPlayer::StoppedState && playbutton->c!=0 ){
               loadingMusic->play();
           }
 

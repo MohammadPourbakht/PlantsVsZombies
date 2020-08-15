@@ -29,6 +29,7 @@ SOURCES += \
     Loading.cpp \
     LoadingRect.cpp \
     Plant.cpp \
+    PlayButton.cpp \
     Shooter.cpp \
         main.cpp \
     Zombie.cpp \
@@ -42,6 +43,7 @@ HEADERS += \
     Loading.h \
     LoadingRect.h \
     Plant.h \
+    PlayButton.h \
     Shooter.h \
     Zombie.h \
     Sun.h \

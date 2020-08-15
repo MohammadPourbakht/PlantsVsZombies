@@ -41,7 +41,6 @@ Loading::~Loading()
     delete loadingMusic;
     delete loadingTimer;
     delete loadingScene;
-
 }
 
 void Loading::loadingSchedule()

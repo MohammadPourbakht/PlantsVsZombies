@@ -2,12 +2,21 @@
 #define GROUND_H
 
 #include <QObject>
+#include <QGraphicsRectItem>
+#include <QGraphicsSceneMouseEvent>
+#include <QGraphicsItem>
+#include "Plant.h"
 
-class Ground : public QObject
+
+
+class Ground : public QObject , public QGraphicsRectItem
 {
     Q_OBJECT
+private:
+    Plant *plant = nullptr;
 public:
-    explicit Ground(QObject *parent = nullptr);
+    explicit Ground(Plant *plant,QGraphicsItem *parent = nullptr);
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
 
 signals:
 

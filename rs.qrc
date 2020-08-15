@@ -16,6 +16,7 @@
         <file>shooter.png</file>
         <file>loading.png</file>
         <file>loadingRect2.png</file>
+        <file>play.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

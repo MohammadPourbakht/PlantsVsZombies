@@ -38,12 +38,15 @@ Loading::~Loading()
 
 void Loading::loadingSchedule()
 {
-    ++seconds;
+    seconds = seconds+30;
 
-    auto rect = new LoadingRect(loadingTimer , 15);
+    auto rect = new LoadingRect(loadingTimer , 40);
     scene()->addItem(rect);
-    rect->setPos(x()+seconds - 95 , y()+484);  // change ??
+    rect->setPos(x()+seconds + 222 , y()+610);  // change ??
 
+  if(rect->x()>800){
+      delete rect;
+  }
 
 
 

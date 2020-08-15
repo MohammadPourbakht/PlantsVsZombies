@@ -7,7 +7,6 @@
 
 Loading::Loading() : QGraphicsView()
 {
-    number = 1;
 
     //create scene
     loadingScene = new QGraphicsScene();
@@ -35,12 +34,6 @@ Loading::Loading() : QGraphicsView()
         loadingTimer->start(1000);
         connect(loadingTimer , SIGNAL(timeout()) , this , SLOT(loadingSchedule()));
 
-
-        if (number == 0){
-          auto pButton = new PlayButton(loadingScene);
-        }
-
-
 }
 
 Loading::~Loading()
@@ -58,9 +51,9 @@ void Loading::loadingSchedule()
     scene()->addItem(rect);
     rect->setPos(x()+seconds + 240 , y()+610);  // change ??
 
-  if(rect->x()>800){
+  if(rect->x()>810){
       delete rect;
-      number = 0;
+      auto pButton = new PlayButton(loadingScene);
   }
 
   if(loadingMusic->state() == QMediaPlayer::StoppedState){

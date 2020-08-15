@@ -8,7 +8,7 @@ PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene{playScene}
 
     //add to scene
     playScene->addItem(this);
-    setPos(600 , 350);
+    setPos(510,340);
 
 
     //create play button music
@@ -21,6 +21,8 @@ void PlayButton::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     //play button music
        playButtonMusic->play();
+
+     //menu
 
 }
 

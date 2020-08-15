@@ -18,7 +18,7 @@ private:
     QTimer *loadingTimer;
     int seconds;
     QMediaPlayer * loadingMusic;
-    int number;
+
 
 
 public:

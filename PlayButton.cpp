@@ -24,4 +24,10 @@ void PlayButton::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 }
 
+PlayButton::~PlayButton()
+{
+    delete playButtonMusic;
+    delete  playScene;
+}
+
 

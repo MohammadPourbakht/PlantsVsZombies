@@ -18,7 +18,7 @@ private:
 public:
     PlayButton(QGraphicsScene *playScene);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
-
+    ~PlayButton();
 
 
 

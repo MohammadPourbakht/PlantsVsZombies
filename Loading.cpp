@@ -20,8 +20,13 @@ Loading::Loading() : QGraphicsView()
         loadingMusic->setMedia(QUrl("qrc:/music/loading.mp3"));
         loadingMusic->play();
 
+    //initialize seconds to zero
+        seconds = 0;
 
-
+    //stat Timer
+        loadingTimer = new QTimer();
+        loadingTimer->start(1000);
+       // connect(loadingTimer , SIGNAL(timeout()) , this , SLOT(schedule()));
 
 
 }

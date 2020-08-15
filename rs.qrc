@@ -23,5 +23,6 @@
         <file>sun.mp3</file>
         <file>shooter.mp3</file>
         <file>ZombieBite.mp3</file>
+        <file>loading.mp3</file>
     </qresource>
 </RCC>

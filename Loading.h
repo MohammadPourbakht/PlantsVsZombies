@@ -1,11 +1,27 @@
 #ifndef LOADING_H
 #define LOADING_H
 
+#include <QObject>
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QTimer>
+#include <QMediaPlayer>
+#include <QGraphicsScene>
 
-class Loading
+
+class Loading : public QGraphicsView
 {
+     Q_OBJECT
+
+private:
+    QGraphicsScene *loadingScene;
+    QTimer *loadingTimer;
+    int seconds;
+    QMediaPlayer * loadingMusic;
+
 public:
-    Loading();
+    explicit Loading();
+    ~Loading();
 };
 
 #endif // LOADING_H

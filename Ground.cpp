@@ -28,3 +28,10 @@ Ground::Ground(Plant *plant,QGraphicsItem *parent) : QObject() , QGraphicsRectIt
     scene()->addItem(rect6);
     scene()->addItem(rect7);
 }
+
+void Ground::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    plant = new Plant();
+
+
+}

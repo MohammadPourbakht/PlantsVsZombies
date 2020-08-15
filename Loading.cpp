@@ -13,6 +13,8 @@ Loading::Loading() : QGraphicsView()
     loadingScene->setSceneRect(0,0,1200,700);
     setScene(loadingScene);
 
+    playbutton = new PlayButton(loadingScene);
+
     //set background
     setBackgroundBrush(QBrush(QImage(":/images/loading.png")));
 

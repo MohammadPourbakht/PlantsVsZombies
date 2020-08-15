@@ -7,7 +7,7 @@
 #include <QTimer>
 #include <QMediaPlayer>
 #include <QGraphicsScene>
-
+#include "PlayButton.h"
 
 class Loading : public QGraphicsView
 {
@@ -18,7 +18,7 @@ private:
     QTimer *loadingTimer;
     int seconds;
     QMediaPlayer * loadingMusic;
-
+    PlayButton* playbutton;
 
 
 public:

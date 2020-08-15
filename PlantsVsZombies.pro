@@ -36,7 +36,8 @@ SOURCES += \
     Sun.cpp \
     Score.cpp \
     Controller.cpp \
-    View.cpp
+    View.cpp \
+    Ground.cpp
 
 HEADERS += \
     Bullet.h \
@@ -49,7 +50,8 @@ HEADERS += \
     Sun.h \
     Score.h \
     Controller.h \
-    View.h
+    View.h \
+    Ground.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

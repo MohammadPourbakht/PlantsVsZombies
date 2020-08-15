@@ -58,7 +58,7 @@ void Loading::loadingSchedule()
       playButton->setButton();
       if(playButton->click==0){
           loadingMusic->stop();
-
+            this->close();
       }
   }
 

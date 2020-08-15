@@ -7,14 +7,14 @@
 #include <QMediaPlayer>
 
 class PlayButton : public QGraphicsPixmapItem
-
 {
+    friend class Loading;
 
 
 private:
     QGraphicsScene *playScene;
     QMediaPlayer *playButtonMusic;
-    int c;
+    int click;
 
 public:
     PlayButton(QGraphicsScene *playScene);

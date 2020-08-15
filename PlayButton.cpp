@@ -3,7 +3,7 @@
 
 PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene{playScene}
 {
-    c=1;
+    click=1;
 
     //create play button music
        playButtonMusic = new QMediaPlayer();
@@ -13,7 +13,7 @@ PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene{playScene}
 
 void PlayButton::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    c=0;
+    click=0;
     //play button music
        playButtonMusic->play();
 

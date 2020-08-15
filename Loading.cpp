@@ -13,7 +13,7 @@ Loading::Loading() : QGraphicsView()
     loadingScene->setSceneRect(0,0,1200,700);
     setScene(loadingScene);
 
-    playbutton = new PlayButton(loadingScene);
+    playButton = new PlayButton(loadingScene);
 
     //set background
     setBackgroundBrush(QBrush(QImage(":/images/loading.png")));
@@ -47,7 +47,7 @@ Loading::~Loading()
 
 void Loading::loadingSchedule()
 {
-    seconds = seconds+ 19 ;
+    seconds = seconds + 19 ;  //velocity of loading box
 
     auto rect = new LoadingRect(loadingTimer , 40);
     scene()->addItem(rect);
@@ -55,13 +55,14 @@ void Loading::loadingSchedule()
 
   if(rect->x()>816){
       delete rect;
-      playbutton->setButton();
-      if(playbutton->c==0){
+      playButton->setButton();
+      if(playButton->click==0){
           loadingMusic->stop();
+
       }
   }
 
-  if(loadingMusic->state() == QMediaPlayer::StoppedState && playbutton->c!=0 ){
+  if(loadingMusic->state() == QMediaPlayer::StoppedState && playButton->click!=0 ){
               loadingMusic->play();
           }
 

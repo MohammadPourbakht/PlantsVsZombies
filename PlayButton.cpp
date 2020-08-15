@@ -1,7 +1,7 @@
 #include "PlayButton.h"
 
 
-PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene(playScene)
+PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene{playScene}
 {
     //set picture
     setPixmap(QPixmap(":/images/play.png"));
@@ -13,6 +13,15 @@ PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene(playScene)
 
     //create play button music
        playButtonMusic = new QMediaPlayer();
-       playButtonMusic->setMedia(QUrl("qrc:/music/.mp3"));
+       playButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
 
 }
+
+void PlayButton::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    //play button music
+       playButtonMusic->play();
+
+}
+
+

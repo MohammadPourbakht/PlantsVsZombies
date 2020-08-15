@@ -1,11 +1,13 @@
 #include "Loading.h"
 #include "LoadingRect.h"
 #include "View.h"
+#include "PlayButton.h"
 
 
 
 Loading::Loading() : QGraphicsView()
 {
+    number = 1;
 
     //create scene
     loadingScene = new QGraphicsScene();
@@ -34,6 +36,11 @@ Loading::Loading() : QGraphicsView()
         connect(loadingTimer , SIGNAL(timeout()) , this , SLOT(loadingSchedule()));
 
 
+        if (number == 0){
+          auto pButton = new PlayButton(loadingScene);
+        }
+
+
 }
 
 Loading::~Loading()
@@ -53,9 +60,12 @@ void Loading::loadingSchedule()
 
   if(rect->x()>800){
       delete rect;
+      number = 0;
   }
 
   if(loadingMusic->state() == QMediaPlayer::StoppedState){
               loadingMusic->play();
           }
+
+
 }

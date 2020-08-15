@@ -9,15 +9,17 @@
 class PlayButton : public QGraphicsPixmapItem
 
 {
-    Q_OBJECT
+
 
 private:
     QGraphicsScene *playScene;
     QMediaPlayer *playButtonMusic;
 
 public:
-    explicit PlayButton(QGraphicsScene *playScene);
+    PlayButton(QGraphicsScene *playScene);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
+
+
 
 
 };

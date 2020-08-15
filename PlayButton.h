@@ -1,15 +1,24 @@
 #ifndef PLAYBUTTON_H
 #define PLAYBUTTON_H
 
-#include <QObject>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
+#include <QMediaPlayer>
 
-class PlayButton : public QObject
+class PlayButton : public QGraphicsPixmapItem
+
 {
     Q_OBJECT
-public:
-    explicit PlayButton(QObject *parent = nullptr);
 
-signals:
+private:
+    QGraphicsScene *playScene;
+    QMediaPlayer *playButtonMusic;
+
+public:
+    explicit PlayButton(QGraphicsScene *playScene);
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
+
 
 };
 

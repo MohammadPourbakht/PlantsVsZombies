@@ -10,13 +10,13 @@
         <file>Layer 4.png</file>
         <file>Layer 5.png</file>
         <file>Layer 6.png</file>
-        <file>gameOver.png</file>
         <file>bullet.png</file>
         <file>score.png</file>
         <file>shooter.png</file>
         <file>loading.png</file>
         <file>loadingRect2.png</file>
         <file>play.png</file>
+        <file>Un2.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

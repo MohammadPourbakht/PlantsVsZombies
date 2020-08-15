@@ -42,7 +42,6 @@ void Zombie::decrementLives()
     //remove and delete if lives == 0
     if(lives==0){
         scene()->removeItem(this);
-        delete this;
     }
 }
 

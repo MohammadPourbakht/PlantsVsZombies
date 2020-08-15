@@ -11,6 +11,7 @@
 class Zombie : public QObject , public QGraphicsPixmapItem
 {
     Q_OBJECT
+
 private:
     int lives;
     int pixPer40MiliSec;
@@ -24,6 +25,8 @@ public:
     ~Zombie();
 
     void decrementLives();
+
+    int getLives();
 
 public slots:
     void moveToLeft();

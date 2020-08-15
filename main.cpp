@@ -10,12 +10,12 @@ QApplication a(argc , argv);
 
 srand(time(0));
 
-auto loading = new Loading();
-loading->show();
-return a.exec();
+//auto loading = new Loading();
+//loading->show();
+//return a.exec();
 
-//auto myV = new View();
-//myV->show();
+auto myV = new View();
+myV->show();
 return a.exec();
 
 

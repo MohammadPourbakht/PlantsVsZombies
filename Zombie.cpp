@@ -46,6 +46,11 @@ void Zombie::decrementLives()
     }
 }
 
+int Zombie::getLives()
+{
+    return lives;
+}
+
 
 void Zombie::moveToLeft()
 {

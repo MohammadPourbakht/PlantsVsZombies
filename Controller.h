@@ -33,6 +33,7 @@ public:
     void addSun();
     void addNuts(int velocity);
     bool boolGameOver();
+    void checkLives();
 
 signals:
 

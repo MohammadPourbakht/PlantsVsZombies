@@ -54,6 +54,11 @@ void Controller::addSun()
     sunList.push_back(new Sun{scene,controllerScore,holder,ctimer});
 }
 
+void Controller::checkLives()
+{
+
+}
+
 
 //bool Controller::boolGameOver()
 //{

@@ -15,7 +15,6 @@
         <file>score.png</file>
         <file>shooter.png</file>
         <file>loading.png</file>
-        <file>loadingRect.png</file>
         <file>loadingRect2.png</file>
     </qresource>
     <qresource prefix="/music">

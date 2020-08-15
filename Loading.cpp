@@ -38,12 +38,15 @@ Loading::Loading() : QGraphicsView()
 
 Loading::~Loading()
 {
+    delete loadingMusic;
+    delete loadingTimer;
+    delete loadingScene;
 
 }
 
 void Loading::loadingSchedule()
 {
-    seconds = seconds+ 19 ; // 29
+    seconds = seconds+ 19 ;
 
     auto rect = new LoadingRect(loadingTimer , 40);
     scene()->addItem(rect);

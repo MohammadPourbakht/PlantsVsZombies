@@ -22,6 +22,12 @@ private:
 public:
     explicit Loading();
     ~Loading();
+
+signals:
+
+public slots:
+    void loadingSchedule();
+
 };
 
 #endif // LOADING_H

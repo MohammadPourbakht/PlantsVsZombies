@@ -26,7 +26,20 @@ Loading::Loading() : QGraphicsView()
     //stat Timer
         loadingTimer = new QTimer();
         loadingTimer->start(1000);
-       // connect(loadingTimer , SIGNAL(timeout()) , this , SLOT(schedule()));
+        connect(loadingTimer , SIGNAL(timeout()) , this , SLOT(loadingSchedule()));
+
+}
+
+void Loading::loadingSchedule()
+{
+    ++seconds;
+
+    if(seconds == 5 ){
+
+
+
+    }
+
 
 
 }

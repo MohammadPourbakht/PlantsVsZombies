@@ -27,6 +27,7 @@ CONFIG += c++11
 SOURCES += \
     Bullet.cpp \
     Loading.cpp \
+    LoadingRect.cpp \
     Plant.cpp \
     Shooter.cpp \
         main.cpp \
@@ -39,6 +40,7 @@ SOURCES += \
 HEADERS += \
     Bullet.h \
     Loading.h \
+    LoadingRect.h \
     Plant.h \
     Shooter.h \
     Zombie.h \

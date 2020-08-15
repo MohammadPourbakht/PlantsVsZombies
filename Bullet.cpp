@@ -22,9 +22,10 @@ void Bullet::moveToRight()
 
     //decrement zombies lives
     for(size_t i{0} ; i<collidingList.size();++i){
-        if(typeid(*(collidingList)[i])==typeid (Zombie)){
-           Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);
-           zom->decrementLives();
+        if(typeid(*(collidingList)[i])==typeid (Zombie)){        
+           ( dynamic_cast<Zombie*>(collidingList[i]))->decrementLives();
+          // Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);
+          // zom->decrementLives();
 
            //remove and delete
            scene()->removeItem(this);

@@ -21,7 +21,7 @@ public:
     int  gameOv;
     Zombie(const int& pixPer40MiliSec , QTimer *timer
            ,const int lives, QGraphicsItem *parent);
-   // ~Zombie();
+    ~Zombie();
 
     void decrementLives();
 

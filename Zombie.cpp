@@ -25,6 +25,11 @@ Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
 
 }
 
+Zombie::~Zombie()
+{
+    delete zombieMusic;
+}
+
 void Zombie::decrementLives()
 {
 

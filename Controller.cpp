@@ -56,7 +56,11 @@ void Controller::addSun()
 
 void Controller::checkLives()
 {
-
+    for( const auto& crs : zombieList ){
+                if(crs->getLives()==0){
+                    zombieList.removeOne(crs);
+                     delete crs;
+                      }}
 }
 
 

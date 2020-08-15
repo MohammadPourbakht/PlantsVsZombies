@@ -19,6 +19,7 @@ private:
     int seconds;
     QMediaPlayer * loadingMusic;
 
+
 public:
     explicit Loading();
     ~Loading();

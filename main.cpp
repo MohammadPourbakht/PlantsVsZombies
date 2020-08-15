@@ -16,7 +16,7 @@ return a.exec();
 
 //auto myV = new View();
 //myV->show();
-//return a.exec();
+return a.exec();
 
 
 }

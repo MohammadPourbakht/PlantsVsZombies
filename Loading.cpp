@@ -1,8 +1,12 @@
 #include "Loading.h"
 #include "LoadingRect.h"
+#include "View.h"
+
+
 
 Loading::Loading() : QGraphicsView()
 {
+
     //create scene
     loadingScene = new QGraphicsScene();
     loadingScene->setSceneRect(0,0,1200,700);
@@ -29,6 +33,7 @@ Loading::Loading() : QGraphicsView()
         loadingTimer->start(1000);
         connect(loadingTimer , SIGNAL(timeout()) , this , SLOT(loadingSchedule()));
 
+
 }
 
 Loading::~Loading()
@@ -38,16 +43,16 @@ Loading::~Loading()
 
 void Loading::loadingSchedule()
 {
-    seconds = seconds+30;
+    seconds = seconds+ 19 ; // 29
 
     auto rect = new LoadingRect(loadingTimer , 40);
     scene()->addItem(rect);
-    rect->setPos(x()+seconds + 222 , y()+610);  // change ??
+    rect->setPos(x()+seconds + 240 , y()+610);  // change ??
 
   if(rect->x()>800){
       delete rect;
+loadingMusic->stop();
+
+
   }
-
-
-
 }

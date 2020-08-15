@@ -102,8 +102,8 @@ void Zombie::moveToLeft()
         setPixmap(QPixmap(":/images/Layer 6.png"));}
 
         if( x() == 0 && lives!= 0){
-//          gameOv=true;
-            exit(1);
+        gameOv=true;
+
     }
 
     Layer=Layer+1;

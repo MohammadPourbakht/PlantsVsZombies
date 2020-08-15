@@ -69,18 +69,19 @@ void View::schedule()
                 backgroundMusic->play();
             }
 
+    viewController->checkLives();
 
-//    if(viewController->boolGameOver()==true){
-//     stopGame();
-//     backgroundMusic->stop();
-//     gameOverMusic->play();
+        if(viewController->boolGameOver()==true){
+         stopGame();
+         backgroundMusic->stop();
+         gameOverMusic->play();
 
-//    QGraphicsPixmapItem * gameover = new QGraphicsPixmapItem();
-//     gameover->setPixmap(QPixmap(":/images/gameOver.png"));
-//     viewController->scene->addItem(gameover);
-//     gameover->setPos(0,0);
+        QGraphicsPixmapItem * gameover = new QGraphicsPixmapItem();
+         gameover->setPixmap(QPixmap(":/images/Un2.png"));
+         viewController->scene->addItem(gameover);
+         gameover->setPos(0,0);
 
-//  }
+     }
 
 }
 

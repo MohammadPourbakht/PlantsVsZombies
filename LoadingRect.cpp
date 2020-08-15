@@ -22,8 +22,6 @@ void LoadingRect::moveToRight()
         scene()->removeItem(this);
         delete this;
     }
-
-
 }
 
 

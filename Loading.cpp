@@ -1,4 +1,5 @@
 #include "Loading.h"
+#include "LoadingRect.h"
 
 Loading::Loading() : QGraphicsView()
 {
@@ -30,15 +31,19 @@ Loading::Loading() : QGraphicsView()
 
 }
 
+Loading::~Loading()
+{
+
+}
+
 void Loading::loadingSchedule()
 {
     ++seconds;
 
-    if(seconds == 5 ){
+    auto rect = new LoadingRect(loadingTimer , 24);
+    scene()->addItem(rect);
+    rect->setPos(x()+100+seconds , y()+500);  // change ??
 
-
-
-    }
 
 
 

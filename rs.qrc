@@ -18,6 +18,7 @@
         <file>play.png</file>
         <file>Un2.png</file>
         <file>Menu background.png</file>
+        <file>shooter icon.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

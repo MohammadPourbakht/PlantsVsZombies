@@ -31,6 +31,11 @@ Controller::Controller(QObject *parent) : QObject(parent)
     scene->addItem(myShooter);
     myShooter->setPos(14,330);
 
+    //add a test nut
+        auto myNut = new Nut(12,ctimer,holder);
+        scene->addItem(myNut);
+        myNut->setPos(14,330);
+
     //add rectItem
     Ground *rect1 = new Ground();
     Ground *rect2 = new Ground();
@@ -39,8 +44,6 @@ Controller::Controller(QObject *parent) : QObject(parent)
     Ground *rect5 = new Ground();
     Ground *rect6 = new Ground();
     Ground *rect7 = new Ground();
-
-
 
     rect1->setRect(0,330,150,150);
     rect2->setRect(150,330,150,150);

@@ -9,6 +9,7 @@
 #include "Score.h"
 #include "Sun.h"
 #include "Ground.h"
+#include "Nut.h"
 
 class Controller : public QObject
 {

@@ -33,6 +33,7 @@
         <file>shovel icon.png</file>
         <file>light shovel icon.png</file>
         <file>Sunflower.png</file>
+        <file>cherry.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

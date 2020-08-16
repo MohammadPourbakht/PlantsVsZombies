@@ -55,7 +55,9 @@ void Loading::loadingSchedule()
 
   if(rect->x()>816){
       delete rect;
+
       playButton->setButton();
+
       if(playButton->click==1){
           loadingMusic->stop();
             this->close();

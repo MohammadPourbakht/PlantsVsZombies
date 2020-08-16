@@ -27,6 +27,7 @@ CONFIG += c++11
 SOURCES += \
     Bullet.cpp \
     Level1Button.cpp \
+    Level2Button.cpp \
     Loading.cpp \
     LoadingRect.cpp \
     Menu.cpp \
@@ -45,6 +46,7 @@ SOURCES += \
 HEADERS += \
     Bullet.h \
     Level1Button.h \
+    Level2Button.h \
     Loading.h \
     LoadingRect.h \
     Menu.h \

@@ -2,7 +2,7 @@
 
 Level4Button::Level4Button(QGraphicsScene *Scene)  : level4Scene{Scene}
 {
-    clickl3 = false;
+    clickl4= false;
 
     //set picture
     setPixmap(QPixmap(":/images/level4.png"));

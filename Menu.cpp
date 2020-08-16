@@ -19,6 +19,12 @@ Menu::Menu()
           MenuMusic = new QMediaPlayer();
           MenuMusic->setMedia(QUrl("qrc:/music/MainMenu.mp3"));
           MenuMusic->play();
+
+       //stat Timer
+          menuTimer = new QTimer();
+          menuTimer->start(1000);
+          connect(menuTimer , SIGNAL(timeout()) , this , SLOT(menuSchedule()));
+
 }
 
 Menu::~Menu()

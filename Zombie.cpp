@@ -37,8 +37,10 @@ Zombie::~Zombie()
 void Zombie::decrementLives()
 {
 
-    //decrement zombies lives
+    if (lives != 0 ){       //decrement zombies lives
     --lives;
+    }
+
     //remove and delete if lives == 0
     if(lives==0){
         scene()->removeItem(this);

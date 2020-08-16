@@ -56,13 +56,13 @@ void Loading::loadingSchedule()
   if(rect->x()>816){
       delete rect;
       playButton->setButton();
-      if(playButton->click==0){
+      if(playButton->click==1){
           loadingMusic->stop();
             this->close();
       }
   }
 
-  if(loadingMusic->state() == QMediaPlayer::StoppedState && playButton->click!=0 ){
+  if(loadingMusic->state() == QMediaPlayer::StoppedState && playButton->click!=1 ){
               loadingMusic->play();
           }
 

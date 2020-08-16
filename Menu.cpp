@@ -33,3 +33,11 @@ Menu::~Menu()
     delete MenuScene;
     delete menuTimer;
 }
+
+void Menu::menuSchedule()
+{
+    if(MenuMusic->state() == QMediaPlayer::StoppedState ){
+                MenuMusic->play();
+            }
+
+}

@@ -32,6 +32,7 @@
         <file>light wall-nut icon.png</file>
         <file>shovel icon.png</file>
         <file>light shovel icon.png</file>
+        <file>Sunflower.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

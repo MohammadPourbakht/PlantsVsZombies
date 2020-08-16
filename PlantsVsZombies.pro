@@ -30,6 +30,7 @@ SOURCES += \
     Level2Button.cpp \
     Level3Button.cpp \
     Level4Button.cpp \
+    Level5Button.cpp \
     Loading.cpp \
     LoadingRect.cpp \
     Menu.cpp \
@@ -51,6 +52,7 @@ HEADERS += \
     Level2Button.h \
     Level3Button.h \
     Level4Button.h \
+    Level5Button.h \
     Loading.h \
     LoadingRect.h \
     Menu.h \

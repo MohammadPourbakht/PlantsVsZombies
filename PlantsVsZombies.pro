@@ -28,7 +28,8 @@ SOURCES += \
     Bullet.cpp \
     Level1Button.cpp \
     Level2Button.cpp \
-    Level3button.cpp \
+    Level3Button.cpp \
+    Level4Button.cpp \
     Loading.cpp \
     LoadingRect.cpp \
     Menu.cpp \
@@ -48,7 +49,8 @@ HEADERS += \
     Bullet.h \
     Level1Button.h \
     Level2Button.h \
-    Level3button.h \
+    Level3Button.h \
+    Level4Button.h \
     Loading.h \
     LoadingRect.h \
     Menu.h \

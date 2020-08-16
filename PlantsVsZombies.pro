@@ -28,6 +28,7 @@ SOURCES += \
     Bullet.cpp \
     Loading.cpp \
     LoadingRect.cpp \
+    Menu.cpp \
     Plant.cpp \
     PlayButton.cpp \
     Shooter.cpp \
@@ -44,6 +45,7 @@ HEADERS += \
     Bullet.h \
     Loading.h \
     LoadingRect.h \
+    Menu.h \
     Plant.h \
     PlayButton.h \
     Shooter.h \

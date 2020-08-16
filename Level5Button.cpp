@@ -12,7 +12,7 @@ Level5Button::Level5Button(QGraphicsScene *Scene)  : level5Scene{Scene}
     Scene->addItem(this);
 
     //setPos
-    setPos(540,477);
+    setPos(740,499);
 
     //create level5 button music
        level5ButtonMusic = new QMediaPlayer();

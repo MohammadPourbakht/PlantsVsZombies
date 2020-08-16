@@ -8,7 +8,7 @@ class Nut : public QObject , public QGraphicsPixmapItem
 {
     Q_OBJECT
 private:
-
+    int Layer;
     int pixPer40MiliSec;
 public:
     Nut(const int& pixPer40MiliSec , QTimer *timer , QGraphicsItem *parent);

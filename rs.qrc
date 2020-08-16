@@ -48,6 +48,14 @@
         <file>lord5.png</file>
         <file>lord6.png</file>
         <file>lord7.png</file>
+        <file>Wall-nut 1.png</file>
+        <file>Wall-nut 2.png</file>
+        <file>Wall-nut 3.png</file>
+        <file>Wall-nut 4.png</file>
+        <file>Wall-nut 5.png</file>
+        <file>Wall-nut 6.png</file>
+        <file>Wall-nut 7.png</file>
+        <file>Wall-nut 8.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

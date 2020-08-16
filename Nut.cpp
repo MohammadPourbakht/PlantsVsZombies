@@ -7,6 +7,7 @@ Nut::Nut(const int& pixPer40MiliSec , QTimer *timer
     : QObject () , QGraphicsPixmapItem (parent) ,
       pixPer40MiliSec{pixPer40MiliSec}
 {
+     Layer=0;
 
     //set picture
      setPixmap(QPixmap(":/images/nut1.png"));
@@ -18,6 +19,8 @@ Nut::Nut(const int& pixPer40MiliSec , QTimer *timer
 void Nut::moveToRight()
 {
     setPos( x() + pixPer40MiliSec , y() );
+
+
 
     //collect all colliding objects in a list
     QList < QGraphicsItem * > collidingList = collidingItems();

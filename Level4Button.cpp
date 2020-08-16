@@ -11,7 +11,7 @@ Level4Button::Level4Button(QGraphicsScene *Scene)  : level4Scene{Scene}
     Scene->addItem(this);
 
     //setPos
-    setPos(637,510);
+    setPos(639,510);
 
     //create level2 button music
        level4ButtonMusic = new QMediaPlayer();

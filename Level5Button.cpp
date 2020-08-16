@@ -28,3 +28,10 @@ void Level5Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
     // go level3...
 }
 
+
+Level5Button::~Level5Button()
+{
+    delete level5Scene;
+    delete level5ButtonMusic;
+}
+

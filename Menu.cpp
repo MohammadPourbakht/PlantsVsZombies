@@ -31,5 +31,5 @@ Menu::~Menu()
 {
     delete MenuMusic;
     delete MenuScene;
-
+    delete menuTimer;
 }

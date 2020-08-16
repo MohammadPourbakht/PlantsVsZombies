@@ -19,7 +19,7 @@ Controller::Controller(QObject *parent) : QObject(parent)
     scoreBoard = new QGraphicsPixmapItem();
     scoreBoard->setPixmap(QPixmap(":/images/score.png"));
     scene->addItem(scoreBoard);
-    scoreBoard->setPos(10,10);
+    scoreBoard->setPos(0,0);
 
     //add score
     controllerScore = new Score();

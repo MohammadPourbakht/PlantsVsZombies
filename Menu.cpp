@@ -25,6 +25,8 @@ Menu::Menu()
           menuTimer->start(1000);
           connect(menuTimer , SIGNAL(timeout()) , this , SLOT(menuSchedule()));
 
+       //add level1Button
+          l1 = new Level1Button(MenuScene);
 }
 
 Menu::~Menu()

@@ -1,5 +1,6 @@
 #include "PlayButton.h"
-#include "View.h"
+#include "Menu.h"
+
 
 PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene{playScene}
 {
@@ -17,8 +18,8 @@ void PlayButton::mousePressEvent(QGraphicsSceneMouseEvent *event)
     //play butto0n music
        playButtonMusic->play();
 
-       auto myV = new View();
-            myV->show();
+       auto myM = new Menu();
+            myM->show();
 
 }
 

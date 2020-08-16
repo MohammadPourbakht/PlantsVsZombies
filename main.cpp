@@ -15,12 +15,12 @@ srand(time(0));
 //loading->show();
 //return a.exec();
 
-auto myM = new Menu();
-     myM->show();
-     return a.exec();
+//auto myM = new Menu();
+//     myM->show();
+//     return a.exec();
 
-//auto myV = new View();
-//myV->show();
-//return a.exec();
+auto myV = new View();
+myV->show();
+return a.exec();
 
 }

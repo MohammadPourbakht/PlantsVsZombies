@@ -5,14 +5,14 @@
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
 #include <QMediaPlayer>
-#include "Menu.h"
+
 
 class Level1Button :public QGraphicsPixmapItem
 {
     friend class Menu;
 private:
-    QGraphicsScene *Level1Scene;
-    QMediaPlayer *Level1ButtonMusic;
+    QGraphicsScene * level1Scene;
+    QMediaPlayer * level1ButtonMusic;
     bool clickl1;
 
 public:

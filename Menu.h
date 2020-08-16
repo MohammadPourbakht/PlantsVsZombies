@@ -13,8 +13,8 @@ class Menu : public QGraphicsView
     Q_OBJECT
 
 private:
-    QGraphicsScene *MenuScene;
-    QMediaPlayer * MenuMusic;
+    QGraphicsScene *menuScene;
+    QMediaPlayer * menuMusic;
     QTimer *menuTimer;
     Level1Button *l1;
 

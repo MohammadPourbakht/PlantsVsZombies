@@ -3,9 +3,9 @@
 Menu::Menu()
 {
     //create scene
-      MenuScene = new QGraphicsScene();
-      MenuScene->setSceneRect(0,0,1200,700);
-      setScene(MenuScene);
+      menuScene = new QGraphicsScene();
+      menuScene->setSceneRect(0,0,1200,700);
+      setScene(menuScene);
 
       //set background
       setBackgroundBrush(QBrush(QImage(":/images/Menu background.png")));
@@ -15,31 +15,31 @@ Menu::Menu()
       setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
       setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-      //set MenuMusic music
-          MenuMusic = new QMediaPlayer();
-          MenuMusic->setMedia(QUrl("qrc:/music/MainMenu.mp3"));
-          MenuMusic->play();
+      //set Menu music music
+          menuMusic = new QMediaPlayer();
+          menuMusic->setMedia(QUrl("qrc:/music/MainMenu.mp3"));
+          menuMusic->play();
 
-       //stat Timer
+       //start Timer
           menuTimer = new QTimer();
           menuTimer->start(1000);
           connect(menuTimer , SIGNAL(timeout()) , this , SLOT(menuSchedule()));
 
        //add level1Button
-          l1 = new Level1Button(MenuScene);
+          l1 = new Level1Button(menuScene);
 }
 
 Menu::~Menu()
 {
-    delete MenuMusic;
-    delete MenuScene;
+    delete menuMusic;
+    delete menuScene;
     delete menuTimer;
 }
 
 void Menu::menuSchedule()
 {
-    if(MenuMusic->state() == QMediaPlayer::StoppedState ){
-                MenuMusic->play();
+    if(menuMusic->state() == QMediaPlayer::StoppedState ){
+                menuMusic->play();
             }
 
 }

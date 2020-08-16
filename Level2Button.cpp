@@ -19,6 +19,13 @@ Level2Button::Level2Button(QGraphicsScene *Scene) : level2Scene{Scene}
 
 }
 
+void Level2Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    clickl2 = true;
+    level2ButtonMusic->play();
+    // go level2...
+}
+
 Level2Button::~Level2Button()
 {
     delete level2Scene;

@@ -19,3 +19,10 @@ Level3Button::Level3Button(QGraphicsScene *Scene)  : level3Scene{Scene}
        level3ButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
 
 }
+
+void Level3Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    clickl3 = true;
+    level3ButtonMusic->play();
+    // go level3...
+}

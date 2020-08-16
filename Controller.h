@@ -8,7 +8,7 @@
 #include "Zombie.h"
 #include "Score.h"
 #include "Sun.h"
-
+#include "Ground.h"
 
 class Controller : public QObject
 {

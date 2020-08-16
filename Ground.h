@@ -13,9 +13,9 @@ class Ground : public QObject , public QGraphicsRectItem
 {
     Q_OBJECT
 private:
-    Plant *plant = nullptr;
+    Plant *myP = nullptr;
 public:
-    explicit Ground(Plant *plant,QGraphicsItem *parent = nullptr);
+    explicit Ground(QGraphicsItem *parent = nullptr);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
 
 signals:

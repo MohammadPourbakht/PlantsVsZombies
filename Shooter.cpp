@@ -3,7 +3,7 @@
 #include"Bullet.h"
 
 Shooter::Shooter(QTimer * shooterTimer, QGraphicsItem *parent)
-    : QObject() , QGraphicsPixmapItem(parent) , Plant() , shooterTimer{shooterTimer} , timeIntervals{0}
+    : QObject() , Plant() , shooterTimer{shooterTimer} , timeIntervals{0}
 {
     //set picture
     setPixmap(QPixmap(":/images/shooter.png"));                 //image shooter

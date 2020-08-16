@@ -27,6 +27,9 @@ Menu::Menu()
 
        //add level1Button
           l1 = new Level1Button(menuScene);
+
+          //add level2Button
+             l2 = new Level2Button(menuScene);
 }
 
 Menu::~Menu()

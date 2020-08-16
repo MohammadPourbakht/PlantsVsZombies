@@ -15,4 +15,29 @@ Nut::Nut(const int& pixPer40MiliSec , QTimer *timer
 
 }
 
+void Nut::moveToRight()
+{
+    setPos( x() + pixPer40MiliSec , y() );
 
+    //collect all colliding objects in a list
+    QList < QGraphicsItem * > collidingList = collidingItems();
+
+    //decrement zombies lives
+    for(size_t i{0} ; i<collidingList.size();++i){
+        if(typeid(*(collidingList)[i])==typeid (Zombie)){
+           Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);
+           zom->decrementLives();
+
+           //remove and delete
+           scene()->removeItem(this);
+           delete this;
+           return;
+        }
+    }
+
+    if(x()>1200){
+        scene()->removeItem(this);
+        delete this;
+    }
+
+}

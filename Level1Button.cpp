@@ -1,6 +1,6 @@
 #include "Level1Button.h"
 
-Level1Button::Level1Button(QGraphicsScene *Scene) : level1Scene{Scene}
+Level1Button::Level1Button(QGraphicsScene *Scene) : Level1Scene{Scene}
 {  
     clickl1 =false;
 
@@ -12,9 +12,16 @@ Level1Button::Level1Button(QGraphicsScene *Scene) : level1Scene{Scene}
     setPos(510,340);
 
 
-    //create play button music
+    //create level1 button music
        Level1ButtonMusic = new QMediaPlayer();
        Level1ButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
+}
+
+void Level1Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    clickl1=true;
+    Level1ButtonMusic->play();
+    // go level1
 }
 
 Level1Button::~Level1Button()

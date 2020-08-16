@@ -15,6 +15,7 @@ PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene{playScene}
 void PlayButton::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     click=1;
+
     //play butto0n music
        playButtonMusic->play();
 

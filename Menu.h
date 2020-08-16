@@ -1,11 +1,22 @@
 #ifndef MENU_H
 #define MENU_H
 
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QMediaPlayer>
 
-class Menu
+
+class Menu : public QGraphicsView
 {
+
+
+private:
+    QGraphicsScene *MenuScene;
+    QMediaPlayer * MenuMusic;
+
 public:
-    Menu();
+    explicit Menu();
+    ~Menu();
 };
 
 #endif // MENU_H

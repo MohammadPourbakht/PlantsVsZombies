@@ -29,7 +29,7 @@ public:
     void decrementLives();
     int getLives();
     void setLives(int lives);
-
+    bool getisLord();
 
 public slots:
     void moveToLeft();

@@ -76,9 +76,11 @@ void Controller::addZombie(const int& velocity , const int& lives)
     zombieList.push_back(new Zombie{velocity,ctimer,lives,holder,true});
     //add to the scene
     scene->addItem(zombieList.last());
-    if(zombieList.last()->isLord==false){
+
+    if(zombieList.last()->getisLord()==false){
     zombieList.last()->setPos(1200,365);}
-    if(zombieList.last()->isLord==true){
+
+    if(zombieList.last()->getisLord()==true){
     zombieList.last()->setPos(1200,340);}
 }
 

@@ -64,6 +64,11 @@ void Zombie::setLives(int lives)
     this->lives = lives;
 }
 
+bool Zombie::getisLord()
+{
+    return isLord;
+}
+
 
 void Zombie::moveToLeft()
 {

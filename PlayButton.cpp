@@ -32,7 +32,6 @@ PlayButton::~PlayButton()
 
 void PlayButton::setButton()
 {
-
     //set picture
     setPixmap(QPixmap(":/images/play.png"));
 

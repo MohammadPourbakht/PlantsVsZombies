@@ -26,3 +26,9 @@ void Level6Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
     level6ButtonMusic->play();
     // go level3...
 }
+
+Level6Button::~Level6Button()
+{
+    delete level6Scene;
+    delete level6ButtonMusic;
+}

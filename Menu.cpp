@@ -28,8 +28,11 @@ Menu::Menu()
        //add level1Button
           l1 = new Level1Button(menuScene);
 
-          //add level2Button
-             l2 = new Level2Button(menuScene);
+       //add level2Button
+          l2 = new Level2Button(menuScene);
+
+       //add level2Button
+          l3 = new Level3Button(menuScene);
 }
 
 Menu::~Menu()

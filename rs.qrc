@@ -22,6 +22,7 @@
         <file>dark shooter icon.png</file>
         <file>light shooter icon.png</file>
         <file>sunflower icon.png</file>
+        <file>dark sunflower icon.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

@@ -16,12 +16,12 @@ private:
     int lives;
     int pixPer40MiliSec;
     int Layer;
-     QMediaPlayer *zombieMusic;
-
+    QMediaPlayer *zombieMusic;
+    bool isLord;
 public:
     bool  gameOv;
     Zombie(const int& pixPer40MiliSec , QTimer *timer
-           ,const int lives, QGraphicsItem *parent);
+           ,const int lives, QGraphicsItem *parent ,bool isLord =false);
     ~Zombie();
 
     void decrementLives();

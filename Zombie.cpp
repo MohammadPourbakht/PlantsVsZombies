@@ -4,15 +4,22 @@
 #include "Plant.h"
 
 Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
-              ,const int lives , QGraphicsItem *parent)
+              ,const int lives , QGraphicsItem *parent , bool isLord  )
     : QObject () , QGraphicsPixmapItem (parent) ,
-      pixPer40MiliSec{pixPer40MiliSec} , lives{lives}
+      pixPer40MiliSec{pixPer40MiliSec} , lives{lives} , isLord{isLord}
 {
 
     gameOv=false;
     Layer=0;
+
+    if(isLord==false){
   //set picture
-   setPixmap(QPixmap(":/images/Layer 1.png"));
+   setPixmap(QPixmap(":/images/Layer 1.png"));}
+
+    if(isLord==true){
+   setPixmap(QPixmap(":/images/lord1.png"));}
+
+
 
    //connect timer to moveToLeft
    connect(timer , SIGNAL(timeout()) , this , SLOT(moveToLeft()));
@@ -83,6 +90,7 @@ void Zombie::moveToLeft()
 
     setPos( x() - pixPer40MiliSec , y() );
 
+       if(isLord==false){
         if(Layer%6==0){
         setPos( x() - pixPer40MiliSec , y() );
         setPixmap(QPixmap(":/images/Layer 1.png"));}
@@ -109,10 +117,48 @@ void Zombie::moveToLeft()
 
         if( x() == 0 && lives!= 0){
         gameOv=true;
-
     }
 
     Layer=Layer+1;
+       }
+
+       if(isLord==true){
+
+           if(Layer%7==0){
+           setPos( x() - pixPer40MiliSec , y() );
+           setPixmap(QPixmap(":/images/lord1.png"));}
+
+           if(Layer%7==1){
+           setPos( x() - pixPer40MiliSec , y() );
+           setPixmap(QPixmap(":/images/lord2.png"));}
+
+           if(Layer%7==2){
+           setPos( x() - pixPer40MiliSec , y() );
+           setPixmap(QPixmap(":/images/lord3.png")); }
+
+           if(Layer%7==3){
+           setPos( x() - pixPer40MiliSec , y() );
+           setPixmap(QPixmap(":/images/lord4.png"));}
+
+           if(Layer%7==4){
+           setPos( x() - pixPer40MiliSec , y() );
+           setPixmap(QPixmap(":/images/lord5.png"));}
+
+           if(Layer%7==5){
+           setPos( x() - pixPer40MiliSec , y() );
+           setPixmap(QPixmap(":/images/lord6.png"));}
+
+           if(Layer%7==6){
+           setPos( x() - pixPer40MiliSec , y() );
+           setPixmap(QPixmap(":/images/lord7.png"));}
+
+       if( x() == 0 && lives!= 0){
+       gameOv=true;
+   }
+
+   Layer=Layer+1; }
+
+
 }
 
 

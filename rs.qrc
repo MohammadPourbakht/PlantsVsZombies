@@ -41,6 +41,13 @@
         <file>level4.png</file>
         <file>level5.png</file>
         <file>level6.png</file>
+        <file>lord1.png</file>
+        <file>lord2.png</file>
+        <file>lord3.png</file>
+        <file>lord4.png</file>
+        <file>lord5.png</file>
+        <file>lord6.png</file>
+        <file>lord7.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

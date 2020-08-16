@@ -73,10 +73,13 @@ Controller::~Controller()
 
 void Controller::addZombie(const int& velocity , const int& lives)
 {
-    zombieList.push_back(new Zombie{velocity,ctimer,lives,holder});
+    zombieList.push_back(new Zombie{velocity,ctimer,lives,holder,true});
     //add to the scene
     scene->addItem(zombieList.last());
-    zombieList.last()->setPos(1200,365);
+    if(zombieList.last()->isLord==false){
+    zombieList.last()->setPos(1200,365);}
+    if(zombieList.last()->isLord==true){
+    zombieList.last()->setPos(1200,340);}
 }
 
 void Controller::addSun()

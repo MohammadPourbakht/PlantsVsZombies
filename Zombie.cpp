@@ -125,7 +125,7 @@ void Zombie::moveToLeft()
        if(isLord==true){
 
            if(Layer%7==0){
-           setPos( x() - pixPer40MiliSec , y() );
+           setPos( x() - pixPer40MiliSec , y());
            setPixmap(QPixmap(":/images/lord1.png"));}
 
            if(Layer%7==1){
@@ -133,7 +133,7 @@ void Zombie::moveToLeft()
            setPixmap(QPixmap(":/images/lord2.png"));}
 
            if(Layer%7==2){
-           setPos( x() - pixPer40MiliSec , y() );
+           setPos( x() - pixPer40MiliSec , y());
            setPixmap(QPixmap(":/images/lord3.png")); }
 
            if(Layer%7==3){
@@ -145,7 +145,7 @@ void Zombie::moveToLeft()
            setPixmap(QPixmap(":/images/lord5.png"));}
 
            if(Layer%7==5){
-           setPos( x() - pixPer40MiliSec , y() );
+           setPos( x() - pixPer40MiliSec , y());
            setPixmap(QPixmap(":/images/lord6.png"));}
 
            if(Layer%7==6){

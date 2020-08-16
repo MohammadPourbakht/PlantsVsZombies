@@ -23,6 +23,7 @@ Menu::Menu()
 
 Menu::~Menu()
 {
-
+    delete MenuMusic;
+    delete MenuScene;
 
 }

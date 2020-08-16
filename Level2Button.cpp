@@ -18,3 +18,9 @@ Level2Button::Level2Button(QGraphicsScene *Scene) : level2Scene{Scene}
        level2ButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
 
 }
+
+Level2Button::~Level2Button()
+{
+    delete level2Scene;
+    delete level2ButtonMusic;
+}

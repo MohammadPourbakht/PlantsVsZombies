@@ -18,9 +18,6 @@ Nut::Nut(const int& pixPer40MiliSec , QTimer *timer
 
 void Nut::moveToRight()
 {
-    setPos( x() + pixPer40MiliSec , y() );
-
-
 
     //collect all colliding objects in a list
     QList < QGraphicsItem * > collidingList = collidingItems();
@@ -39,5 +36,41 @@ void Nut::moveToRight()
         scene()->removeItem(this);
         delete this;
     }
+
+    setPos( x() + pixPer40MiliSec , y() );
+
+    if(Layer%8==0){
+    setPos( x() + pixPer40MiliSec , y() );
+    setPixmap(QPixmap(":/images/Wall-nut 1.png"));}
+
+    if(Layer%8==1){
+    setPos( x() + pixPer40MiliSec , y() );
+    setPixmap(QPixmap(":/images/Wall-nut 2.png"));}
+
+    if(Layer%8==2){
+    setPos( x() + pixPer40MiliSec , y() );
+    setPixmap(QPixmap(":/images/Wall-nut 3.png")); }
+
+    if(Layer%6==3){
+    setPos( x() + pixPer40MiliSec , y() );
+    setPixmap(QPixmap(":/images/Wall-nut 4.png"));}
+
+    if(Layer%8==4){
+    setPos( x() + pixPer40MiliSec , y() );
+    setPixmap(QPixmap(":/images/Wall-nut 5.png"));}
+
+    if(Layer%8==5){
+    setPos( x() + pixPer40MiliSec , y() );
+    setPixmap(QPixmap(":/images/Wall-nut 6.png"));}
+
+    if(Layer%8==6){
+    setPos( x() + pixPer40MiliSec , y() );
+    setPixmap(QPixmap(":/images/Wall-nut 7.png"));}
+
+    if(Layer%8==7){
+    setPos( x() + pixPer40MiliSec , y() );
+    setPixmap(QPixmap(":/images/Wall-nut 8.png"));}
+
+    Layer=Layer+1;
 
 }

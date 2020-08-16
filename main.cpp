@@ -18,5 +18,4 @@ return a.exec();
 //myV->show();
 //return a.exec();
 
-
 }

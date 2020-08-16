@@ -35,6 +35,12 @@
         <file>Sunflower.png</file>
         <file>cherry.png</file>
         <file>nut1.png</file>
+        <file>level1.png</file>
+        <file>level2.png</file>
+        <file>level3.png</file>
+        <file>level4.png</file>
+        <file>level5.png</file>
+        <file>level6.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

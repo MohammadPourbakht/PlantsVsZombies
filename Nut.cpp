@@ -9,7 +9,7 @@ Nut::Nut(const int& pixPer40MiliSec , QTimer *timer
 {
 
     //set picture
-     setPixmap(QPixmap(":/images/nut1.jpg"));
+     setPixmap(QPixmap(":/images/nut1.png"));
 
      connect(timer , SIGNAL(timeout()) , this , SLOT(moveToRight()));
 
@@ -25,12 +25,9 @@ void Nut::moveToRight()
     //decrement zombies lives
     for(size_t i{0} ; i<collidingList.size();++i){
         if(typeid(*(collidingList)[i])==typeid (Zombie)){
-           Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);
-           zom->decrementLives();
+           Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]); 
+           zom->setLives(0);
 
-           //remove and delete
-           scene()->removeItem(this);
-           delete this;
            return;
         }
     }

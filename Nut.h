@@ -11,8 +11,7 @@ private:
 
     int pixPer40MiliSec;
 public:
-    Nut(const int& pixPer40MiliSec , QTimer *timer
-           , QGraphicsItem *parent);
+    Nut(const int& pixPer40MiliSec , QTimer *timer , QGraphicsItem *parent);
 
 signals:
 

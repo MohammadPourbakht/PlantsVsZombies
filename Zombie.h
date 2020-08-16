@@ -25,8 +25,8 @@ public:
     ~Zombie();
 
     void decrementLives();
-
     int getLives();
+    void setLives(int lives);
 
 public slots:
     void moveToLeft();

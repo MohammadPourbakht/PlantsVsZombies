@@ -21,6 +21,7 @@ public:
 signals:
 
 public slots:
+
 };
 
 #endif // GROUND_H

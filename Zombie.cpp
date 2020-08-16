@@ -50,6 +50,11 @@ int Zombie::getLives()
     return lives;
 }
 
+void Zombie::setLives(int lives)
+{
+    this->lives = lives;
+}
+
 
 void Zombie::moveToLeft()
 {

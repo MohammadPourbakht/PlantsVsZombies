@@ -14,7 +14,7 @@ class Level4Button  : public QGraphicsPixmapItem
 private:
     QGraphicsScene * level4Scene;
     QMediaPlayer * level4ButtonMusic;
-    bool clickl3;
+    bool clickl4;
 
 public:
     Level4Button(QGraphicsScene *Scene);

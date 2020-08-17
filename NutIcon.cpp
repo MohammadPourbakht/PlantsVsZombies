@@ -22,3 +22,18 @@ NutIcon::~NutIcon()
 {
     delete nutIconScene;
 }
+
+void NutIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    if(isSelectable==true){
+        isSelected=true;
+        //set picture
+        setPixmap(QPixmap(":/images/light wall-nut icon.png"));
+        //add to scene
+       // shooterIconScene->addItem(this);
+        //setPos
+        setPos(315 , 11);
+    }
+
+    //add sound if isSelectable == false
+}

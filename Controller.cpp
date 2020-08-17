@@ -24,7 +24,7 @@ Controller::Controller(QObject *parent) : QObject(parent)
     //add score
     controllerScore = new Score();
     scene->addItem(controllerScore);
-    controllerScore->setPos(43,101);
+    controllerScore->setPos(39,95);
 
     //add a test shooter
     auto myShooter = new Shooter(ctimer , holder);

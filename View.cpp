@@ -1,16 +1,19 @@
 #include "View.h"
 #include "Zombie.h"
+#include "Menu.h"
 
-View::View() : QGraphicsView()
+View::View(int level) : QGraphicsView()
 {
+
+    this->level=level;
     //create viewController
     viewController = new Controller();
 
+    //set background
+    setBackground();
+
     //create scene
     setScene(viewController->scene);
-
-    //set background
-    setBackgroundBrush(QBrush(QImage(":/images/Fsl-3.png")));
 
     //set fixed size
     setFixedSize(1200,700);
@@ -50,6 +53,23 @@ void View::stopGame()
     viewController->ctimer->stop();
 }
 
+void View::setBackground()
+{
+
+    if(level==1){
+    //set background
+    setBackgroundBrush(QBrush(QImage(":/images/Fsl-1.png")));}
+
+    if(level==2){
+    //set background
+    setBackgroundBrush(QBrush(QImage(":/images/Fsl-2.png")));}
+
+    if(level==3){
+    //set background
+    setBackgroundBrush(QBrush(QImage(":/images/Fsl-3.png")));}
+
+}
+
 void View::schedule()
 {
     ++seconds;
@@ -80,8 +100,9 @@ void View::schedule()
          gameover->setPixmap(QPixmap(":/images/Un2.png"));
          viewController->scene->addItem(gameover);
          gameover->setPos(0,0);
+       }
+        //add backtomenu and replay
 
-     }
 
 }
 

@@ -5,9 +5,10 @@
 
 class Plant : public QGraphicsPixmapItem
 {
-private:
-    bool isDead;
+
+
 public:
+    bool isDead;
     Plant();
     ~Plant();
 };

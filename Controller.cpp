@@ -125,6 +125,9 @@ void Controller::planting()
 
     if(shooterIcon->isSelected==true){
         for( const auto& ground : groundList ){
+            if(ground->myP->isDead == true){
+                ground->myP==nullptr;}
+
               if(ground->clickBlock==true && ground->myP==nullptr){
                  ground->myP = new Shooter(ctimer , holder);
                  scene->addItem(ground->myP);
@@ -146,6 +149,9 @@ void Controller::planting()
 
     if(nutIcon->isSelected==true){
         for( const auto& ground : groundList ){
+            if(ground->myP->isDead == true){
+                ground->myP==nullptr;}
+
               if(ground->clickBlock==true && ground->myP==nullptr ){
                  ground->myP = new Nut(12 , ctimer , holder);
                  scene->addItem(ground->myP);

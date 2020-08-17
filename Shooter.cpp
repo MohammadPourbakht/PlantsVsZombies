@@ -5,7 +5,7 @@
 Shooter::Shooter(QTimer * shooterTimer, QGraphicsItem *parent)
     : QObject() , Plant() , shooterTimer{shooterTimer} , timeIntervals{0}
 {
-    bool isDead = false;
+    this->isDead = false;
     //set picture
     setPixmap(QPixmap(":/images/shooter.png"));                 //image shooter
 
@@ -20,7 +20,7 @@ Shooter::Shooter(QTimer * shooterTimer, QGraphicsItem *parent)
 
 Shooter::~Shooter()
 {
-    bool isDead = true;
+    this->isDead = true;
     delete shooterPlayer;
 }
 

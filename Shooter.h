@@ -15,7 +15,7 @@ private:
     QMediaPlayer * shooterPlayer;
     int timeIntervals;
     QTimer * shooterTimer;
-    bool isDead;
+
 
 public:
     explicit Shooter( QTimer * shooterTimer , QGraphicsItem *parent = nullptr);

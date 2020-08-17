@@ -13,7 +13,7 @@ Controller::Controller(QObject *parent) : QObject(parent)
 
     //create and start ctimer
     ctimer = new QTimer();
-    ctimer->start(40);    // 50 | 40  ???
+    ctimer->start(40);
 
     //add scoreBoard
     scoreBoard = new QGraphicsPixmapItem();
@@ -71,13 +71,13 @@ Controller::~Controller()
     delete ctimer;
 }
 
-void Controller::addZombie(const int& velocity , const int& lives)
+void Controller::addZombie(const int& velocity , const int& lives ,  bool isLord)
 {
-    zombieList.push_back(new Zombie{velocity,ctimer,lives,holder,true});
+    zombieList.push_back(new Zombie{velocity,ctimer,lives,holder,isLord});
     //add to the scene
     scene->addItem(zombieList.last());
 
-    if(zombieList.last()->getisLord()==false){
+    if(zombieList.last()->getisLord()==false){  //ghadeshoon
     zombieList.last()->setPos(1200,365);}
 
     if(zombieList.last()->getisLord()==true){
@@ -89,20 +89,20 @@ void Controller::addSun()
     sunList.push_back(new Sun{scene,controllerScore,holder,ctimer});
 }
 
-void Controller::checkLives()
+void Controller::checkLives() //delete zombies that dead from List
 {
-    for( const auto& crs : zombieList ){
-                if(crs->getLives()==0){
-                    zombieList.removeOne(crs);
-                     delete crs;
+    for( const auto& zom : zombieList ){
+                if(zom->getLives()==0){
+                    zombieList.removeOne(zom);
+                     delete zom;
                       }}
 }
 
 
 bool Controller::boolGameOver()
 {
-    for( const auto& crs : zombieList ){
-          if(crs->gameOv==true){
+    for( const auto& zom : zombieList ){
+          if(zom->gameOv==true){
              return true;
            }
 }

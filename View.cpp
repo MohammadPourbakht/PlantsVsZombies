@@ -4,8 +4,7 @@
 
 View::View(int level) : QGraphicsView()
 {
-
-    this->level=level;
+    this->season=level;
     //create viewController
     viewController = new Controller();
 
@@ -29,12 +28,8 @@ View::View(int level) : QGraphicsView()
         gameOverMusic = new QMediaPlayer();
         gameOverMusic->setMedia(QUrl("qrc:/music/Game Over.mp3"));
 
-
     //initialize seconds to zero
     seconds = 0;
-
-
-
 
     //stat Timer
     viewTimer = new QTimer();
@@ -56,15 +51,15 @@ void View::stopGame()
 void View::setBackground()
 {
 
-    if(level==1){
+    if(season==1){
     //set background
     setBackgroundBrush(QBrush(QImage(":/images/Fsl-1.png")));}
 
-    if(level==2){
+    if(season==2){
     //set background
     setBackgroundBrush(QBrush(QImage(":/images/Fsl-2.png")));}
 
-    if(level==3){
+    if(season==3){
     //set background
     setBackgroundBrush(QBrush(QImage(":/images/Fsl-3.png")));}
 
@@ -76,13 +71,12 @@ void View::schedule()
 
     if(seconds == 3 || seconds == 9 || seconds == 13 || seconds == 15){
 
-        viewController->addZombie(6 , 10);
+        viewController->addZombie(6 , 10 , false);
 
     }
 
     if(seconds % 2 == 0){
         viewController->addSun();
-
     }
 
     if(backgroundMusic->state() == QMediaPlayer::StoppedState){

@@ -19,7 +19,7 @@ srand(time(0));
 //     myM->show();
 //     return a.exec();
 
-auto myV = new View();
+auto myV = new View(3);
 myV->show();
 return a.exec();
 

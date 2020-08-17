@@ -19,10 +19,10 @@ private:
     Controller *viewController;
     QMediaPlayer *backgroundMusic;
     QMediaPlayer *gameOverMusic;
-    int level ;
+    int season ;
 
 public:
-    explicit View(int level);
+    explicit View(int season);
     ~View();
     void stopGame();
     void setBackground();

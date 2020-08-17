@@ -30,7 +30,7 @@ private:
 public:
     explicit Controller(QObject *parent = nullptr);
     ~Controller();
-    void addZombie(const int& velocity, const int & lives);
+    void addZombie(const int& velocity, const int & lives , bool isLord);
     void addSun();
     void addNuts(int velocity);
     bool boolGameOver();

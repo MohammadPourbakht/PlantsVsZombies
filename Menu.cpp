@@ -56,5 +56,9 @@ void Menu::menuSchedule()
     if(menuMusic->state() == QMediaPlayer::StoppedState ){
                 menuMusic->play();
             }
-
+    if(l1->clickl1==true || l2->clickl2==true || l3->clickl3==true ||
+       l4->clickl4==true || l5->clickl5==true || l6->clickl6==true){
+        menuMusic->stop();
+        this->close();
+}
 }

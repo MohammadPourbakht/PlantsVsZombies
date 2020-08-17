@@ -98,7 +98,6 @@ void Controller::checkLives() //delete zombies that dead from List
                       }}
 }
 
-
 bool Controller::boolGameOver()
 {
     for( const auto& zom : zombieList ){

@@ -22,7 +22,7 @@ private:
     QGraphicsRectItem *holder;
     QList<Zombie *> zombieList;
     QList<Sun *> sunList;
-
+    QList<GroundRect *> groundList;
     QGraphicsPixmapItem *scoreBoard;
     Score *controllerScore;
 
@@ -35,6 +35,7 @@ public:
     void addNuts(int velocity);
     bool boolGameOver();
     void checkLives();
+    void addGround(const int & season);
 
 signals:
 

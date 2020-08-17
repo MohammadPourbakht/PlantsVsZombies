@@ -31,6 +31,10 @@ View::View(int level) : QGraphicsView()
     //initialize seconds to zero
     seconds = 0;
 
+    //add ground
+    viewController->addGround(season);
+
+
     //stat Timer
     viewTimer = new QTimer();
     viewTimer->start(1000);

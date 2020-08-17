@@ -69,7 +69,40 @@ void Controller::checkLives() //delete zombies that dead from List
                 if(zom->getLives()==0){
                     zombieList.removeOne(zom);
                      delete zom;
-                      }}
+                }}
+}
+
+void Controller::addGround(const int & season)
+{
+    if(season == 1 ){
+        for(int i = 0 ; i < 7 ; i++){
+            groundList.push_back(new GroundRect{holder});
+            groundList.last()->setGroundRect( (i * 150) , 486);
+            scene->addItem(groundList.last());
+        }
+    }
+
+    if(season == 2 ){
+        for(int j = 0 ; j < 2 ; j++){
+         for(int i = 0 ; i < 7 ; i++){
+            groundList.push_back(new GroundRect{holder});
+            groundList.last()->setGroundRect( (i * 150) , 486 - (j*150));
+            scene->addItem(groundList.last());
+        }
+        }
+    }
+
+
+    if(season == 3 ){
+        for(int j = 0 ; j < 3 ; j++){
+           for(int i = 0 ; i < 7 ; i++){
+             groundList.push_back(new GroundRect{holder});
+             groundList.last()->setGroundRect( (i * 150) , 486 - (j*150));
+             scene->addItem(groundList.last());
+        }
+        }
+    }
+
 }
 
 bool Controller::boolGameOver()

@@ -8,9 +8,13 @@
 class ShooterIcon: public QGraphicsPixmapItem
 {
 
+private:
+    QGraphicsScene * shooterIconScene;
+    bool isSelected;
+    bool isSelectable;
 
 public:
-    ShooterIcon();
+    ShooterIcon(QGraphicsScene *shooterIconScene);
 };
 
 #endif // SHOOTERICON_H

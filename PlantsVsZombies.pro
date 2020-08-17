@@ -49,7 +49,8 @@ SOURCES += \
     Controller.cpp \
     View.cpp \
     Nut.cpp \
-    SunFlower.cpp
+    SunFlower.cpp \
+    CherryBomb.cpp
 
 HEADERS += \
     Bullet.h \
@@ -75,7 +76,8 @@ HEADERS += \
     Controller.h \
     View.h \
     Nut.h \
-    SunFlower.h
+    SunFlower.h \
+    CherryBomb.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

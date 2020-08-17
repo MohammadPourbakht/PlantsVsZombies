@@ -8,7 +8,7 @@ SunFlower::SunFlower(Score *sunScore ,  QGraphicsScene *sunScene ,
    , sunScene(sunScene)
 {
     //set picture
-    setPixmap(QPixmap(":/images/Sunflower.png"));
+    setPixmap(QPixmap(":/images/Sunflower1.png"));
 
     connect(sunTimer,SIGNAL(timeout()),this,SLOT(makeSun()));
 
@@ -16,7 +16,7 @@ SunFlower::SunFlower(Score *sunScore ,  QGraphicsScene *sunScene ,
 
 void SunFlower::makeSun()
 {
-    if(timeIntervals % 3750 == 0){
+    if(timeIntervals % 375 == 0){
 
        auto mySun = new Sun(sunScene,sunScore,sunTimer);
        scene()->addItem(mySun);

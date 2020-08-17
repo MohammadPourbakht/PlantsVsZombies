@@ -30,6 +30,11 @@ Controller::Controller(QObject *parent) : QObject(parent)
     shooterIcon = new ShooterIcon(scene);
     nutIcon = new NutIcon(scene);
 
+    //add a test sun flower
+    auto mySunFlower = new SunFlower(controllerScore,scene,ctimer,holder);
+    scene->addItem(mySunFlower);
+    mySunFlower->setPos(14,470);
+
 
 
 }
@@ -56,7 +61,7 @@ void Controller::addZombie(const int& velocity , const int& lives ,  bool isLord
 
 void Controller::addSun()
 {
-    sunList.push_back(new Sun{scene,controllerScore,holder,ctimer});
+    sunList.push_back(new Sun{scene,controllerScore,ctimer,holder});
 }
 
 void Controller::checkLives() //delete zombies that dead from List

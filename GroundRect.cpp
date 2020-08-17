@@ -16,3 +16,8 @@ void GroundRect:: mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 }
 
+GroundRect::~GroundRect()
+{
+ delete plantMusic;
+}
+

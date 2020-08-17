@@ -7,7 +7,7 @@
 
 class ShooterIcon: public QGraphicsPixmapItem
 {
-
+    friend class Controller;
 private:
     QGraphicsScene * shooterIconScene;
     bool isSelected;

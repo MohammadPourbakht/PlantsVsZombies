@@ -31,6 +31,11 @@ Controller::Controller(QObject *parent) : QObject(parent)
     scene->addItem(myShooter);
     myShooter->setPos(14,330);
 
+
+    //......................
+    shooterIcon = new ShooterIcon(scene);
+
+
     //add a test nut
         auto myNut = new Nut(12,ctimer,holder);
         scene->addItem(myNut);
@@ -103,6 +108,16 @@ void Controller::addGround(const int & season)
         }
     }
 
+}
+
+void Controller::checkShooterIcon()
+{
+    if(controllerScore->getScore()>=100){
+        shooterIcon->isSelectable = true;
+    }
+    if(controllerScore->getScore()<100){
+        shooterIcon->isSelectable=false;
+    }
 }
 
 bool Controller::boolGameOver()

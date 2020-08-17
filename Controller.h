@@ -10,6 +10,7 @@
 #include "Sun.h"
 #include "GroundRect.h"
 #include "Nut.h"
+#include "ShooterIcon.h"
 
 class Controller : public QObject
 {
@@ -25,7 +26,7 @@ private:
     QList<GroundRect *> groundList;
     QGraphicsPixmapItem *scoreBoard;
     Score *controllerScore;
-
+    ShooterIcon * shooterIcon;
 
 public:
     explicit Controller(QObject *parent = nullptr);
@@ -36,6 +37,7 @@ public:
     bool boolGameOver();
     void checkLives();
     void addGround(const int & season);
+    void checkShooterIcon();
 
 signals:
 

@@ -15,6 +15,7 @@ private:
 
 public:
     ShooterIcon(QGraphicsScene *shooterIconScene);
+    ~ShooterIcon();
 };
 
 #endif // SHOOTERICON_H

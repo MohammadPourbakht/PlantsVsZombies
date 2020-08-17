@@ -13,6 +13,11 @@ ShooterIcon::ShooterIcon(QGraphicsScene *shooterIconScene)
     shooterIconScene->addItem(this);
 
     //setPos
-    setPos(338,528);
+    setPos(174 , 34);
 
+}
+
+ShooterIcon::~ShooterIcon()
+{
+    delete shooterIconScene;
 }

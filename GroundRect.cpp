@@ -6,6 +6,8 @@ GroundRect::GroundRect(QGraphicsItem *parent)
 {
 
     clickBlock=false;
+    row=0;
+    column=0;
 
 
 }
@@ -18,6 +20,8 @@ void GroundRect:: mousePressEvent(QGraphicsSceneMouseEvent *event)
         plantMusic->setMedia(QUrl("qrc:/music/Plant.mp3"));
         plantMusic->play();
 
+
+
 }
 
 GroundRect::~GroundRect()
@@ -28,18 +32,9 @@ GroundRect::~GroundRect()
 void GroundRect::setGroundRect(int x, int y)
 {
     setRect(x,y,150,150);
+   // this->hide();
 
 }
 
-int GroundRect::getX()
-{
-    return this->x();
-}
-
-
-int GroundRect::getY()
-{
-    return this->y();
-}
 
 

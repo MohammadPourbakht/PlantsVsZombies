@@ -26,20 +26,10 @@ Controller::Controller(QObject *parent) : QObject(parent)
     scene->addItem(controllerScore);
     controllerScore->setPos(39,95);
 
-    //add a test shooter
-//    auto myShooter = new Shooter(ctimer , holder);
-//    scene->addItem(myShooter);
-//    myShooter->setPos(14,330);
 
-
-    //......................
     shooterIcon = new ShooterIcon(scene);
 
 
-    //add a test nut
-//        auto myNut = new Nut(12,ctimer,holder);
-//        scene->addItem(myNut);
-//        myNut->setPos(14,330);
 
 }
 
@@ -84,6 +74,8 @@ void Controller::addGround(const int & season)
             groundList.push_back(new GroundRect{holder});
             groundList.last()->setGroundRect( (i * 150) , 486);
             scene->addItem(groundList.last());
+            groundList.last()->row=i * 150;
+            groundList.last()->column=486;
         }
     }
     if(season == 2 ){
@@ -92,6 +84,8 @@ void Controller::addGround(const int & season)
             groundList.push_back(new GroundRect{holder});
             groundList.last()->setGroundRect( (i * 150) , 486 - (j*150));
             scene->addItem(groundList.last());
+            groundList.last()->row=(i * 150);
+            groundList.last()->column=486 - (j*150);
         }
         }
     }
@@ -101,6 +95,8 @@ void Controller::addGround(const int & season)
              groundList.push_back(new GroundRect{holder});
              groundList.last()->setGroundRect( (i * 150) , 486 - (j*150));
              scene->addItem(groundList.last());
+             groundList.last()->row=(i * 150);
+             groundList.last()->column=486 - (j*150);
         }
         }
     }
@@ -124,7 +120,7 @@ void Controller::planting()
               if(ground->clickBlock==true && ground->myP==nullptr){
                  ground->myP = new Shooter(ctimer , holder);
                  scene->addItem(ground->myP);
-                 ground->myP->setPos(ground->getX(),ground->getY());
+                 ground->myP->setPos(ground->row,ground->column);
                  controllerScore->setScore(controllerScore->getScore()-100);
                  shooterIcon->isSelected=false;
                  ground->clickBlock=false;

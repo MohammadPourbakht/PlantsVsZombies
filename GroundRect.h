@@ -18,15 +18,14 @@ private:
     Plant *myP = nullptr;
     QMediaPlayer * plantMusic;
     bool clickBlock;
-
+    int row;
+    int column;
 
 public:
     explicit GroundRect(QGraphicsItem *parent );
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     ~GroundRect();
     void setGroundRect(int x , int y);
-    int getX();
-    int getY();
 
 signals:
 

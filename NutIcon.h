@@ -1,9 +1,12 @@
 #ifndef NUTICON_H
 #define NUTICON_H
 
-#include "Icons.h"
 
-class NutIcon : public QGraphicsPixmapItem , public Icons
+#include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
+#include <QGraphicsPixmapItem>
+
+class NutIcon: public QGraphicsPixmapItem
 {
     friend class Controller;
 private:
@@ -14,9 +17,9 @@ private:
 public:
     NutIcon(QGraphicsScene *nutIconScene);
     ~NutIcon();
+
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void setNutIcon();
-
 };
 
 #endif // NUTICON_H

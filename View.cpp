@@ -73,13 +73,15 @@ void View::schedule()
 {
     ++seconds;
 
-   //shooterIcon
-    viewController->checkShooterIcon();
-    viewController->planting();
-
     //nutIcon
     viewController->checkNutIcon();
-    viewController->planting();
+ viewController->checkShooterIcon();
+ viewController->planting();
+
+
+   //shooterIcon
+
+
 
 
     if(seconds == 30 || seconds == 39 || seconds == 43 || seconds == 45){

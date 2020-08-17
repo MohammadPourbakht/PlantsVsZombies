@@ -42,6 +42,7 @@ public:
     void addGround(const int & season);
     void checkShooterIcon();
     void planting();
+
     void checkNutIcon();
 
 signals:

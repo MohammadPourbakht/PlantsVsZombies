@@ -1,5 +1,5 @@
 #include "NutIcon.h"
-#include "Icons.h"
+
 
 NutIcon::NutIcon(QGraphicsScene *nutIconScene) : nutIconScene{nutIconScene}
 {
@@ -7,16 +7,15 @@ NutIcon::NutIcon(QGraphicsScene *nutIconScene) : nutIconScene{nutIconScene}
     isSelectable=false;
 
     //set picture
-    setPixmap(QPixmap(":/images/dark nut icon.png"));
+    setPixmap(QPixmap(":/images/dark wall-nut icon.png"));
 
     //add to scene
     nutIconScene->addItem(this);
 
     //setPos
-    setPos(315 , 11);
+    setPos(265 , 11);
 
 }
-
 
 NutIcon::~NutIcon()
 {
@@ -32,7 +31,7 @@ void NutIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
         //add to scene
        // shooterIconScene->addItem(this);
         //setPos
-        setPos(315 , 11);
+        setPos(265 , 11);
     }
 
     //add sound if isSelectable == false
@@ -47,18 +46,18 @@ void NutIcon::setNutIcon()
         //add to scene
         //shooterIconScene->addItem(this);
         //setPos
-        setPos(315 ,11);
+        setPos(265 ,11);
 
     }
 
     if(isSelectable==false && isSelected==false ){
 
         //set picture
-        setPixmap(QPixmap(":/images/dark nut icon.png"));
+        setPixmap(QPixmap(":/images/dark wall-nut icon.png"));
         //add to scene
         //shooterIconScene->addItem(this);
         //setPos
-        setPos(315 , 11);
+        setPos(265 , 11);
 
     }
 }

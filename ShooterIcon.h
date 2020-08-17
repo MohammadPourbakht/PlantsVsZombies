@@ -1,9 +1,12 @@
 #ifndef SHOOTERICON_H
 #define SHOOTERICON_H
 
-#include "Icons.h"
 
-class ShooterIcon: public QGraphicsPixmapItem , public Icons
+#include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
+#include <QGraphicsPixmapItem>
+
+class ShooterIcon: public QGraphicsPixmapItem
 {
     friend class Controller;
 private:

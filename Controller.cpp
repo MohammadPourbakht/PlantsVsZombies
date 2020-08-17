@@ -30,10 +30,10 @@ Controller::Controller(QObject *parent) : QObject(parent)
     shooterIcon = new ShooterIcon(scene);
     nutIcon = new NutIcon(scene);
 
-    //add a test sun flower
-    auto mySunFlower = new SunFlower(controllerScore,scene,ctimer,holder);
-    scene->addItem(mySunFlower);
-    mySunFlower->setPos(14,470);
+//    //add a test sun flower
+//    auto mySunFlower = new SunFlower(controllerScore,scene,ctimer,holder);
+//    scene->addItem(mySunFlower);
+//    mySunFlower->setPos(14,470);
 
 
 
@@ -121,8 +121,8 @@ void Controller::checkShooterIcon()
 
 void Controller::planting()
 {
-    //shooterIcon
-    if(shooterIcon->isSelected==false){
+   //shooterIcon
+    if(shooterIcon->isSelected==false && nutIcon->isSelected==false ){
              for( const auto& ground : groundList ){
            ground->clickBlock=false;
              }
@@ -140,31 +140,26 @@ void Controller::planting()
                  controllerScore->setScore(controllerScore->getScore()-100);
                  shooterIcon->isSelected=false;
                  ground->clickBlock=false;
-                  return;
+
                }
     }
     }
 
     //nutIcon
-    if(nutIcon->isSelected==false){
-             for( const auto& ground : groundList ){
-           ground->clickBlock=false;
-             }
-       }
 
     if(nutIcon->isSelected==true){
-        for( const auto& ground : groundList ){
-            if(ground->myP->isDead == true){
-                ground->myP==nullptr;}
+       for( const auto& ground : groundList ){
+           if(ground->myP->isDead == true){
+           ground->myP==nullptr;}
 
-              if(ground->clickBlock==true && ground->myP==nullptr ){
-                 ground->myP = new Nut(12 , ctimer , holder);
+              if(ground->clickBlock==true && ground->myP==nullptr){
+                 ground->myP = new Nut(12,ctimer , holder);
                  scene->addItem(ground->myP);
                  ground->myP->setPos(ground->row,ground->column);
-                 controllerScore->setScore(controllerScore->getScore()-100);
+                 controllerScore->setScore(controllerScore->getScore()-150);
                  nutIcon->isSelected=false;
                  ground->clickBlock=false;
-                  return;
+
                }
     }
     }
@@ -172,14 +167,14 @@ void Controller::planting()
 
 void Controller::checkNutIcon()
 {
-    if(controllerScore->getScore()>=100){
+
+    if(controllerScore->getScore()>=150){
         nutIcon->isSelectable = true;
     }
-    if(controllerScore->getScore()<100){
+    if(controllerScore->getScore()<150){
         nutIcon->isSelectable=false;
     }
     nutIcon->setNutIcon();
-
 }
 
 bool Controller::boolGameOver()

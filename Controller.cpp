@@ -118,6 +118,7 @@ void Controller::checkShooterIcon()
     if(controllerScore->getScore()<100){
         shooterIcon->isSelectable=false;
     }
+    shooterIcon->setShooterIcon();
 }
 
 bool Controller::boolGameOver()

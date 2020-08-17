@@ -13,7 +13,7 @@ ShooterIcon::ShooterIcon(QGraphicsScene *shooterIconScene) : shooterIconScene{sh
     shooterIconScene->addItem(this);
 
     //setPos
-    setPos(174 , 34);
+    setPos(165 , 11);
 
 }
 
@@ -33,7 +33,7 @@ void ShooterIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
        // shooterIconScene->addItem(this);
 
         //setPos
-        setPos(174 , 34);
+        setPos(165 , 11);
     }
 
     //add sound if isSelectable == false
@@ -41,14 +41,14 @@ void ShooterIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 void ShooterIcon::setShooterIcon()
 {
-    if(isSelectable==true){
+    if(isSelectable==true && isSelected==false){
 
         //set picture
         setPixmap(QPixmap(":/images/shooter icon.png"));
         //add to scene
         //shooterIconScene->addItem(this);
         //setPos
-        setPos(174 , 34);
+        setPos(165 ,11);
 
     }
 
@@ -59,7 +59,7 @@ void ShooterIcon::setShooterIcon()
         //add to scene
         //shooterIconScene->addItem(this);
         //setPos
-        setPos(174 , 34);
+        setPos(165 , 11);
 
     }
 }

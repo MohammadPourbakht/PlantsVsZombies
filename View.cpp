@@ -73,6 +73,8 @@ void View::schedule()
 {
     ++seconds;
 
+    viewController->checkShooterIcon();
+
     if(seconds == 3 || seconds == 9 || seconds == 13 || seconds == 15){
 
         viewController->addZombie(6 , 10 , false);

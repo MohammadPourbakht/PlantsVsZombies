@@ -13,6 +13,7 @@
 #include "ShooterIcon.h"
 #include "NutIcon.h"
 #include "SunFlower.h"
+#include "SunFlowerIcon.h"
 
 class Controller : public QObject
 {
@@ -30,6 +31,7 @@ private:
     Score *controllerScore;
     ShooterIcon * shooterIcon;
     NutIcon * nutIcon;
+    SunFlowerIcon * sunFlowerIcon;
 
 public:
     explicit Controller(QObject *parent = nullptr);
@@ -42,8 +44,8 @@ public:
     void addGround(const int & season);
     void checkShooterIcon();
     void planting();
-
     void checkNutIcon();
+    void checkSunFlowerIcon();
 
 signals:
 

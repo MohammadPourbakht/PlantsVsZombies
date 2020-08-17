@@ -75,11 +75,17 @@ void View::schedule()
 
     //nutIcon
     viewController->checkNutIcon();
- viewController->checkShooterIcon();
- viewController->planting();
+
+    //shooterIcon
+    viewController->checkShooterIcon();
+
+    //sunFloweIcon
+    viewController->checkSunFlowerIcon();
+
+    viewController->planting();
 
 
-   //shooterIcon
+
 
 
 

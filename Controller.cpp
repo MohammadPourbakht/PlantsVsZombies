@@ -29,6 +29,7 @@ Controller::Controller(QObject *parent) : QObject(parent)
 
     shooterIcon = new ShooterIcon(scene);
     nutIcon = new NutIcon(scene);
+    sunFlowerIcon = new SunFlowerIcon(scene);
 
 //    //add a test sun flower
 //    auto mySunFlower = new SunFlower(controllerScore,scene,ctimer,holder);
@@ -175,6 +176,18 @@ void Controller::checkNutIcon()
         nutIcon->isSelectable=false;
     }
     nutIcon->setNutIcon();
+}
+
+void Controller::checkSunFlowerIcon()
+{
+    if(controllerScore->getScore()>= 50){
+        sunFlowerIcon->isSelectable = true;
+    }
+    if(controllerScore->getScore()< 50){
+        sunFlowerIcon->isSelectable=false;
+    }
+   sunFlowerIcon->setSunFlowerIcon();
+
 }
 
 bool Controller::boolGameOver()

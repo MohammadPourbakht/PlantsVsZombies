@@ -26,3 +26,8 @@ Score::~Score()
 {
     delete scorePlayer;
 }
+
+int Score::getScore()
+{
+    return playerScore;
+}

@@ -15,6 +15,7 @@ public:
     Score(QGraphicsItem *parent = 0);
     void addToScore(int s);
     ~Score();
+    int getScore();
 };
 
 #endif // SCORE_H

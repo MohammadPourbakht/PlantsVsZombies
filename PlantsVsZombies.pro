@@ -26,6 +26,7 @@ CONFIG += c++11
 
 SOURCES += \
     Bullet.cpp \
+    GroundRect.cpp \
     Level1Button.cpp \
     Level2Button.cpp \
     Level3Button.cpp \
@@ -44,11 +45,11 @@ SOURCES += \
     Score.cpp \
     Controller.cpp \
     View.cpp \
-    Ground.cpp \
     Nut.cpp
 
 HEADERS += \
     Bullet.h \
+    GroundRect.h \
     Level1Button.h \
     Level2Button.h \
     Level3Button.h \
@@ -66,7 +67,6 @@ HEADERS += \
     Score.h \
     Controller.h \
     View.h \
-    Ground.h \
     Nut.h
 
 # Default rules for deployment.

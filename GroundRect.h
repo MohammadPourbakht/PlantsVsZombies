@@ -9,13 +9,13 @@
 
 
 
-class Ground : public QObject , public QGraphicsRectItem
+class GroundRect : public QObject , public QGraphicsRectItem
 {
     Q_OBJECT
 private:
     Plant *myP = nullptr;
 public:
-    explicit Ground(QGraphicsItem *parent = nullptr);
+    explicit GroundRect(QGraphicsItem *parent = nullptr);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
 
 signals:

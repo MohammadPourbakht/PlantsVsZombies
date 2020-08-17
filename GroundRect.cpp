@@ -1,13 +1,13 @@
-#include "Ground.h"
+#include "GroundRect.h"
 #include <QGraphicsScene>
 
-Ground::Ground(QGraphicsItem *parent)
+GroundRect::GroundRect(QGraphicsItem *parent)
     : QObject () , QGraphicsRectItem (parent)
 {
 
 }
 
-void Ground:: mousePressEvent(QGraphicsSceneMouseEvent *event)
+void GroundRect:: mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     myP = new Plant();
     scene()->addItem(myP);

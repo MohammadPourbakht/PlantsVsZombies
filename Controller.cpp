@@ -36,32 +36,6 @@ Controller::Controller(QObject *parent) : QObject(parent)
         scene->addItem(myNut);
         myNut->setPos(14,330);
 
-    //add rectItem
-    Ground *rect1 = new Ground();
-    Ground *rect2 = new Ground();
-    Ground *rect3 = new Ground();
-    Ground *rect4 = new Ground();
-    Ground *rect5 = new Ground();
-    Ground *rect6 = new Ground();
-    Ground *rect7 = new Ground();
-
-    rect1->setRect(0,330,150,150);
-    rect2->setRect(150,330,150,150);
-    rect3->setRect(300,330,150,150);
-    rect4->setRect(450,330,150,150);
-    rect5->setRect(600,330,150,150);
-    rect6->setRect(750,330,150,150);
-    rect7->setRect(900,330,150,150);
-    scene->addItem(rect1);
-    scene->addItem(rect2);
-    scene->addItem(rect3);
-    scene->addItem(rect4);
-    scene->addItem(rect5);
-    scene->addItem(rect6);
-    scene->addItem(rect7);
-
-
-
 }
 
 Controller::~Controller()

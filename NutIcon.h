@@ -12,10 +12,10 @@ private:
     bool isSelectable;
 
 public:
-    NutIcon(QGraphicsScene *shooterIconScene);
+    NutIcon(QGraphicsScene *nutIconScene);
     ~NutIcon();
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
-    void setShooterIcon();
+    void setNutIcon();
 
 };
 

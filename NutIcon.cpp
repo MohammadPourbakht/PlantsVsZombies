@@ -37,3 +37,28 @@ void NutIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
     //add sound if isSelectable == false
 }
+
+void NutIcon::setNutIcon()
+{
+    if(isSelectable==true && isSelected==false){
+
+        //set picture
+        setPixmap(QPixmap(":/images/wall-nut icon.png"));
+        //add to scene
+        //shooterIconScene->addItem(this);
+        //setPos
+        setPos(315 ,11);
+
+    }
+
+    if(isSelectable==false && isSelected==false ){
+
+        //set picture
+        setPixmap(QPixmap(":/images/dark nut icon.png"));
+        //add to scene
+        //shooterIconScene->addItem(this);
+        //setPos
+        setPos(315 , 11);
+
+    }
+}

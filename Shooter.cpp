@@ -20,8 +20,6 @@ Shooter::Shooter(QTimer * shooterTimer, QGraphicsItem *parent)
 Shooter::~Shooter()
 {
     delete shooterPlayer;
-
-
 }
 
 void Shooter::shoot()

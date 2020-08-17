@@ -86,7 +86,6 @@ void Controller::addGround(const int & season)
             scene->addItem(groundList.last());
         }
     }
-
     if(season == 2 ){
         for(int j = 0 ; j < 2 ; j++){
          for(int i = 0 ; i < 7 ; i++){
@@ -96,8 +95,6 @@ void Controller::addGround(const int & season)
         }
         }
     }
-
-
     if(season == 3 ){
         for(int j = 0 ; j < 3 ; j++){
            for(int i = 0 ; i < 7 ; i++){
@@ -107,7 +104,6 @@ void Controller::addGround(const int & season)
         }
         }
     }
-
 }
 
 void Controller::checkShooterIcon()
@@ -125,13 +121,13 @@ void Controller::planting()
 {
     if(shooterIcon->isSelected==true){
         for( const auto& ground : groundList ){
-              if(ground->clickBlock==true){
+              if(ground->clickBlock==true && ground->myP==nullptr){
                  ground->myP = new Shooter(ctimer , holder);
                  scene->addItem(ground->myP);
-                ground->myP->setPos(14,330);
-                  controllerScore=controllerScore-100;
-                  shooterIcon->isSelected=false;
-                  ground->clickBlock=false;
+                 ground->myP->setPos(ground->getX(),ground->getY());
+                 controllerScore->setScore(controllerScore->getScore()-100);
+                 shooterIcon->isSelected=false;
+                 ground->clickBlock=false;
                   return;
                }
     }

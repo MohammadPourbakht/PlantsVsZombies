@@ -28,10 +28,8 @@ void ShooterIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
         isSelected=true;
         //set picture
         setPixmap(QPixmap(":/images/light shooter icon.png"));
-
         //add to scene
        // shooterIconScene->addItem(this);
-
         //setPos
         setPos(165 , 11);
     }
@@ -52,7 +50,7 @@ void ShooterIcon::setShooterIcon()
 
     }
 
-    if(isSelectable==false){
+    if(isSelectable==false && isSelected==false ){
 
         //set picture
         setPixmap(QPixmap(":/images/dark shooter icon.png"));

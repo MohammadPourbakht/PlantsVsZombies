@@ -91,7 +91,7 @@ void View::schedule()
                 backgroundMusic->play();
             }
 
-    viewController->checkLives();
+        viewController->checkLives();
 
         if(viewController->boolGameOver()==true){
          stopGame();

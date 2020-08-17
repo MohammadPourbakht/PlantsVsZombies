@@ -122,13 +122,14 @@ void Controller::checkShooterIcon()
 
 void Controller::planting()
 {
-   //shooterIcon
-    if(shooterIcon->isSelected==false && nutIcon->isSelected==false ){
+    //score kam bshe click konim nabayd bekare , in chand khat nabashe vaghti score ziad she hmonja mikare
+    if(shooterIcon->isSelected==false && nutIcon->isSelected==false  && sunFlowerIcon->isSelected==false){
              for( const auto& ground : groundList ){
            ground->clickBlock=false;
              }
        }
 
+    //shooterIcon
     if(shooterIcon->isSelected==true){
         for( const auto& ground : groundList ){
             if(ground->myP->isDead == true){
@@ -164,6 +165,26 @@ void Controller::planting()
                }
     }
     }
+
+    //sunFlowerIcon
+
+    if(sunFlowerIcon->isSelected==true){
+       for( const auto& ground : groundList ){
+           if(ground->myP->isDead == true){
+           ground->myP == nullptr;}
+
+              if(ground->clickBlock==true && ground->myP==nullptr){
+                 ground->myP = new SunFlower( controllerScore , scene , ctimer , holder);
+                 scene->addItem(ground->myP);
+                 ground->myP->setPos(ground->row,ground->column);
+                 controllerScore->setScore(controllerScore->getScore() - 50);
+                 sunFlowerIcon->isSelected=false;
+                 ground->clickBlock=false;
+
+               }
+    }
+    }
+
 }
 
 void Controller::checkNutIcon()

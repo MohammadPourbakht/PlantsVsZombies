@@ -39,6 +39,7 @@ SOURCES += \
     Plant.cpp \
     PlayButton.cpp \
     Shooter.cpp \
+    ShooterIcon.cpp \
         main.cpp \
     Zombie.cpp \
     Sun.cpp \
@@ -62,6 +63,7 @@ HEADERS += \
     Plant.h \
     PlayButton.h \
     Shooter.h \
+    ShooterIcon.h \
     Zombie.h \
     Sun.h \
     Score.h \

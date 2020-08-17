@@ -1,5 +1,5 @@
-#ifndef GROUND_H
-#define GROUND_H
+#ifndef GROUNDRECT_H
+#define GROUNDRECT_H
 
 #include <QObject>
 #include <QGraphicsRectItem>
@@ -28,4 +28,4 @@ public slots:
 
 };
 
-#endif // GROUND_H
+#endif // GROUNDRECT_H

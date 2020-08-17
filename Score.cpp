@@ -31,3 +31,8 @@ int Score::getScore()
 {
     return playerScore;
 }
+
+void Score::setScore(int score)
+{
+    playerScore=score;
+}

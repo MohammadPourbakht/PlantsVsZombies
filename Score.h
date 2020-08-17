@@ -16,6 +16,7 @@ public:
     void addToScore(int s);
     ~Score();
     int getScore();
+    void setScore(int score);
 };
 
 #endif // SCORE_H

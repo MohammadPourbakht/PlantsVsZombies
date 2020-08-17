@@ -4,8 +4,7 @@
 
 Nut::Nut(const int& pixPer40MiliSec , QTimer *timer
               , QGraphicsItem *parent)
-    : QObject () , QGraphicsPixmapItem (parent) ,
-      pixPer40MiliSec{pixPer40MiliSec}
+    : QObject ()  , Plant() , pixPer40MiliSec{pixPer40MiliSec}
 {
      Layer=0;
 

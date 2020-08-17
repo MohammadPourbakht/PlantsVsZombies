@@ -3,8 +3,9 @@
 
 #include <QObject>
 #include <QGraphicsPixmapItem>
+#include "Plant.h"
 
-class Nut : public QObject , public QGraphicsPixmapItem
+class Nut : public QObject , public Plant
 {
     Q_OBJECT
 private:
@@ -12,6 +13,7 @@ private:
     int pixPer40MiliSec;
 public:
     Nut(const int& pixPer40MiliSec , QTimer *timer , QGraphicsItem *parent);
+
 
 signals:
 

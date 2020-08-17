@@ -28,6 +28,7 @@ Controller::Controller(QObject *parent) : QObject(parent)
 
 
     shooterIcon = new ShooterIcon(scene);
+    nutIcon = new NutIcon(scene);
 
 
 
@@ -134,6 +135,18 @@ void Controller::planting()
                }
     }
     }
+}
+
+void Controller::checkNutIcon()
+{
+    if(controllerScore->getScore()>=100){
+        nutIcon->isSelectable = true;
+    }
+    if(controllerScore->getScore()<100){
+        nutIcon->isSelectable=false;
+    }
+    nutIcon->setNutIcon();
+
 }
 
 bool Controller::boolGameOver()

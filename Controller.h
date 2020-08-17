@@ -11,6 +11,7 @@
 #include "GroundRect.h"
 #include "Nut.h"
 #include "ShooterIcon.h"
+#include "NutIcon.h"
 
 class Controller : public QObject
 {
@@ -27,6 +28,7 @@ private:
     QGraphicsPixmapItem *scoreBoard;
     Score *controllerScore;
     ShooterIcon * shooterIcon;
+    NutIcon * nutIcon;
 
 public:
     explicit Controller(QObject *parent = nullptr);
@@ -39,6 +41,8 @@ public:
     void addGround(const int & season);
     void checkShooterIcon();
     void planting();
+    void checkNutIcon();
+
 signals:
 
 };

@@ -77,6 +77,8 @@ void View::schedule()
     viewController->checkShooterIcon();
     viewController->planting();
 
+    //nutIcon
+
     if(seconds == 30 || seconds == 39 || seconds == 43 || seconds == 45){
 
         viewController->addZombie(6 , 10 , false);

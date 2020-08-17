@@ -18,6 +18,7 @@ public:
     ~ShooterIcon();
 
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
+    void setShooterIcon();
 };
 
 #endif // SHOOTERICON_H

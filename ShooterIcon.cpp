@@ -36,3 +36,28 @@ void ShooterIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
         setPos(174 , 34);
     }
 }
+
+void ShooterIcon::setShooterIcon()
+{
+    if(isSelectable==true){
+
+        //set picture
+        setPixmap(QPixmap(":/images/shooter icon.png"));
+        //add to scene
+        shooterIconScene->addItem(this);
+        //setPos
+        setPos(174 , 34);
+
+    }
+
+    if(isSelectable==false){
+
+        //set picture
+        setPixmap(QPixmap(":/images/dark shooter icon.png"));
+        //add to scene
+        shooterIconScene->addItem(this);
+        //setPos
+        setPos(174 , 34);
+
+    }
+}

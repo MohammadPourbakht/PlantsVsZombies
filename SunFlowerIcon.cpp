@@ -36,4 +36,29 @@ void SunFlowerIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
     //add sound if isSelectable == false
 }
 
+void SunFlowerIcon::setSunFlowerIcon()
+{
+    if(isSelectable==true && isSelected==false){
+
+        //set picture
+        setPixmap(QPixmap(":/images/sunflower icon.png"));
+        //add to scene
+        //shooterIconScene->addItem(this);
+        //setPos
+        setPos(440 ,11);
+
+    }
+
+    if(isSelectable==false && isSelected==false ){
+
+        //set picture
+        setPixmap(QPixmap(":/images/dark sunflower icon.png"));
+        //add to scene
+        //shooterIconScene->addItem(this);
+        //setPos
+        setPos(440 , 11);
+
+    }
+}
+
 

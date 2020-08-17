@@ -6,7 +6,7 @@ SunFlowerIcon::SunFlowerIcon(QGraphicsScene *sunFlowerIconScene) : sunFlowerIcon
     isSelectable=false;
 
     //set picture
-    setPixmap(QPixmap(":/images/sunflower icon.png"));
+    setPixmap(QPixmap(":/images/dark sunflower icon.png"));
 
     //add to scene
     sunFlowerIconScene->addItem(this);

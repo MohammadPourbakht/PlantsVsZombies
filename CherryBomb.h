@@ -4,6 +4,9 @@
 #include <QObject>
 #include "Plant.h"
 #include <QTimer>
+#include <QGraphicsPixmapItem>
+#include<QMediaPlayer>
+
 
 class CherryBomb : public QObject , public Plant
 {
@@ -11,8 +14,9 @@ class CherryBomb : public QObject , public Plant
 private:
     int timeIntervals;
     QTimer * cherryTimer;
+    QMediaPlayer * cherryBombPlayer;
 public:
-    explicit CherryBomb(QTimer *cherrytTimer,QGraphicsItem *parent = nullptr);
+    explicit CherryBomb(QTimer *cherrytTimer , QGraphicsItem *parent = nullptr);
 
 signals:
 

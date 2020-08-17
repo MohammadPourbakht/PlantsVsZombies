@@ -2,5 +2,10 @@
 
 Plant::Plant()
 {
+    isDead = false;
+}
 
+Plant::~Plant()
+{
+    isDead = true;
 }

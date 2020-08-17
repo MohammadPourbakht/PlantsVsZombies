@@ -15,6 +15,8 @@ Nut::Nut(const int& pixPer40MiliSec , QTimer *timer
 
 }
 
+
+
 void Nut::moveToRight()
 {
 
@@ -31,10 +33,7 @@ void Nut::moveToRight()
         }
     }
 
-    if(x()>1200){
-        scene()->removeItem(this);
-        delete this;
-    }
+
 
     setPos( x() + pixPer40MiliSec , y() );
 
@@ -71,5 +70,10 @@ void Nut::moveToRight()
     setPixmap(QPixmap(":/images/Wall-nut 8.png"));}
 
     Layer=Layer+1;
+
+    if(x()>1200){
+        scene()->removeItem(this);
+        delete this;
+    }
 
 }

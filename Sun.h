@@ -18,8 +18,9 @@ private:
     int timeIntervals;
 
 public:
-    Sun(QGraphicsScene *sunScene , Score *sunScore , QGraphicsItem *parent ,
-        QTimer *timer);
+    explicit Sun(QGraphicsScene *sunScene , Score *sunScore , QTimer *timer
+        , QGraphicsItem *parent = nullptr);
+
 
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
 public slots:

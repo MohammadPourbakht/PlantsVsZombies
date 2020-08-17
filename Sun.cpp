@@ -1,8 +1,8 @@
 #include "Sun.h"
 #include <cstdlib>
 
-Sun::Sun(QGraphicsScene *sunScene, Score *sunScore, QGraphicsItem *parent,
-         QTimer *timer)
+Sun::Sun(QGraphicsScene *sunScene , Score *sunScore , QTimer *timer
+         , QGraphicsItem *parent)
     : QObject () , QGraphicsPixmapItem (parent) ,
       sunScene(sunScene) , sunScore(sunScore) , timeIntervals{0}
 {

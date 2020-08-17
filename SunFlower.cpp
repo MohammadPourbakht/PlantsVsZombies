@@ -14,3 +14,15 @@ SunFlower::SunFlower(Score *sunScore ,  QGraphicsScene *sunScene ,
 
 }
 
+void SunFlower::makeSun()
+{
+    if(timeIntervals % 3750 == 0){
+
+       auto mySun = new Sun(sunScene,sunScore,sunTimer);
+       scene()->addItem(mySun);
+       mySun->setPos(x(),y());
+
+
+    }
+    ++timeIntervals;
+}

@@ -5,6 +5,7 @@ GroundRect::GroundRect(QGraphicsItem *parent)
     : QObject () , QGraphicsRectItem (parent)
 {
 
+
 }
 
 void GroundRect:: mousePressEvent(QGraphicsSceneMouseEvent *event)
@@ -18,6 +19,14 @@ void GroundRect:: mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 GroundRect::~GroundRect()
 {
- delete plantMusic;
+    delete plantMusic;
 }
+
+void GroundRect::setGroundRect(int x, int y)
+{
+    setRect(x,y,150,150);
+
+}
+
+
 

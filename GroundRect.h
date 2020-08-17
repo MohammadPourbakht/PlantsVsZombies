@@ -20,6 +20,7 @@ public:
     explicit GroundRect(QGraphicsItem *parent = nullptr);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     ~GroundRect();
+    void setGroundRect(int x , int y);
 
 signals:
 

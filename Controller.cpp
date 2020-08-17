@@ -27,9 +27,9 @@ Controller::Controller(QObject *parent) : QObject(parent)
     controllerScore->setPos(39,95);
 
     //add a test shooter
-    auto myShooter = new Shooter(ctimer , holder);
-    scene->addItem(myShooter);
-    myShooter->setPos(14,330);
+//    auto myShooter = new Shooter(ctimer , holder);
+//    scene->addItem(myShooter);
+//    myShooter->setPos(14,330);
 
 
     //......................
@@ -37,9 +37,9 @@ Controller::Controller(QObject *parent) : QObject(parent)
 
 
     //add a test nut
-        auto myNut = new Nut(12,ctimer,holder);
-        scene->addItem(myNut);
-        myNut->setPos(14,330);
+//        auto myNut = new Nut(12,ctimer,holder);
+//        scene->addItem(myNut);
+//        myNut->setPos(14,330);
 
 }
 
@@ -119,6 +119,23 @@ void Controller::checkShooterIcon()
         shooterIcon->isSelectable=false;
     }
     shooterIcon->setShooterIcon();
+}
+
+void Controller::planting()
+{
+    if(shooterIcon->isSelected==true){
+        for( const auto& ground : groundList ){
+              if(ground->clickBlock==true){
+                 ground->myP = new Shooter(ctimer , holder);
+                 scene->addItem(ground->myP);
+                ground->myP->setPos(14,330);
+                  controllerScore=controllerScore-100;
+                  shooterIcon->isSelected=false;
+                  ground->clickBlock=false;
+                  return;
+               }
+    }
+    }
 }
 
 bool Controller::boolGameOver()

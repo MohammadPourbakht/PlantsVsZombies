@@ -38,6 +38,7 @@ public:
     void checkLives();
     void addGround(const int & season);
     void checkShooterIcon();
+    void planting();
 
 signals:
 

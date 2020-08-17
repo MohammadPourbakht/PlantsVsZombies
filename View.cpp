@@ -73,9 +73,11 @@ void View::schedule()
 {
     ++seconds;
 
+   //shooterIcon
     viewController->checkShooterIcon();
+    viewController->planting();
 
-    if(seconds == 3 || seconds == 9 || seconds == 13 || seconds == 15){
+    if(seconds == 30 || seconds == 39 || seconds == 43 || seconds == 45){
 
         viewController->addZombie(6 , 10 , false);
 

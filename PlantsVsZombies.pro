@@ -41,6 +41,7 @@ SOURCES += \
     PlayButton.cpp \
     Shooter.cpp \
     ShooterIcon.cpp \
+    SunFlowerIcon.cpp \
         main.cpp \
     Zombie.cpp \
     Sun.cpp \
@@ -68,6 +69,7 @@ HEADERS += \
     PlayButton.h \
     Shooter.h \
     ShooterIcon.h \
+    SunFlowerIcon.h \
     Zombie.h \
     Sun.h \
     Score.h \

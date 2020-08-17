@@ -16,6 +16,8 @@ private:
 public:
     ShooterIcon(QGraphicsScene *shooterIconScene);
     ~ShooterIcon();
+
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
 };
 
 #endif // SHOOTERICON_H

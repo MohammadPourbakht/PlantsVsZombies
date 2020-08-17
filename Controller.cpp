@@ -115,6 +115,12 @@ void Controller::checkShooterIcon()
 
 void Controller::planting()
 {
+    if(shooterIcon->isSelected==false){
+             for( const auto& ground : groundList ){
+           ground->clickBlock=false;
+             }
+       }
+
     if(shooterIcon->isSelected==true){
         for( const auto& ground : groundList ){
               if(ground->clickBlock==true && ground->myP==nullptr){

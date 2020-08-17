@@ -14,6 +14,7 @@
 #include "NutIcon.h"
 #include "SunFlower.h"
 #include "SunFlowerIcon.h"
+#include "CherryBomb.h"
 
 class Controller : public QObject
 {

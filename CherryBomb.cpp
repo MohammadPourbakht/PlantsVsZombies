@@ -11,7 +11,7 @@ CherryBomb::CherryBomb(QTimer *cherrytTimer, QGraphicsItem *parent)
 
     //create shooter player
     cherryBombPlayer = new QMediaPlayer();
-    cherryBombPlayer->setMedia(QUrl("qrc:/music/cherry.mp3")); //add cherry mp3 .........................
+    cherryBombPlayer->setMedia(QUrl("qrc:/music/cherry.mp3")); //add cherry mp3 va pain play ...............
 
     connect(cherryTimer , SIGNAL(timeout()) , this , SLOT(move()));
 }

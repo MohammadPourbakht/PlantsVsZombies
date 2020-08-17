@@ -31,10 +31,16 @@ Controller::Controller(QObject *parent) : QObject(parent)
     nutIcon = new NutIcon(scene);
     sunFlowerIcon = new SunFlowerIcon(scene);
 
-//    //add a test sun flower
+     //add a test sun flower
 //    auto mySunFlower = new SunFlower(controllerScore,scene,ctimer,holder);
 //    scene->addItem(mySunFlower);
-//    mySunFlower->setPos(14,470);
+//    mySunFlower->setPos(600,470);
+
+        //add a test sun flower
+        auto mycherry = new CherryBomb(ctimer,holder);
+        scene->addItem(mycherry);
+        mycherry->setPos(750,170);
+
 
 
 

@@ -2,6 +2,8 @@
 #include <QGraphicsScene>
 #include <QList>
 #include "Plant.h"
+#include "Nut.h"
+#include "CherryBomb.h"
 
 Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
               ,const int lives , QGraphicsItem *parent , bool isLord  )
@@ -76,6 +78,7 @@ void Zombie::moveToLeft()
     QList<QGraphicsItem *> collidingObjects = collidingItems();
     //remove and delete collidingItem if it was a plant
     for(size_t i{0} ; i<collidingObjects.size();++i){
+      if(typeid(*(collidingObjects)[i])!=typeid (Nut) && typeid(*(collidingObjects)[i])!=typeid (CherryBomb)){
         Plant* plant = dynamic_cast<Plant*>(collidingObjects[i]);
         if(plant){
 
@@ -93,7 +96,7 @@ void Zombie::moveToLeft()
             }
         }
     }
-
+}
     setPos( x() - pixPer40MiliSec , y() );
 
        if(isLord==false){

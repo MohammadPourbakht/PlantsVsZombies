@@ -90,7 +90,7 @@ void View::schedule()
 
 
 
-    if(seconds == 30 || seconds == 39 || seconds == 43 || seconds == 45){
+    if(seconds == 1 || seconds == 39 || seconds == 43 || seconds == 45){
 
         viewController->addZombie(6 , 10 , false);
 

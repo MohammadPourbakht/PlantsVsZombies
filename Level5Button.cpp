@@ -1,5 +1,5 @@
 #include "Level5Button.h"
-
+#include "View.h"
 
 Level5Button::Level5Button(QGraphicsScene *Scene)  : level5Scene{Scene}
 {
@@ -25,7 +25,9 @@ void Level5Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     clickl5 = true;
     level5ButtonMusic->play();
-    // go level3...
+
+    auto myV = new View(3);
+    myV->show();
 }
 
 

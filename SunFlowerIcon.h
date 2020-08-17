@@ -15,7 +15,7 @@ private:
 
 public:
     SunFlowerIcon(QGraphicsScene *sunFlowerIconScene);
-    SunFlowerIcon();
+    ~SunFlowerIcon();
 
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void setSunFlowerIcon();

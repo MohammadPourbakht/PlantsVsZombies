@@ -16,4 +16,9 @@ SunFlowerIcon::SunFlowerIcon(QGraphicsScene *sunFlowerIconScene) : sunFlowerIcon
 
 }
 
+SunFlowerIcon::~SunFlowerIcon()
+{
+    delete sunFlowerIconScene;
+}
+
 

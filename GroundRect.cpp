@@ -9,10 +9,10 @@ GroundRect::GroundRect(QGraphicsItem *parent)
 
 void GroundRect:: mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    myP = new Plant();
-    scene()->addItem(myP);
-    myP->setPos(40,40);
-
+    //set plant music
+        plantMusic = new QMediaPlayer();
+        plantMusic->setMedia(QUrl("qrc:/music/plant.mp3"));
+        plantMusic->play();
 
 }
 

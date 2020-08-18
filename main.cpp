@@ -1,5 +1,4 @@
 #include <QApplication>
-#include "View.h"
 #include <cstdlib>
 #include <ctime>
 #include "Loading.h"

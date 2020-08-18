@@ -18,7 +18,8 @@ private:
     int Layer;
     QMediaPlayer *zombieMusic;
      bool isLord;
-
+     int xx; // x of plants that bited by zombie
+     int yy; // y of plants that bited by zombie
 public:
 
     bool  gameOv;
@@ -30,6 +31,8 @@ public:
     int getLives();
     void setLives(int lives);
     bool getisLord();
+    int getxx();
+    int getyy();
 
 public slots:
     void moveToLeft();

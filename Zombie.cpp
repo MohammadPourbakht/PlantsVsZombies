@@ -10,7 +10,8 @@ Zombie::Zombie(const int& pixPer40MiliSec , QTimer *timer
     : QObject () , QGraphicsPixmapItem (parent) ,
       pixPer40MiliSec{pixPer40MiliSec} , lives{lives} , isLord{isLord}
 {
-
+xx=-1;
+yy=-1;
     gameOv=false;
     Layer=0;
 
@@ -71,6 +72,16 @@ bool Zombie::getisLord()
     return isLord;
 }
 
+int Zombie::getxx()
+{
+    return xx;
+}
+
+int Zombie::getyy()
+{
+    return yy;
+}
+
 
 void Zombie::moveToLeft()
 {
@@ -84,6 +95,10 @@ void Zombie::moveToLeft()
         if(plant){
 
             scene()->removeItem(collidingObjects[i]);
+
+            this->xx=plant->x();
+            this->yy=plant->y();
+
             delete collidingObjects[i];
             plant->isDead =true;
           QMediaPlayer*  zombieBiteMusic = new QMediaPlayer();

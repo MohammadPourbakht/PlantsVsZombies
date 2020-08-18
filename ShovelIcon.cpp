@@ -12,7 +12,7 @@ ShovelIcon::ShovelIcon(QGraphicsScene *shovelIconScene) : shovelIconScene{shovel
     shovelIconScene->addItem(this);
 
     //setPos
-    setPos(730 , 0);
+    setPos(750 , 0);
 
 }
 
@@ -30,7 +30,7 @@ void ShovelIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
         //add to scene
        // shooterIconScene->addItem(this);
         //setPos
-        setPos(730 , 0);
+        setPos(750 , 0);
 
     //add sound if isSelectable == false
 }
@@ -44,7 +44,7 @@ void ShovelIcon::setShovelIcon()
         //add to scene
         //shooterIconScene->addItem(this);
         //setPos
-        setPos(730 , 0);
+        setPos(750 , 0);
 
     }
 

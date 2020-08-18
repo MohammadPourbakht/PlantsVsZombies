@@ -130,7 +130,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
     //score kam bshe click konim nabayd bekare , in chand khat nabashe vaghti score ziad she hmonja mikare
     if(shooterIcon->isSelected==false && nutIcon->isSelected==false
-       && sunFlowerIcon->isSelected==false && cherryIcon->isSelected==false){
+    && sunFlowerIcon->isSelected==false && cherryIcon->isSelected==false && shovelIcon->isSelected==false){
              for( const auto& ground : groundList ){
            ground->clickBlock=false;
              }
@@ -139,13 +139,12 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
     //shooterIcon
     if(shooterIcon->isSelected==true){
         for( const auto& ground : groundList ){
-            if(ground->myP->isDead == true){
-                ground->myP==nullptr;}
 
               if(ground->clickBlock==true && ground->myP==nullptr){
                  ground->myP = new Shooter(ctimer , holder);
                  scene->addItem(ground->myP);
-                 ground->myP->setPos(ground->row,ground->column);
+                 ground->myP->setPos(ground->row , ground->column);
+                 ground->plantMusic->play();
                  controllerScore->setScore(controllerScore->getScore()-100);
                  shooterIcon->isSelected=false;
                  ground->clickBlock=false;
@@ -157,13 +156,12 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
     if(nutIcon->isSelected==true){
        for( const auto& ground : groundList ){
-           if(ground->myP->isDead == true){
-           ground->myP==nullptr;}
 
               if(ground->clickBlock==true && ground->myP==nullptr){
                  ground->myP = new Nut(12,ctimer , holder);
                  scene->addItem(ground->myP);
                  ground->myP->setPos(ground->row , (ground->column)+20);
+                 ground->plantMusic->play();
                  controllerScore->setScore(controllerScore->getScore()-150);
                  nutIcon->isSelected=false;
                  ground->clickBlock=false;
@@ -176,12 +174,12 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
     if(sunFlowerIcon->isSelected==true){
        for( const auto& ground : groundList ){
-           if(ground->myP->isDead == true){
-           ground->myP == nullptr;}
+
               if(ground->clickBlock==true && ground->myP==nullptr){
                  ground->myP = new SunFlower( controllerScore , scene , ctimer , holder);
                  scene->addItem(ground->myP);
                  ground->myP->setPos(ground->row,ground->column);
+                 ground->plantMusic->play();
                  controllerScore->setScore(controllerScore->getScore() - 50);
                  sunFlowerIcon->isSelected=false;
                  ground->clickBlock=false;
@@ -200,8 +198,24 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                  ground->myP = new CherryBomb(ctimer , holder);
                  scene->addItem(ground->myP);
                  ground->myP->setPos((ground->row)-150 , (ground->column)-150);
+                 ground->plantMusic->play();
                  controllerScore->setScore(controllerScore->getScore()-150);
                  cherryIcon->isSelected=false;
+                 ground->clickBlock=false;
+
+                 }
+    }
+    }
+
+    //shovelIcon
+    if(shovelIcon->isSelected==true){
+        for( const auto& ground : groundList ){
+
+              if(ground->clickBlock==true){
+                 scene->removeItem(ground->myP);
+                 delete  ground->myP;
+                 ground->myP = nullptr;
+                 shovelIcon->isSelected=false;
                  ground->clickBlock=false;
 
                  }
@@ -247,7 +261,7 @@ void Controller::checkCherryIcon()
 
 void Controller::checkShovelIcon()
 {
-    cherryIcon->setCherryIcon();
+    shovelIcon->setShovelIcon();
 }
 
 bool Controller::boolGameOver()

@@ -133,7 +133,8 @@ void Controller::checkShooterIcon()
 
 void Controller::planting(int s)
 {
-    if(number != 0){
+
+    if(number > 1){
         shooterIcon->isSelected=false;
         nutIcon->isSelected=false;
         cherryIcon->isSelected=false;
@@ -193,6 +194,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                  ground->plantMusic->play();
                  controllerScore->setScore(controllerScore->getScore()-100);
                  shooterIcon->isSelected=false;
+                 number--;
                  ground->clickBlock=false;
                }
     }
@@ -211,6 +213,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                  ground->plantMusic->play();
                  controllerScore->setScore(controllerScore->getScore()-150);
                  nutIcon->isSelected=false;
+                 number--;
                  ground->clickBlock=false;
                  ground->myP=nullptr;
                }
@@ -230,6 +233,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                  ground->plantMusic->play();
                  controllerScore->setScore(controllerScore->getScore() - 50);
                  sunFlowerIcon->isSelected=false;
+                 number--;
                  ground->clickBlock=false;
 
                }
@@ -250,6 +254,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                  ground->plantMusic->play();
                  controllerScore->setScore(controllerScore->getScore()-150);
                  cherryIcon->isSelected=false;
+                 number--;
                  ground->clickBlock=false;
 
                  }
@@ -266,6 +271,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                  delete  ground->myP;
                  ground->myP = nullptr;
                  shovelIcon->isSelected=false;
+                 number--;
                  ground->clickBlock=false;
 
                  }
@@ -317,6 +323,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                          ground->plantMusic->play();
                          controllerScore->setScore(controllerScore->getScore()-100);
                          shooterIcon->isSelected=false;
+                         number--;
                          ground->clickBlock=false;
                        }
             }
@@ -335,6 +342,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                          ground->plantMusic->play();
                          controllerScore->setScore(controllerScore->getScore()-150);
                          nutIcon->isSelected=false;
+                         number--;
                          ground->clickBlock=false;
                          ground->myP=nullptr;
                        }
@@ -354,6 +362,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                          ground->plantMusic->play();
                          controllerScore->setScore(controllerScore->getScore() - 50);
                          sunFlowerIcon->isSelected=false;
+                         number--;
                          ground->clickBlock=false;
 
                        }
@@ -370,6 +379,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                          delete  ground->myP;
                          ground->myP = nullptr;
                          shovelIcon->isSelected=false;
+                         number--;
                          ground->clickBlock=false;
 
                          }
@@ -420,6 +430,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                          ground->plantMusic->play();
                          controllerScore->setScore(controllerScore->getScore()-100);
                          shooterIcon->isSelected=false;
+                         number--;
                          ground->clickBlock=false;
                        }
             }
@@ -438,6 +449,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                          ground->plantMusic->play();
                          controllerScore->setScore(controllerScore->getScore() - 50);
                          sunFlowerIcon->isSelected=false;
+                         number--;
                          ground->clickBlock=false;
 
                        }
@@ -454,6 +466,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                          delete  ground->myP;
                          ground->myP = nullptr;
                          shovelIcon->isSelected=false;
+                         number--;
                          ground->clickBlock=false;
 
                          }

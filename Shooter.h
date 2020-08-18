@@ -15,10 +15,10 @@ private:
     QMediaPlayer * shooterPlayer;
     int timeIntervals;
     QTimer * shooterTimer;
-
+    bool isLevel6;
 
 public:
-    explicit Shooter( QTimer * shooterTimer , QGraphicsItem *parent = nullptr);
+    explicit Shooter( QTimer * shooterTimer ,bool level6, QGraphicsItem *parent = nullptr );
     ~Shooter();
 
 signals:

@@ -39,6 +39,7 @@ private:
     ShovelIcon * shovelIcon;
     int season;
     int number;
+    bool isLevelSix;
 
 public:
     explicit Controller(int season,QObject *parent =nullptr);

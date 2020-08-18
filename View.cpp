@@ -83,11 +83,15 @@ void View::setBackground()
 
 void View::schedule()
 {
+
+
     if(season==1){
+        viewController->isLevelSix=false;
         viewController->scene->removeItem(viewController->nutIcon);
         viewController->scene->removeItem(viewController->cherryIcon);
     }
     if(season==2){
+        viewController->isLevelSix=false;
         viewController->scene->removeItem(viewController->cherryIcon);
     }
 
@@ -157,6 +161,7 @@ void View::schedule()
 
      //season3 level4
         if(season==3 && level==4){
+            viewController->isLevelSix=false;
             if(miliseconds==35000){
                 zCommingMusic->play();
             }
@@ -198,6 +203,7 @@ void View::schedule()
 
    //season3 level5
         if(season==3 && level==5){
+            viewController->isLevelSix=false;
             if(miliseconds==35000){
                 zCommingMusic->play();
             }
@@ -239,6 +245,7 @@ void View::schedule()
 
      //season3 level6
         if(season==3 && level==6){
+            viewController->isLevelSix=true;
             if(miliseconds==35000){
                 zCommingMusic->play();
             }

@@ -3,7 +3,7 @@
 
 Controller::Controller( int season,QObject *parent) : QObject(parent)
 {
-
+isLevelSix=false;
     this->season=season;
 
     //create scene
@@ -188,7 +188,8 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
         for( const auto& ground : groundList ){
 
               if(ground->clickBlock==true && ground->myP==nullptr){
-                 ground->myP = new Shooter(ctimer , holder);
+                 ground->myP = new Shooter(ctimer,isLevelSix , holder);
+
                  scene->addItem(ground->myP);
                  ground->myP->setPos(ground->row , ground->column);
                  ground->plantMusic->play();
@@ -318,7 +319,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                 for( const auto& ground : groundList ){
 
                       if(ground->clickBlock==true && ground->myP==nullptr){
-                         ground->myP = new Shooter(ctimer , holder);
+                         ground->myP = new Shooter(ctimer,isLevelSix  , holder);
                          scene->addItem(ground->myP);
                          ground->myP->setPos(ground->row , ground->column);
                          ground->plantMusic->play();
@@ -425,7 +426,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                 for( const auto& ground : groundList ){
 
                       if(ground->clickBlock==true && ground->myP==nullptr){
-                         ground->myP = new Shooter(ctimer , holder);
+                         ground->myP = new Shooter(ctimer,isLevelSix  , holder);
                          scene->addItem(ground->myP);
                          ground->myP->setPos(ground->row , ground->column);
                          ground->plantMusic->play();

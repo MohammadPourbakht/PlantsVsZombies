@@ -2,9 +2,11 @@
 #include<QGraphicsScene>
 #include"Bullet.h"
 
-Shooter::Shooter(QTimer * shooterTimer, QGraphicsItem *parent)
+Shooter::Shooter(QTimer * shooterTimer, bool level6, QGraphicsItem *parent )
     : QObject() , Plant() , shooterTimer{shooterTimer} , timeIntervals{0}
 {
+
+    isLevel6=level6;
     this->isDead = false;
     //set picture
     setPixmap(QPixmap(":/images/shooter.png"));                 //image shooter
@@ -31,10 +33,19 @@ void Shooter::shoot()
     if( timeIntervals % 10 == 0 ){
 
         //create bullet
+
+        if(isLevel6==false){
         auto bullet = new Bullet(shooterTimer , 24);
 
         scene()->addItem(bullet);
-        bullet->setPos(x()+ 90 , y() + 23);
+        bullet->setPos(x()+ 90 , y() + 23);}
+
+        if(isLevel6==true){
+        auto bullet = new Bullet(shooterTimer , 18);
+
+        scene()->addItem(bullet);
+        bullet->setPos(x()+ 90 , y() + 23);}
+
 
         //play shooterPlayer
         if(shooterPlayer->state() == QMediaPlayer::PlayingState){

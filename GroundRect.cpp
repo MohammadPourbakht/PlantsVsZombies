@@ -1,5 +1,6 @@
 #include "GroundRect.h"
 #include <QGraphicsScene>
+#include <QPen>
 
 GroundRect::GroundRect(QGraphicsItem *parent)
     : QObject () , QGraphicsRectItem (parent)

@@ -202,7 +202,7 @@ void Controller::planting()
               if(ground->clickBlock==true && ground->myP==nullptr){
                  ground->myP = new CherryBomb(ctimer , holder);
                  scene->addItem(ground->myP);
-                 ground->myP->setPos(ground->row,ground->column);
+                 ground->myP->setPos((ground->row)-150 , (ground->column)-150);
                  controllerScore->setScore(controllerScore->getScore()-150);
                  cherryIcon->isSelected=false;
                  ground->clickBlock=false;

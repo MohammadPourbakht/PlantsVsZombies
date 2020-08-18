@@ -11,7 +11,7 @@ CherryBomb::CherryBomb(QTimer *cherrytTimer, QGraphicsItem *parent)
 
     //create shooter player
     cherryBombPlayer = new QMediaPlayer();
-    cherryBombPlayer->setMedia(QUrl("qrc:/music/cherry.mp3")); //add cherry mp3 va pain play ...............
+    cherryBombPlayer->setMedia(QUrl("qrc:/music/cherry sound.mp3"));
 
     connect(cherryTimer , SIGNAL(timeout()) , this , SLOT(move()));
 }
@@ -26,9 +26,9 @@ void CherryBomb::move()
         //decrement zombies lives
         for(size_t i{0} ; i<collidingList.size(); ++i){
             if(typeid(*(collidingList)[i])==typeid (Zombie)){
-                Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);
-                zom->setLives(0);
-
+                Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);               
+                cherryBombPlayer->play();
+                zom->setLives(0);              
             }
         }
             scene()->removeItem(this);

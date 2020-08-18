@@ -1,8 +1,11 @@
 #include "Controller.h"
 #include "Shooter.h"
 
-Controller::Controller(QObject *parent) : QObject(parent)
+Controller::Controller( int season,QObject *parent) : QObject(parent)
 {
+
+    this->season=season;
+
     //create scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,1200,700);
@@ -27,11 +30,18 @@ Controller::Controller(QObject *parent) : QObject(parent)
     controllerScore->setPos(39,95);
 
     //add icons
-    shooterIcon = new ShooterIcon(scene);
-    nutIcon = new NutIcon(scene);
-    sunFlowerIcon = new SunFlowerIcon(scene);
-    cherryIcon = new CherryIcon( scene);
-    shovelIcon = new ShovelIcon(scene);
+        shooterIcon = new ShooterIcon(scene);
+        sunFlowerIcon = new SunFlowerIcon(scene);
+        shovelIcon = new ShovelIcon(scene);
+
+    if(season==2){
+
+     nutIcon = new NutIcon(scene);}
+
+    if(season ==3){
+
+     cherryIcon = new CherryIcon(scene);
+}
 
 }
 
@@ -42,19 +52,29 @@ Controller::~Controller()
     delete ctimer;
 }
 
-void Controller::addZombie(const int& velocity , const int& lives ,  bool isLord)
+void Controller::addZombie(const int& velocity , const int& lives ,  bool isLord,int row)
 {
     zombieList.push_back(new Zombie{velocity,ctimer,lives,holder,isLord});
     //add to the scene
     scene->addItem(zombieList.last());
-
-    if(zombieList.last()->getisLord()==false){  //ghadeshoon
-    zombieList.last()->setPos(1200,365);}
-
-    if(zombieList.last()->getisLord()==true){
-    zombieList.last()->setPos(1200,340);}
+if(season==1){
+     //ghadeshoon
+    zombieList.last()->setPos(1200,515);
+}
+if(season==2){
+ //ghadeshoon
+    zombieList.last()->setPos(1200,515+row*150);
 }
 
+
+if(season==3){
+    if(zombieList.last()->getisLord()==false){  //ghadeshoon
+    zombieList.last()->setPos(1200,515+(row*150));}
+    if(zombieList.last()->getisLord()==true){  //ghadeshoon
+    zombieList.last()->setPos(1200,515+(row*150));}
+
+}
+}
 void Controller::addSun()
 {
     sunList.push_back(new Sun{scene,controllerScore,ctimer,holder});
@@ -115,8 +135,28 @@ void Controller::checkShooterIcon()
     shooterIcon->setShooterIcon();
 }
 
-void Controller::planting()
+void Controller::planting(int s)
 {
+    season=s;
+
+    if(season==3){
+
+
+            //nutIcon
+            checkNutIcon();
+
+            //shooterIcon
+           checkShooterIcon();
+
+            //sunFlowerIcon
+            checkSunFlowerIcon();
+
+            //cherryIcon
+            checkCherryIcon();
+
+            //shovelIcon
+            checkShovelIcon();
+
 
     for( const auto& zom : zombieList ){
 if(zom->getxx()!=-1 && zom->getyy()!= -1){
@@ -241,7 +281,208 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
                  }
     }
+    }}
+
+    if(season ==2){
+
+            //nutIcon
+            checkNutIcon();
+
+            //shooterIcon
+           checkShooterIcon();
+
+            //sunFlowerIcon
+            checkSunFlowerIcon();
+
+            //shovelIcon
+            checkShovelIcon();
+
+            for( const auto& zom : zombieList ){
+        if(zom->getxx()!=-1 && zom->getyy()!= -1){
+            for( const auto& ground : groundList ){
+          if(ground->row == zom->getxx() && ground->column == zom->getyy()){
+          ground->myP=nullptr;
+          }
+            }
+        }
+            }
+
+            //score kam bshe click konim nabayd bekare , in chand khat nabashe vaghti score ziad she hmonja mikare
+            if(shooterIcon->isSelected==false && nutIcon->isSelected==false
+            && sunFlowerIcon->isSelected==false &&  shovelIcon->isSelected==false){
+                     for( const auto& ground : groundList ){
+                   ground->clickBlock=false;
+                     }
+               }
+
+            //shooterIcon
+            if(shooterIcon->isSelected==true){
+                nutIcon->isSelected=false;
+                sunFlowerIcon->isSelected=false;
+                shovelIcon->isSelected=false;
+
+                for( const auto& ground : groundList ){
+
+                      if(ground->clickBlock==true && ground->myP==nullptr){
+                         ground->myP = new Shooter(ctimer , holder);
+                         scene->addItem(ground->myP);
+                         ground->myP->setPos(ground->row , ground->column);
+                         ground->plantMusic->play();
+                         controllerScore->setScore(controllerScore->getScore()-100);
+                         shooterIcon->isSelected=false;
+                         ground->clickBlock=false;
+                       }
+            }
+            }
+
+            //nutIcon
+
+            if(nutIcon->isSelected==true){
+                shooterIcon->isSelected=false;
+                sunFlowerIcon->isSelected=false;
+                shovelIcon->isSelected=false;
+               for( const auto& ground : groundList ){
+
+                      if(ground->clickBlock==true && ground->myP==nullptr){
+                         ground->myP = new Nut(12,ctimer , holder);
+                         scene->addItem(ground->myP);
+                         ground->myP->setPos(ground->row , (ground->column)+20);
+                         ground->plantMusic->play();
+                         controllerScore->setScore(controllerScore->getScore()-150);
+                         nutIcon->isSelected=false;
+                         ground->clickBlock=false;
+                         ground->myP=nullptr;
+                       }
+            }
+            }
+
+            //sunFlowerIcon
+
+            if(sunFlowerIcon->isSelected==true){
+                nutIcon->isSelected=false;
+                shooterIcon->isSelected=false;
+                shovelIcon->isSelected=false;
+               for( const auto& ground : groundList ){
+
+                      if(ground->clickBlock==true && ground->myP==nullptr){
+                         ground->myP = new SunFlower( controllerScore , scene , ctimer , holder);
+                         scene->addItem(ground->myP);
+                         ground->myP->setPos(ground->row,ground->column);
+                         ground->plantMusic->play();
+                         controllerScore->setScore(controllerScore->getScore() - 50);
+                         sunFlowerIcon->isSelected=false;
+                         ground->clickBlock=false;
+
+                       }
+            }
+            }
+
+            //shovelIcon
+            if(shovelIcon->isSelected==true){
+                nutIcon->isSelected=false;
+                sunFlowerIcon->isSelected=false;
+                shooterIcon->isSelected=false;
+                for( const auto& ground : groundList ){
+
+                      if(ground->clickBlock==true){
+                         scene->removeItem(ground->myP);
+                         delete  ground->myP;
+                         ground->myP = nullptr;
+                         shovelIcon->isSelected=false;
+                         ground->clickBlock=false;
+
+                         }
+            }
+            }
+
     }
+
+    if(season==1){
+
+            //shooterIcon
+           checkShooterIcon();
+
+            //sunFlowerIcon
+            checkSunFlowerIcon();
+
+            //shovelIcon
+            checkShovelIcon();
+
+            for( const auto& zom : zombieList ){
+        if(zom->getxx()!=-1 && zom->getyy()!= -1){
+            for( const auto& ground : groundList ){
+          if(ground->row == zom->getxx() && ground->column == zom->getyy()){
+          ground->myP=nullptr;
+          }
+            }
+        }
+            }
+
+            //score kam bshe click konim nabayd bekare , in chand khat nabashe vaghti score ziad she hmonja mikare
+            if(shooterIcon->isSelected==false && sunFlowerIcon->isSelected==false &&  shovelIcon->isSelected==false){
+                     for( const auto& ground : groundList ){
+                   ground->clickBlock=false;
+                     }
+               }
+
+            //shooterIcon
+            if(shooterIcon->isSelected==true){
+                sunFlowerIcon->isSelected=false;
+                shovelIcon->isSelected=false;
+
+                for( const auto& ground : groundList ){
+
+                      if(ground->clickBlock==true && ground->myP==nullptr){
+                         ground->myP = new Shooter(ctimer , holder);
+                         scene->addItem(ground->myP);
+                         ground->myP->setPos(ground->row , ground->column);
+                         ground->plantMusic->play();
+                         controllerScore->setScore(controllerScore->getScore()-100);
+                         shooterIcon->isSelected=false;
+                         ground->clickBlock=false;
+                       }
+            }
+            }
+
+            //sunFlowerIcon
+
+            if(sunFlowerIcon->isSelected==true){
+                shooterIcon->isSelected=false;
+                shovelIcon->isSelected=false;
+               for( const auto& ground : groundList ){
+
+                      if(ground->clickBlock==true && ground->myP==nullptr){
+                         ground->myP = new SunFlower( controllerScore , scene , ctimer , holder);
+                         scene->addItem(ground->myP);
+                         ground->myP->setPos(ground->row,ground->column);
+                         ground->plantMusic->play();
+                         controllerScore->setScore(controllerScore->getScore() - 50);
+                         sunFlowerIcon->isSelected=false;
+                         ground->clickBlock=false;
+
+                       }
+            }
+            }
+
+            //shovelIcon
+            if(shovelIcon->isSelected==true){
+                sunFlowerIcon->isSelected=false;
+                shooterIcon->isSelected=false;
+                for( const auto& ground : groundList ){
+
+                      if(ground->clickBlock==true){
+                         scene->removeItem(ground->myP);
+                         delete  ground->myP;
+                         ground->myP = nullptr;
+                         shovelIcon->isSelected=false;
+                         ground->clickBlock=false;
+
+                         }
+            }
+            }
+
+    }
+
 
 }
 

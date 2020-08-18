@@ -37,22 +37,24 @@ private:
     SunFlowerIcon * sunFlowerIcon;
     CherryIcon* cherryIcon;
     ShovelIcon * shovelIcon;
+    int season;
 
 public:
-    explicit Controller(QObject *parent = nullptr);
+    explicit Controller(int season,QObject *parent =nullptr);
     ~Controller();
-    void addZombie(const int& velocity, const int & lives , bool isLord);
+    void addZombie(const int& velocity, const int & lives , bool isLord,int row);
     void addSun();
     void addNuts(int velocity);
     bool boolGameOver();
     void checkLives();
     void addGround(const int & season);
     void checkShooterIcon();
-    void planting();
+    void planting(int s);
     void checkNutIcon();
     void checkSunFlowerIcon();
     void checkCherryIcon();
     void checkShovelIcon();
+
 
 signals:
 

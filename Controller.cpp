@@ -37,9 +37,9 @@ Controller::Controller(QObject *parent) : QObject(parent)
 //    mySunFlower->setPos(600,470);
 
         //add a test sun flower
-        auto mycherry = new CherryBomb(ctimer,holder);
-        scene->addItem(mycherry);
-        mycherry->setPos(750,170);
+//        auto mycherry = new CherryBomb(ctimer,holder);
+//        scene->addItem(mycherry);
+//        mycherry->setPos(750,170);
 
 
 
@@ -129,7 +129,8 @@ void Controller::checkShooterIcon()
 void Controller::planting()
 {
     //score kam bshe click konim nabayd bekare , in chand khat nabashe vaghti score ziad she hmonja mikare
-    if(shooterIcon->isSelected==false && nutIcon->isSelected==false  && sunFlowerIcon->isSelected==false){
+    if(shooterIcon->isSelected==false && nutIcon->isSelected==false
+       && sunFlowerIcon->isSelected==false && cherryIcon->isSelected==false){
              for( const auto& ground : groundList ){
            ground->clickBlock=false;
              }
@@ -191,6 +192,25 @@ void Controller::planting()
     }
     }
 
+
+    //cherryIcon
+    if(cherryIcon->isSelected==true){
+        for( const auto& ground : groundList ){
+
+
+              if(ground->clickBlock==true && ground->myP==nullptr){
+                 ground->myP = new CherryBomb(ctimer , holder);
+                 scene->addItem(ground->myP);
+                 ground->myP->setPos(ground->row,ground->column);
+                 controllerScore->setScore(controllerScore->getScore()-150);
+                 cherryIcon->isSelected=false;
+                 ground->clickBlock=false;
+
+               }
+    }
+    }
+
+
 }
 
 void Controller::checkNutIcon()
@@ -215,6 +235,17 @@ void Controller::checkSunFlowerIcon()
     }
    sunFlowerIcon->setSunFlowerIcon();
 
+}
+
+void Controller::checkCherryIcon()
+{
+    if(controllerScore->getScore()>= 150){
+        cherryIcon->isSelectable = true;
+    }
+    if(controllerScore->getScore()< 150){
+        cherryIcon->isSelectable=false;
+    }
+   cherryIcon->setCherryIcon();
 }
 
 bool Controller::boolGameOver()

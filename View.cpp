@@ -79,16 +79,13 @@ void View::schedule()
     //shooterIcon
     viewController->checkShooterIcon();
 
-    //sunFloweIcon
+    //sunFlowerIcon
     viewController->checkSunFlowerIcon();
 
+    //cherryIcon
+    viewController->checkCherryIcon();
+
     viewController->planting();
-
-
-
-
-
-
 
     if(seconds == 1 || seconds == 39 || seconds == 43 || seconds == 45){
 

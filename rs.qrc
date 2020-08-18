@@ -56,6 +56,7 @@
         <file>Wall-nut 7.png</file>
         <file>Wall-nut 8.png</file>
         <file>Sunflower1.png</file>
+        <file>cherry2.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

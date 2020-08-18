@@ -32,18 +32,6 @@ Controller::Controller(QObject *parent) : QObject(parent)
     sunFlowerIcon = new SunFlowerIcon(scene);
     cherryIcon = new CherryIcon( scene);
 
-     //add a test sun flower
-//    auto mySunFlower = new SunFlower(controllerScore,scene,ctimer,holder);
-//    scene->addItem(mySunFlower);
-//    mySunFlower->setPos(600,470);
-
-        //add a test sun flower
-//        auto mycherry = new CherryBomb(ctimer,holder);
-//        scene->addItem(mycherry);
-//        mycherry->setPos(750,170);
-
-
-
 
 }
 
@@ -203,6 +191,7 @@ void Controller::planting()
                  ground->myP = new CherryBomb(ctimer , holder);
                  scene->addItem(ground->myP);
                  ground->myP->setPos((ground->row)-150 , (ground->column)-150);
+
                  controllerScore->setScore(controllerScore->getScore()-150);
                  cherryIcon->isSelected=false;
                  ground->clickBlock=false;

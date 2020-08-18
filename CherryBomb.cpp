@@ -7,7 +7,7 @@
 CherryBomb::CherryBomb(QTimer *cherrytTimer, QGraphicsItem *parent)
     : QObject () , Plant() , cherryTimer(cherrytTimer) , timeIntervals{0}
 {
-    setPixmap(QPixmap(":/images/cherry.png"));
+    setPixmap(QPixmap(":/images/cherry2.png"));
 
     //create shooter player
     cherryBombPlayer = new QMediaPlayer();
@@ -19,7 +19,7 @@ CherryBomb::CherryBomb(QTimer *cherrytTimer, QGraphicsItem *parent)
 void CherryBomb::move()
 {
     if(timeIntervals == 50){         // bade 2 sanie betereke
-
+cherryBombPlayer->play();
         //collect all colliding objects in a list
         QList < QGraphicsItem * > collidingList = collidingItems();
 
@@ -27,7 +27,7 @@ void CherryBomb::move()
         for(size_t i{0} ; i<collidingList.size(); ++i){
             if(typeid(*(collidingList)[i])==typeid (Zombie)){
                 Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);               
-                cherryBombPlayer->play();
+
                 zom->setLives(0);              
             }
         }

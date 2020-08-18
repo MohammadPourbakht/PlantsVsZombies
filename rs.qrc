@@ -57,6 +57,8 @@
         <file>Layer 5.png</file>
         <file>Layer 6.png</file>
         <file>win.png</file>
+        <file>menu.png</file>
+        <file>replay.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

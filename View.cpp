@@ -310,7 +310,7 @@ void View::schedule()
        }
 
         //win page
-        if(viewController->boolGameOver()==false && miliseconds==70){
+        if(viewController->boolGameOver()==false && miliseconds==70000){
               stopGame();
               backgroundMusic->stop();
               winMusic->play();

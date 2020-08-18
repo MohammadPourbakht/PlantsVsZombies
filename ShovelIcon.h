@@ -11,7 +11,7 @@ class ShovelIcon : public QGraphicsPixmapItem
 private:
     QGraphicsScene * shovelIconScene;
     bool isSelected;
-    bool isSelectable;
+
 public:
     ShovelIcon(QGraphicsScene *shovelIconScene);
     ~ShovelIcon();

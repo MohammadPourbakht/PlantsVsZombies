@@ -4,7 +4,6 @@
 ShovelIcon::ShovelIcon(QGraphicsScene *shovelIconScene) : shovelIconScene{shovelIconScene}
 {
     isSelected=false;
-    isSelectable=false;
 
     //set picture
     setPixmap(QPixmap(":/images/shovel icon.png"));
@@ -24,17 +23,30 @@ ShovelIcon::~ShovelIcon()
 
 void ShovelIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    if(isSelectable==true){
-        isSelected=true;
+          isSelected=true;
+
         //set picture
         setPixmap(QPixmap(":/images/light shovel icon.png"));
         //add to scene
        // shooterIconScene->addItem(this);
         //setPos
         setPos(730 , 0);
-    }
 
     //add sound if isSelectable == false
+}
+
+void ShovelIcon::setShovelIcon()
+{
+    if(isSelected==false){
+
+        //set picture
+        setPixmap(QPixmap(":/images/shovel icon.png"));
+        //add to scene
+        //shooterIconScene->addItem(this);
+        //setPos
+        setPos(730 , 0);
+
+    }
 
 }
 

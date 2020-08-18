@@ -12,7 +12,7 @@ CherryIcon::CherryIcon(QGraphicsScene *cherryIconScene) : cherryIconScene{cherry
     cherryIconScene->addItem(this);
 
     //setPos
-    setPos(965 , 11);
+    setPos(618 , 11);
 
 }
 
@@ -30,7 +30,7 @@ void CherryIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 
         //setPos
-        setPos(965 , 11);
+        setPos(618 , 11);
     }
 
     //add sound if isSelectable == false
@@ -44,7 +44,7 @@ void CherryIcon::setCherryIcon()
         //set picture
         setPixmap(QPixmap(":/images/cherry icon.png"));
         //setPos
-        setPos(965 ,11);
+        setPos(618 ,11);
 
     }
 
@@ -54,7 +54,7 @@ void CherryIcon::setCherryIcon()
         setPixmap(QPixmap(":/images/dark cherry icon.png"));
 
         //setPos
-        setPos(965 , 11);
+        setPos(618 , 11);
 
     }
 }

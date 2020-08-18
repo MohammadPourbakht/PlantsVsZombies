@@ -12,7 +12,7 @@ SunFlowerIcon::SunFlowerIcon(QGraphicsScene *sunFlowerIconScene) : sunFlowerIcon
     sunFlowerIconScene->addItem(this);
 
     //setPos
-    setPos(440 , 11);
+    setPos(168 , 11);
 
 }
 
@@ -30,7 +30,7 @@ void SunFlowerIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
         //add to scene
        // shooterIconScene->addItem(this);
         //setPos
-        setPos(440 , 11);
+        setPos(168 , 11);
     }
 
     //add sound if isSelectable == false
@@ -45,7 +45,7 @@ void SunFlowerIcon::setSunFlowerIcon()
         //add to scene
         //shooterIconScene->addItem(this);
         //setPos
-        setPos(440 ,11);
+        setPos(168 ,11);
 
     }
 
@@ -56,7 +56,7 @@ void SunFlowerIcon::setSunFlowerIcon()
         //add to scene
         //shooterIconScene->addItem(this);
         //setPos
-        setPos(440 , 11);
+        setPos(168 , 11);
 
     }
 }

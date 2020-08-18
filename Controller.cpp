@@ -30,6 +30,7 @@ Controller::Controller(QObject *parent) : QObject(parent)
     shooterIcon = new ShooterIcon(scene);
     nutIcon = new NutIcon(scene);
     sunFlowerIcon = new SunFlowerIcon(scene);
+    cherryIcon = new CherryIcon( scene);
 
      //add a test sun flower
 //    auto mySunFlower = new SunFlower(controllerScore,scene,ctimer,holder);

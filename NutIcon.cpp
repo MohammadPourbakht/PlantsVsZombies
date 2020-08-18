@@ -13,7 +13,7 @@ NutIcon::NutIcon(QGraphicsScene *nutIconScene) : nutIconScene{nutIconScene}
     nutIconScene->addItem(this);
 
     //setPos
-    setPos(265 , 11);
+    setPos(468 , 11);
 
 }
 
@@ -31,7 +31,7 @@ void NutIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
         //add to scene
        // shooterIconScene->addItem(this);
         //setPos
-        setPos(265 , 11);
+        setPos(468 , 11);
     }
 
     //add sound if isSelectable == false
@@ -46,7 +46,7 @@ void NutIcon::setNutIcon()
         //add to scene
         //shooterIconScene->addItem(this);
         //setPos
-        setPos(265 ,11);
+        setPos(468 ,11);
 
     }
 
@@ -57,7 +57,7 @@ void NutIcon::setNutIcon()
         //add to scene
         //shooterIconScene->addItem(this);
         //setPos
-        setPos(265 , 11);
+        setPos(468 , 11);
 
     }
 }

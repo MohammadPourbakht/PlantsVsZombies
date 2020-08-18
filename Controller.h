@@ -35,6 +35,7 @@ private:
     NutIcon * nutIcon;
     SunFlowerIcon * sunFlowerIcon;
     CherryIcon* cherryIcon;
+
 public:
     explicit Controller(QObject *parent = nullptr);
     ~Controller();

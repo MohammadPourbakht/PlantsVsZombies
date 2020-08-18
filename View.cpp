@@ -35,6 +35,11 @@ View::View(int season, int level) : QGraphicsView()
         winMusic = new QMediaPlayer();
         winMusic->setMedia(QUrl("qrc:/music/win.mp3"));
 
+     //set zombie Comming Music
+        zCommingMusic = new QMediaPlayer();
+        zCommingMusic->setMedia(QUrl("qrc:/music/zCommingMusic.mp3"));
+
+
     //initialize seconds to zero
     seconds = 0;
 
@@ -96,6 +101,9 @@ void View::schedule()
   //season 1 level1
 
     if(season==1 && level==1){
+        if(seconds==45){
+            zCommingMusic->play();
+        }
         if(seconds == 50 || seconds == 54|| seconds == 57 || seconds == 59 || seconds == 60 ){
 
             viewController->addZombie( 6 , 4 , false,1);
@@ -104,6 +112,9 @@ void View::schedule()
 
   //season2 level2
     if(season==2 && level==2){
+        if(seconds==45){
+            zCommingMusic->play();
+        }
         int row1=rand()%2;
         int row2;
         if(seconds == 63 || seconds == 62 || seconds == 58 || seconds == 50  ){
@@ -122,6 +133,9 @@ void View::schedule()
 
     //season2 level3
         if(season==2 && level==3){
+            if(seconds==40){
+                zCommingMusic->play();
+            }
             int row1=rand()%2;
             int row2;
             if(seconds == 45 || seconds == 48 || seconds == 50 || seconds == 52 ||seconds==51  ){
@@ -140,6 +154,9 @@ void View::schedule()
 
      //season3 level4
         if(season==3 && level==4){
+            if(seconds==35){
+                zCommingMusic->play();
+            }
             int row1=rand()%3;
             int row2;
             int row3;
@@ -178,6 +195,9 @@ void View::schedule()
 
    //season3 level5
         if(season==3 && level==5){
+            if(seconds==35){
+                zCommingMusic->play();
+            }
             int row1=rand()%3;
             int row2;
             int row3;
@@ -216,6 +236,9 @@ void View::schedule()
 
      //season3 level6
         if(season==3 && level==6){
+            if(seconds==35){
+                zCommingMusic->play();
+            }
             int row1=rand()%3;
             int row2;
             int row3;

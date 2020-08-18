@@ -25,6 +25,7 @@ private:
     int season ;
     int level;
     QMediaPlayer * winMusic;
+     QMediaPlayer * zCommingMusic;
     MenuButton * menuB;
     ReplyButton * replayB;
     NextButton * nextB;

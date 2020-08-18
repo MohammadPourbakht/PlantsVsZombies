@@ -73,6 +73,13 @@ void View::setBackground()
 
 void View::schedule()
 {
+    if(season==1){
+        viewController->scene->removeItem(viewController->nutIcon);
+        viewController->scene->removeItem(viewController->cherryIcon);
+    }
+    if(season==2){
+        viewController->scene->removeItem(viewController->cherryIcon);
+    }
 
     if(seconds % 10 == 0){
         viewController->addSun();
@@ -81,7 +88,7 @@ void View::schedule()
     ++seconds;
 
 
-    //season 1 level1
+  //season 1 level1
 
     if(season==1 && level==1){
         if(seconds == 50 || seconds == 54|| seconds == 57 || seconds == 59 || seconds == 60 ){
@@ -90,7 +97,7 @@ void View::schedule()
 
         }}
 
-    //season2 level2
+  //season2 level2
     if(season==2 && level==2){
         int row1=rand()%2;
         int row2;

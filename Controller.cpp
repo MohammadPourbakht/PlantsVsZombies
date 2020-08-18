@@ -34,14 +34,8 @@ Controller::Controller( int season,QObject *parent) : QObject(parent)
         sunFlowerIcon = new SunFlowerIcon(scene);
         shovelIcon = new ShovelIcon(scene);
 
-    if(season==2){
-
-     nutIcon = new NutIcon(scene);}
-
-    if(season ==3){
-
-     cherryIcon = new CherryIcon(scene);
-}
+         nutIcon = new NutIcon(scene);
+         cherryIcon = new CherryIcon(scene);
 
 }
 
@@ -63,15 +57,15 @@ if(season==1){
 }
 if(season==2){
  //ghadeshoon
-    zombieList.last()->setPos(1200,500+row*150);
+    zombieList.last()->setPos(1200,500-(row*150));
 }
 
 
 if(season==3){
     if(zombieList.last()->getisLord()==false){  //ghadeshoon
-    zombieList.last()->setPos(1200,500+(row*150));}
+    zombieList.last()->setPos(1200,500-(row*150));}
     if(zombieList.last()->getisLord()==true){  //ghadeshoon
-    zombieList.last()->setPos(1200,500+(row*150));}
+    zombieList.last()->setPos(1200,500-(row*150));}
 
 }
 }
@@ -398,6 +392,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
     }
 
     if(season==1){
+
 
             //shooterIcon
            checkShooterIcon();

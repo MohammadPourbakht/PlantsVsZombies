@@ -11,15 +11,15 @@ QApplication a(argc , argv);
 
 srand(time(0));
 
-auto loading = new Loading();
-loading->show();
-return a.exec();
+//auto loading = new Loading();
+//loading->show();
+//return a.exec();
 
-//auto myM = new Menu();
-//     myM->show();
-//     return a.exec();
+auto myM = new Menu();
+     myM->show();
+     return a.exec();
 
-//auto myV = new View(3);
+//auto myV = new View(1,1);
 //myV->show();
 //return a.exec();
 

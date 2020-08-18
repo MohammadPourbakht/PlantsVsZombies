@@ -35,3 +35,27 @@ void CherryIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
     //add sound if isSelectable == false
 }
+
+
+void CherryIcon::setCherryIcon()
+{
+    if(isSelectable==true && isSelected==false){
+
+        //set picture
+        setPixmap(QPixmap(":/images/cherry icon.png"));
+        //setPos
+        setPos(365 ,11);
+
+    }
+
+    if(isSelectable==false && isSelected==false ){
+
+        //set picture
+        setPixmap(QPixmap(":/images/dark cherry icon.png"));
+
+        //setPos
+        setPos(365 , 11);
+
+    }
+}
+

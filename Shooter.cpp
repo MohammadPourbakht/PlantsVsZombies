@@ -27,6 +27,7 @@ Shooter::~Shooter()
 void Shooter::shoot()
 {
     //shoot every 400 millisecond
+
     if( timeIntervals % 10 == 0 ){
 
         //create bullet

@@ -3,7 +3,7 @@
 
 Controller::Controller(QObject *parent) : QObject(parent)
 {
-  //create scene
+    //create scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,1200,700);
 
@@ -26,12 +26,10 @@ Controller::Controller(QObject *parent) : QObject(parent)
     scene->addItem(controllerScore);
     controllerScore->setPos(39,95);
 
-
     shooterIcon = new ShooterIcon(scene);
     nutIcon = new NutIcon(scene);
     sunFlowerIcon = new SunFlowerIcon(scene);
     cherryIcon = new CherryIcon( scene);
-
 
 }
 
@@ -117,6 +115,17 @@ void Controller::checkShooterIcon()
 
 void Controller::planting()
 {
+
+    for( const auto& zom : zombieList ){
+if(zom->getxx()!=-1 && zom->getyy()!= -1){
+    for( const auto& ground : groundList ){
+  if(ground->row == zom->getxx() && ground->column == zom->getyy()){
+  ground->myP=nullptr;
+  }
+    }
+}
+    }
+
     //score kam bshe click konim nabayd bekare , in chand khat nabashe vaghti score ziad she hmonja mikare
     if(shooterIcon->isSelected==false && nutIcon->isSelected==false
        && sunFlowerIcon->isSelected==false && cherryIcon->isSelected==false){
@@ -199,8 +208,6 @@ void Controller::planting()
                }
     }
     }
-
-
 }
 
 void Controller::checkNutIcon()

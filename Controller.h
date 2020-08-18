@@ -38,6 +38,7 @@ private:
     CherryIcon* cherryIcon;
     ShovelIcon * shovelIcon;
     int season;
+    int number;
 
 public:
     explicit Controller(int season,QObject *parent =nullptr);
@@ -54,6 +55,7 @@ public:
     void checkSunFlowerIcon();
     void checkCherryIcon();
     void checkShovelIcon();
+
 
 
 signals:

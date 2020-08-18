@@ -1,4 +1,4 @@
-#include "Controller.h"
+﻿#include "Controller.h"
 #include "Shooter.h"
 
 Controller::Controller( int season,QObject *parent) : QObject(parent)
@@ -33,9 +33,9 @@ Controller::Controller( int season,QObject *parent) : QObject(parent)
         shooterIcon = new ShooterIcon(scene);
         sunFlowerIcon = new SunFlowerIcon(scene);
         shovelIcon = new ShovelIcon(scene);
-
-         nutIcon = new NutIcon(scene);
-         cherryIcon = new CherryIcon(scene);
+        nutIcon = new NutIcon(scene);
+        cherryIcon = new CherryIcon(scene);
+        number = 0;
 
 }
 
@@ -129,9 +129,19 @@ void Controller::checkShooterIcon()
     shooterIcon->setShooterIcon();
 }
 
+
+
 void Controller::planting(int s)
 {
+    if(number != 0){
+        shooterIcon->isSelected=false;
+        nutIcon->isSelected=false;
+        cherryIcon->isSelected=false;
+        sunFlowerIcon->isSelected=false;
+        shovelIcon->isSelected=false;
+    }
     season=s;
+    number = 0;
 
     if(season==3){
 
@@ -172,10 +182,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
     //shooterIcon
     if(shooterIcon->isSelected==true){
-        nutIcon->isSelected=false;
-        cherryIcon->isSelected=false;
-        sunFlowerIcon->isSelected=false;
-        shovelIcon->isSelected=false;
+        number++;
 
         for( const auto& ground : groundList ){
 
@@ -194,10 +201,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
     //nutIcon
 
     if(nutIcon->isSelected==true){
-        shooterIcon->isSelected=false;
-        cherryIcon->isSelected=false;
-        sunFlowerIcon->isSelected=false;
-        shovelIcon->isSelected=false;
+        number++;
        for( const auto& ground : groundList ){
 
               if(ground->clickBlock==true && ground->myP==nullptr){
@@ -216,10 +220,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
     //sunFlowerIcon
 
     if(sunFlowerIcon->isSelected==true){
-        nutIcon->isSelected=false;
-        cherryIcon->isSelected=false;
-        shooterIcon->isSelected=false;
-        shovelIcon->isSelected=false;
+        number++;
        for( const auto& ground : groundList ){
 
               if(ground->clickBlock==true && ground->myP==nullptr){
@@ -238,10 +239,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
     //cherryIcon
     if(cherryIcon->isSelected==true){
-        nutIcon->isSelected=false;
-        shooterIcon->isSelected=false;
-        sunFlowerIcon->isSelected=false;
-        shovelIcon->isSelected=false;
+        number++;
         for( const auto& ground : groundList ){
 
               if(ground->clickBlock==true && ground->myP==nullptr){
@@ -260,10 +258,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
     //shovelIcon
     if(shovelIcon->isSelected==true){
-        nutIcon->isSelected=false;
-        cherryIcon->isSelected=false;
-        sunFlowerIcon->isSelected=false;
-        shooterIcon->isSelected=false;
+        number++;
         for( const auto& ground : groundList ){
 
               if(ground->clickBlock==true){
@@ -311,9 +306,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
             //shooterIcon
             if(shooterIcon->isSelected==true){
-                nutIcon->isSelected=false;
-                sunFlowerIcon->isSelected=false;
-                shovelIcon->isSelected=false;
+                number++;
 
                 for( const auto& ground : groundList ){
 
@@ -332,9 +325,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
             //nutIcon
 
             if(nutIcon->isSelected==true){
-                shooterIcon->isSelected=false;
-                sunFlowerIcon->isSelected=false;
-                shovelIcon->isSelected=false;
+                number++;
                for( const auto& ground : groundList ){
 
                       if(ground->clickBlock==true && ground->myP==nullptr){
@@ -353,9 +344,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
             //sunFlowerIcon
 
             if(sunFlowerIcon->isSelected==true){
-                nutIcon->isSelected=false;
-                shooterIcon->isSelected=false;
-                shovelIcon->isSelected=false;
+                number++;
                for( const auto& ground : groundList ){
 
                       if(ground->clickBlock==true && ground->myP==nullptr){
@@ -373,9 +362,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
             //shovelIcon
             if(shovelIcon->isSelected==true){
-                nutIcon->isSelected=false;
-                sunFlowerIcon->isSelected=false;
-                shooterIcon->isSelected=false;
+                number++;
                 for( const auto& ground : groundList ){
 
                       if(ground->clickBlock==true){
@@ -422,8 +409,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
             //shooterIcon
             if(shooterIcon->isSelected==true){
-                sunFlowerIcon->isSelected=false;
-                shovelIcon->isSelected=false;
+                number++;
 
                 for( const auto& ground : groundList ){
 
@@ -442,8 +428,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
             //sunFlowerIcon
 
             if(sunFlowerIcon->isSelected==true){
-                shooterIcon->isSelected=false;
-                shovelIcon->isSelected=false;
+                number++;
                for( const auto& ground : groundList ){
 
                       if(ground->clickBlock==true && ground->myP==nullptr){
@@ -461,8 +446,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
 
             //shovelIcon
             if(shovelIcon->isSelected==true){
-                sunFlowerIcon->isSelected=false;
-                shooterIcon->isSelected=false;
+                number++;
                 for( const auto& ground : groundList ){
 
                       if(ground->clickBlock==true){

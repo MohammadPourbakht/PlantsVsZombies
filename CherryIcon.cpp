@@ -6,7 +6,7 @@ CherryIcon::CherryIcon(QGraphicsScene *cherryIconScene) : cherryIconScene{cherry
     isSelectable=false;
 
     //set picture
-    setPixmap(QPixmap(":/images/dark cherry icon.png"));
+    setPixmap(QPixmap(":/images/icon.png"));
 
     //add to scene
     cherryIconScene->addItem(this);

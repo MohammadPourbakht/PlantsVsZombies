@@ -7,7 +7,7 @@ NutIcon::NutIcon(QGraphicsScene *nutIconScene) : nutIconScene{nutIconScene}
     isSelectable=false;
 
     //set picture
-    setPixmap(QPixmap(":/images/dark wall-nut icon.png"));
+    setPixmap(QPixmap(":/images/icon.png"));
 
     //add to scene
     nutIconScene->addItem(this);

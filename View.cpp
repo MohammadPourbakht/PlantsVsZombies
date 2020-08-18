@@ -2,6 +2,7 @@
 #include "Zombie.h"
 #include "Menu.h"
 
+
 View::View(int season, int level) : QGraphicsView()
 {
     this->season=season;
@@ -269,6 +270,7 @@ void View::schedule()
 
          menuB = new MenuButton(viewController->scene);
          replayB = new ReplyButton(viewController->scene , season , level);
+         exitB = new Exit(viewController->scene);
        }
 
         //win page
@@ -284,6 +286,7 @@ void View::schedule()
                menuB = new MenuButton(viewController->scene);
                if(level!=6){
                nextB = new NextButton(viewController->scene , level);
+               exitB = new Exit(viewController->scene);
                }
               }
 

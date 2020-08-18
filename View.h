@@ -10,7 +10,7 @@
 #include "MenuButton.h"
 #include "ReplyButton.h"
 #include "NextButton.h"
-
+#include "Exit.h"
 
 class View : public QGraphicsView
 {
@@ -28,6 +28,7 @@ private:
     MenuButton * menuB;
     ReplyButton * replayB;
     NextButton * nextB;
+    Exit* exitB;
 
 public:
     explicit View(int season , int level);

@@ -19,3 +19,19 @@ CherryIcon::CherryIcon(QGraphicsScene *cherryIconScene) : cherryIconScene{cherry
 CherryIcon::~CherryIcon(){
     delete cherryIconScene;
 }
+
+
+void CherryIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    if(isSelectable==true){
+        isSelected=true;
+        //set picture
+        setPixmap(QPixmap(":/images/light cherry icon.png"));
+
+
+        //setPos
+        setPos(365 , 11);
+    }
+
+    //add sound if isSelectable == false
+}

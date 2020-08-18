@@ -268,6 +268,7 @@ void View::schedule()
          gameover->setPos(0,0);
 
          menuB = new MenuButton(viewController->scene);
+         replayB = new ReplyButton(viewController->scene , season , level);
        }
 
         //win page
@@ -282,9 +283,6 @@ void View::schedule()
               win->setPos(0,0);
                menuB = new MenuButton(viewController->scene);
               }
-
-
-
 
          viewController->planting(season);
 

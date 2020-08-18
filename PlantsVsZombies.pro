@@ -41,6 +41,7 @@ SOURCES += \
     NutIcon.cpp \
     Plant.cpp \
     PlayButton.cpp \
+    ReplyButton.cpp \
     Shooter.cpp \
     ShooterIcon.cpp \
     ShovelIcon.cpp \
@@ -72,6 +73,7 @@ HEADERS += \
     NutIcon.h \
     Plant.h \
     PlayButton.h \
+    ReplyButton.h \
     Shooter.h \
     ShooterIcon.h \
     ShovelIcon.h \

@@ -8,6 +8,7 @@
 #include <QMediaPlayer>
 #include "Controller.h"
 #include "MenuButton.h"
+#include "ReplyButton.h"
 
 
 class View : public QGraphicsView
@@ -24,6 +25,8 @@ private:
     int level;
     QMediaPlayer * winMusic;
     MenuButton * menuB;
+    ReplyButton * replayB;
+
 public:
     explicit View(int season , int level);
     ~View();

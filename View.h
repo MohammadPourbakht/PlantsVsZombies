@@ -21,6 +21,7 @@ private:
     QMediaPlayer *gameOverMusic;
     int season ;
     int level;
+    QMediaPlayer * winMusic;
 
 public:
     explicit View(int season , int level);

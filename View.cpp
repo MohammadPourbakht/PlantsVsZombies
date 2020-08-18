@@ -30,6 +30,10 @@ View::View(int season, int level) : QGraphicsView()
         gameOverMusic = new QMediaPlayer();
         gameOverMusic->setMedia(QUrl("qrc:/music/Game Over.mp3"));
 
+     //set win music
+        winMusic = new QMediaPlayer();
+        winMusic->setMedia(QUrl("qrc:/music/win.mp3"));
+
     //initialize seconds to zero
     seconds = 0;
 
@@ -133,7 +137,7 @@ void View::schedule()
 
             }}
 
-        //season3 level4
+     //season3 level4
         if(season==3 && level==4){
             int row1=rand()%3;
             int row2;
@@ -171,7 +175,7 @@ void View::schedule()
 
             }if(seconds==53){viewController->addZombie( 6 , 10 , true,row3);}}
 
-        //season3 level5
+   //season3 level5
         if(season==3 && level==5){
             int row1=rand()%3;
             int row2;
@@ -209,7 +213,7 @@ void View::schedule()
 
             }if(seconds==53){viewController->addZombie( 6 , 12 , true,row3);}}
 
-        //season3 level6
+     //season3 level6
         if(season==3 && level==6){
             int row1=rand()%3;
             int row2;
@@ -263,8 +267,18 @@ void View::schedule()
          viewController->scene->addItem(gameover);
          gameover->setPos(0,0);
        }
-        //add backtomenu and replay
 
+        //win page
+        if(viewController->boolGameOver()==false && seconds==70){
+              stopGame();
+              backgroundMusic->stop();
+              winMusic->play();
+
+             QGraphicsPixmapItem * win = new QGraphicsPixmapItem();
+              win->setPixmap(QPixmap(":/images/win.png"));
+              viewController->scene->addItem(win);
+              win->setPos(0,0);
+            }
 
        viewController->planting(season);
 

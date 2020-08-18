@@ -15,3 +15,7 @@ CherryIcon::CherryIcon(QGraphicsScene *cherryIconScene) : cherryIconScene{cherry
     setPos(365 , 11);
 
 }
+
+CherryIcon::~CherryIcon(){
+    delete cherryIconScene;
+}

@@ -16,7 +16,7 @@ Level2Button::Level2Button(QGraphicsScene *Scene) : level2Scene{Scene}
 
     //create level2 button music
        level2ButtonMusic = new QMediaPlayer();
-       level2ButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
+       level2ButtonMusic->setMedia(QUrl("qrc:/music/click.mp3"));
 
 }
 

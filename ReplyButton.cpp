@@ -18,7 +18,7 @@ ReplyButton::ReplyButton( QGraphicsScene *Scene , int season , int level) : repl
 
     //create level1 button music
        replayButtonMusic = new QMediaPlayer();
-       replayButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
+       replayButtonMusic->setMedia(QUrl("qrc:/music/click.mp3"));
 
        this->season = season;
        this->level = level;

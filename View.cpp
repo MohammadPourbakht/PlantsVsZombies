@@ -37,7 +37,7 @@ View::View(int season, int level) : QGraphicsView()
 
      //set zombie Comming Music
         zCommingMusic = new QMediaPlayer();
-        zCommingMusic->setMedia(QUrl("qrc:/music/zCommingMusic.mp3"));
+        zCommingMusic->setMedia(QUrl("qrc:/music/zComing.mp3"));
 
 
     //initialize seconds to zero
@@ -91,7 +91,7 @@ void View::schedule()
         viewController->scene->removeItem(viewController->cherryIcon);
     }
 
-    if(miliseconds % 2000 == 0){
+    if(miliseconds % 10000 == 0){
         viewController->addSun();
     }
 
@@ -204,7 +204,7 @@ void View::schedule()
             int row1=rand()%3;
             int row2;
             int row3;
-            if(miliseconds == 40000 || miliseconds == 47000 || miliseconds == 48000 || miliseconds == 50000   ){
+            if(miliseconds == 40000 || miliseconds == 47000 || miliseconds == 48000 || miliseconds == 50000  ){
 
                 viewController->addZombie( 6 , 4 , false,row1);
 

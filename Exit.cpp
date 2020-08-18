@@ -16,7 +16,7 @@ Exit::Exit( QGraphicsScene *Scene  ) : exitButtonScene{Scene}
 
     //create level1 button music
        exitButtonMusic = new QMediaPlayer();
-       exitButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
+       exitButtonMusic->setMedia(QUrl("qrc:/music/click.mp3"));
 
 }
 

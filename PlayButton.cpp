@@ -8,7 +8,7 @@ PlayButton::PlayButton(QGraphicsScene *playScene) :  playScene{playScene}
 
     //create play button music
        playButtonMusic = new QMediaPlayer();
-       playButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
+       playButtonMusic->setMedia(QUrl("qrc:/music/click.mp3"));
 
 }
 

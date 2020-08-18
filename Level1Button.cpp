@@ -16,7 +16,7 @@ Level1Button::Level1Button(QGraphicsScene *Scene) : level1Scene{Scene}
 
     //create level1 button music
        level1ButtonMusic = new QMediaPlayer();
-       level1ButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
+       level1ButtonMusic->setMedia(QUrl("qrc:/music/click.mp3"));
 }
 
 void Level1Button::mousePressEvent(QGraphicsSceneMouseEvent *event)

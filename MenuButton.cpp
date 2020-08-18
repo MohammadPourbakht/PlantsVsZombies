@@ -16,7 +16,7 @@ MenuButton::MenuButton( QGraphicsScene *Scene) : menuButtonScene{Scene}
 
     //create level1 button music
        menuButtonMusic = new QMediaPlayer();
-       menuButtonMusic->setMedia(QUrl("qrc:/music/shooter.mp3"));
+       menuButtonMusic->setMedia(QUrl("qrc:/music/click.mp3"));
 
 }
 

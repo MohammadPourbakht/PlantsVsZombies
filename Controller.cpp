@@ -253,6 +253,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                  ground->myP->setPos((ground->row)-150 , (ground->column)-150);
                  ground->plantMusic->play();
                  controllerScore->setScore(controllerScore->getScore()-150);
+                 ground->myP=nullptr;
                  cherryIcon->isSelected=false;
                  number--;
                  ground->clickBlock=false;

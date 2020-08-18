@@ -12,7 +12,7 @@ Exit::Exit( QGraphicsScene *Scene  ) : exitButtonScene{Scene}
     Scene->addItem(this);
 
     //setPos
-    setPos(750,500);
+    setPos(350,500);
 
     //create level1 button music
        exitButtonMusic = new QMediaPlayer();

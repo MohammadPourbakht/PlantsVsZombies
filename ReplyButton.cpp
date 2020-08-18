@@ -14,7 +14,7 @@ ReplyButton::ReplyButton( QGraphicsScene *Scene , int season , int level) : repl
     Scene->addItem(this);
 
     //setPos
-    setPos(350,500);
+    setPos(750,500);
 
     //create level1 button music
        replayButtonMusic = new QMediaPlayer();

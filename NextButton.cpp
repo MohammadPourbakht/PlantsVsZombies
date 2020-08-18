@@ -12,7 +12,7 @@ NextButton::NextButton( QGraphicsScene *Scene  , int level) : nextButtonScene{Sc
     Scene->addItem(this);
 
     //setPos
-    setPos(350,500);
+    setPos(750,500);
 
     //create level1 button music
        nextButtonMusic = new QMediaPlayer();

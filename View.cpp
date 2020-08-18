@@ -86,7 +86,7 @@ void View::schedule()
         viewController->scene->removeItem(viewController->cherryIcon);
     }
 
-    if(seconds % 10 == 0){
+    if(seconds % 2 == 0){
         viewController->addSun();
     }
 

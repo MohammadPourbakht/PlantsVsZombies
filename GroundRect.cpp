@@ -20,6 +20,8 @@ void GroundRect:: mousePressEvent(QGraphicsSceneMouseEvent *event)
 void GroundRect::setGroundRect(int x, int y)
 {
     setRect(x,y,150,150);
+    QPen *pen = new QPen("transparent");
+    this->setPen(*pen);
  }
 GroundRect::~GroundRect()
 {

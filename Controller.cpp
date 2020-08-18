@@ -59,19 +59,19 @@ void Controller::addZombie(const int& velocity , const int& lives ,  bool isLord
     scene->addItem(zombieList.last());
 if(season==1){
      //ghadeshoon
-    zombieList.last()->setPos(1200,515);
+    zombieList.last()->setPos(1200,500);
 }
 if(season==2){
  //ghadeshoon
-    zombieList.last()->setPos(1200,515+row*150);
+    zombieList.last()->setPos(1200,500+row*150);
 }
 
 
 if(season==3){
     if(zombieList.last()->getisLord()==false){  //ghadeshoon
-    zombieList.last()->setPos(1200,515+(row*150));}
+    zombieList.last()->setPos(1200,500+(row*150));}
     if(zombieList.last()->getisLord()==true){  //ghadeshoon
-    zombieList.last()->setPos(1200,515+(row*150));}
+    zombieList.last()->setPos(1200,500+(row*150));}
 
 }
 }

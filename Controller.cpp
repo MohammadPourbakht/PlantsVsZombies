@@ -125,6 +125,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
     }
 }
     }
+
     //score kam bshe click konim nabayd bekare , in chand khat nabashe vaghti score ziad she hmonja mikare
     if(shooterIcon->isSelected==false && nutIcon->isSelected==false
        && sunFlowerIcon->isSelected==false && cherryIcon->isSelected==false){
@@ -160,7 +161,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
               if(ground->clickBlock==true && ground->myP==nullptr){
                  ground->myP = new Nut(12,ctimer , holder);
                  scene->addItem(ground->myP);
-                 ground->myP->setPos(ground->row,ground->column);
+                 ground->myP->setPos(ground->row , (ground->column)+20);
                  controllerScore->setScore(controllerScore->getScore()-150);
                  nutIcon->isSelected=false;
                  ground->clickBlock=false;

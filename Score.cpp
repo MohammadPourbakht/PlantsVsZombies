@@ -35,4 +35,7 @@ int Score::getScore()
 void Score::setScore(int score)
 {
     playerScore=score;
+    setPlainText(QString::number(playerScore));
+    setDefaultTextColor(Qt::red);
+    setFont(QFont("times",20));
 }

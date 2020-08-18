@@ -85,6 +85,10 @@ void View::schedule()
     //cherryIcon
     viewController->checkCherryIcon();
 
+    //shovelIcon
+    viewController->checkShovelIcon();
+
+
     viewController->planting();
 
     if(seconds == 18 || seconds == 29|| seconds == 43 || seconds == 45){

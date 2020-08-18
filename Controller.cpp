@@ -26,10 +26,12 @@ Controller::Controller(QObject *parent) : QObject(parent)
     scene->addItem(controllerScore);
     controllerScore->setPos(39,95);
 
+    //add icons
     shooterIcon = new ShooterIcon(scene);
     nutIcon = new NutIcon(scene);
     sunFlowerIcon = new SunFlowerIcon(scene);
     cherryIcon = new CherryIcon( scene);
+    shovelIcon = new ShovelIcon(scene);
 
 }
 
@@ -240,7 +242,12 @@ void Controller::checkCherryIcon()
     if(controllerScore->getScore()< 150){
         cherryIcon->isSelectable=false;
     }
-   cherryIcon->setCherryIcon();
+    cherryIcon->setCherryIcon();
+}
+
+void Controller::checkShovelIcon()
+{
+    cherryIcon->setCherryIcon();
 }
 
 bool Controller::boolGameOver()

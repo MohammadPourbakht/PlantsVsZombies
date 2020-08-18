@@ -16,6 +16,7 @@
 #include "SunFlowerIcon.h"
 #include "CherryBomb.h"
 #include "CherryIcon.h"
+#include "ShovelIcon.h"
 
 class Controller : public QObject
 {
@@ -35,6 +36,7 @@ private:
     NutIcon * nutIcon;
     SunFlowerIcon * sunFlowerIcon;
     CherryIcon* cherryIcon;
+    ShovelIcon * shovelIcon;
 
 public:
     explicit Controller(QObject *parent = nullptr);
@@ -50,6 +52,7 @@ public:
     void checkNutIcon();
     void checkSunFlowerIcon();
     void checkCherryIcon();
+    void checkShovelIcon();
 
 signals:
 

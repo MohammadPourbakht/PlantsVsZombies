@@ -8,34 +8,22 @@ GroundRect::GroundRect(QGraphicsItem *parent)
     clickBlock=false;
     row=0;
     column=0;
-
-
 }
 
 void GroundRect:: mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     clickBlock=true;
-
         //set plant music
         plantMusic = new QMediaPlayer();
         plantMusic->setMedia(QUrl("qrc:/music/Plant.mp3"));
-
-
-
-
 }
-
+void GroundRect::setGroundRect(int x, int y)
+{
+    setRect(x,y,150,150);
+ }
 GroundRect::~GroundRect()
 {
     delete plantMusic;
 }
-
-void GroundRect::setGroundRect(int x, int y)
-{
-    setRect(x,y,150,150);
-   // this->hide();
-
-}
-
 
 

@@ -18,7 +18,7 @@ class View : public QGraphicsView
 
 private:
     QTimer *viewTimer;
-    int seconds;
+    int miliseconds;
     Controller *viewController;
     QMediaPlayer *backgroundMusic;
     QMediaPlayer *gameOverMusic;

@@ -41,7 +41,7 @@ View::View(int season, int level) : QGraphicsView()
 
 
     //initialize seconds to zero
-    seconds = 0;
+    miliseconds = 0;
 
     //add ground
     viewController->addGround(season);
@@ -49,7 +49,7 @@ View::View(int season, int level) : QGraphicsView()
 
     //stat Timer
     viewTimer = new QTimer();
-    viewTimer->start(1000);
+    viewTimer->start(500);
     connect(viewTimer , SIGNAL(timeout()) , this , SLOT(schedule()));
 }
 View::~View()
@@ -91,20 +91,21 @@ void View::schedule()
         viewController->scene->removeItem(viewController->cherryIcon);
     }
 
-    if(seconds % 2 == 0){
+    if(miliseconds % 2000 == 0){
         viewController->addSun();
     }
 
-    ++seconds;
+    miliseconds=miliseconds+500;
 
 
   //season 1 level1
 
     if(season==1 && level==1){
-        if(seconds==45){
+        if(miliseconds==45000){
             zCommingMusic->play();
         }
-        if(seconds == 50 || seconds == 54|| seconds == 57 || seconds == 59 || seconds == 60 ){
+        if(miliseconds == 50000 || miliseconds == 54000|| miliseconds == 57000
+                || miliseconds == 59000 || miliseconds == 60000 ){
 
             viewController->addZombie( 6 , 4 , false,1);
 
@@ -112,12 +113,12 @@ void View::schedule()
 
   //season2 level2
     if(season==2 && level==2){
-        if(seconds==45){
+        if(miliseconds==45000){
             zCommingMusic->play();
         }
         int row1=rand()%2;
         int row2;
-        if(seconds == 63 || seconds == 62 || seconds == 58 || seconds == 50  ){
+        if(miliseconds == 63000 || miliseconds == 62000 || miliseconds == 58000 || miliseconds == 50000  ){
 
             viewController->addZombie( 6 , 4 , false,row1);
 
@@ -125,7 +126,7 @@ void View::schedule()
         if(row1==0){row2=1;}
         if(row1==1){row2=0;}
 
-        if(seconds == 55 || seconds == 60 || seconds == 63 || seconds == 64  ){
+        if(miliseconds == 55000 || miliseconds == 60000 || miliseconds == 63000 || miliseconds == 64000  ){
 
             viewController->addZombie( 6 , 4 , false,row2);
 
@@ -133,12 +134,13 @@ void View::schedule()
 
     //season2 level3
         if(season==2 && level==3){
-            if(seconds==40){
+            if(miliseconds==40000){
                 zCommingMusic->play();
             }
             int row1=rand()%2;
             int row2;
-            if(seconds == 45 || seconds == 48 || seconds == 50 || seconds == 52 ||seconds==51  ){
+            if(miliseconds == 45000 || miliseconds == 48000 || miliseconds == 50000
+                    || miliseconds == 52000 ||miliseconds==51000  ){
 
                 viewController->addZombie( 6 , 4 , false,row1);
 
@@ -146,7 +148,8 @@ void View::schedule()
             if(row1==0){row2=1;}
             if(row1==1){row2=0;}
 
-            if(seconds == 48 || seconds == 49 || seconds == 50 || seconds == 51 ||seconds==52  ){
+            if(miliseconds == 48000 || miliseconds == 49000 || miliseconds == 50000 ||
+                    miliseconds == 51000 ||miliseconds==52000  ){
 
                 viewController->addZombie( 6 , 4 , false,row2);
 
@@ -154,18 +157,18 @@ void View::schedule()
 
      //season3 level4
         if(season==3 && level==4){
-            if(seconds==35){
+            if(miliseconds==35000){
                 zCommingMusic->play();
             }
             int row1=rand()%3;
             int row2;
             int row3;
-            if(seconds == 40 || seconds == 47 || seconds == 48 || seconds == 50   ){
+            if(miliseconds == 40000 || miliseconds == 47000 || miliseconds == 48000 || miliseconds == 50000   ){
 
                 viewController->addZombie( 6 , 4 , false,row1);
 
             }
-            if(seconds==53){viewController->addZombie( 6 , 10 , true,row1);}
+            if(miliseconds==53000){viewController->addZombie( 6 , 10 , true,row1);}
 
             if(row1==0){
                 row2=rand()%2+1;
@@ -181,32 +184,32 @@ void View::schedule()
             if(row2==0){row3=1;}
             if(row2==1){row3=0;} }
 
-            if(seconds == 44 || seconds == 47 || seconds == 50 || seconds == 51  ){
+            if(miliseconds == 44000 || miliseconds == 47000 || miliseconds == 50000 || miliseconds == 51000  ){
 
                 viewController->addZombie( 6 , 4 , false,row2);
             }
-         if(seconds==53){viewController->addZombie( 6 , 10 , true,row2);}
+         if(miliseconds==53000){viewController->addZombie( 6 , 10 , true,row2);}
 
-            if(seconds == 46 || seconds == 48 || seconds == 50 || seconds == 51  ){
+            if(miliseconds == 46000 || miliseconds == 48000 || miliseconds == 50000 || miliseconds == 51000  ){
 
                 viewController->addZombie( 6 , 4 , false,row3);
 
-            }if(seconds==53){viewController->addZombie( 6 , 10 , true,row3);}}
+            }if(miliseconds==53000){viewController->addZombie( 6 , 10 , true,row3);}}
 
    //season3 level5
         if(season==3 && level==5){
-            if(seconds==35){
+            if(miliseconds==35000){
                 zCommingMusic->play();
             }
             int row1=rand()%3;
             int row2;
             int row3;
-            if(seconds == 40 || seconds == 47 || seconds == 48 || seconds == 50   ){
+            if(miliseconds == 40000 || miliseconds == 47000 || miliseconds == 48000 || miliseconds == 50000   ){
 
                 viewController->addZombie( 6 , 4 , false,row1);
 
             }
-            if(seconds==53){viewController->addZombie( 6 , 12 , true,row1);}
+            if(miliseconds==53000){viewController->addZombie( 6 , 12 , true,row1);}
 
             if(row1==0){
                 row2=rand()%2+1;
@@ -222,27 +225,28 @@ void View::schedule()
             if(row2==0){row3=1;}
             if(row2==1){row3=0;} }
 
-            if(seconds == 44 || seconds == 47 || seconds == 50 || seconds == 51  ){
+            if(miliseconds == 44000 || miliseconds == 47000 || miliseconds == 50000 || miliseconds == 51000  ){
 
                 viewController->addZombie( 6 , 4 , false,row2);
             }
-         if(seconds==53){viewController->addZombie( 6 , 12 , true,row2);}
+         if(miliseconds==53000){viewController->addZombie( 6 , 12 , true,row2);}
 
-            if(seconds == 46 || seconds == 48 || seconds == 50 || seconds == 51  ){
+            if(miliseconds == 46000 || miliseconds == 48000 || miliseconds == 50000 || miliseconds == 51000  ){
 
                 viewController->addZombie( 6 , 4 , false,row3);
 
-            }if(seconds==53){viewController->addZombie( 6 , 12 , true,row3);}}
+            }if(miliseconds==53000){viewController->addZombie( 6 , 12 , true,row3);}}
 
      //season3 level6
         if(season==3 && level==6){
-            if(seconds==35){
+            if(miliseconds==35000){
                 zCommingMusic->play();
             }
             int row1=rand()%3;
             int row2;
             int row3;
-            if(seconds == 40 || seconds == 47 || seconds == 48 || seconds == 50 ||seconds==53  ){
+            if(miliseconds == 40000 || miliseconds == 47000 || miliseconds == 48000
+                    || miliseconds == 50000 ||miliseconds==53000  ){
 
                 viewController->addZombie(12 , 15 , true,row1);
 
@@ -263,13 +267,15 @@ void View::schedule()
             if(row2==0){row3=1;}
             if(row2==1){row3=0;} }
 
-            if(seconds == 44 || seconds == 47 || seconds == 50 || seconds == 51 ||seconds==53 ){
+            if(miliseconds == 44000 || miliseconds == 47000 || miliseconds == 50000
+                    || miliseconds == 51000 ||miliseconds==53000 ){
 
                 viewController->addZombie( 12 , 15 , true,row2);
             }
 
 
-            if(seconds == 46 || seconds == 48 || seconds == 50 || seconds == 51 ||seconds==53 ){
+            if(miliseconds == 46000 || miliseconds == 48000 || miliseconds == 50000
+                    || miliseconds == 51000 ||miliseconds==53000 ){
 
                 viewController->addZombie( 12 , 15 , true,row3);
 
@@ -297,7 +303,7 @@ void View::schedule()
        }
 
         //win page
-        if(viewController->boolGameOver()==false && seconds==70){
+        if(viewController->boolGameOver()==false && miliseconds==70){
               stopGame();
               backgroundMusic->stop();
               winMusic->play();

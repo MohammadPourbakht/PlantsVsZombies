@@ -16,6 +16,11 @@ CherryBomb::CherryBomb(QTimer *cherrytTimer, QGraphicsItem *parent)
     connect(cherryTimer , SIGNAL(timeout()) , this , SLOT(move()));
 }
 
+int CherryBomb::gettimeIntervals()
+{
+    return timeIntervals;
+}
+
 void CherryBomb::move()
 {
     if(timeIntervals == 50){         // bade 2 sanie betereke
@@ -28,10 +33,12 @@ cherryBombPlayer->play();
             if(typeid(*(collidingList)[i])==typeid (Zombie)){
                 Zombie* zom = dynamic_cast<Zombie*>(collidingList[i]);               
 
-                zom->setLives(0);              
+                zom->setLives(0);
+
             }
         }
             scene()->removeItem(this);
+
             delete this;
              return;  // doroste? check shavad ....................................
     }

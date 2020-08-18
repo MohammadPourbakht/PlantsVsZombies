@@ -125,7 +125,6 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
     }
 }
     }
-
     //score kam bshe click konim nabayd bekare , in chand khat nabashe vaghti score ziad she hmonja mikare
     if(shooterIcon->isSelected==false && nutIcon->isSelected==false
        && sunFlowerIcon->isSelected==false && cherryIcon->isSelected==false){
@@ -147,7 +146,6 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                  controllerScore->setScore(controllerScore->getScore()-100);
                  shooterIcon->isSelected=false;
                  ground->clickBlock=false;
-
                }
     }
     }
@@ -166,7 +164,7 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
                  controllerScore->setScore(controllerScore->getScore()-150);
                  nutIcon->isSelected=false;
                  ground->clickBlock=false;
-
+                 ground->myP=nullptr;
                }
     }
     }
@@ -177,7 +175,6 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
        for( const auto& ground : groundList ){
            if(ground->myP->isDead == true){
            ground->myP == nullptr;}
-
               if(ground->clickBlock==true && ground->myP==nullptr){
                  ground->myP = new SunFlower( controllerScore , scene , ctimer , holder);
                  scene->addItem(ground->myP);
@@ -195,19 +192,19 @@ if(zom->getxx()!=-1 && zom->getyy()!= -1){
     if(cherryIcon->isSelected==true){
         for( const auto& ground : groundList ){
 
-
               if(ground->clickBlock==true && ground->myP==nullptr){
+
                  ground->myP = new CherryBomb(ctimer , holder);
                  scene->addItem(ground->myP);
                  ground->myP->setPos((ground->row)-150 , (ground->column)-150);
-
                  controllerScore->setScore(controllerScore->getScore()-150);
                  cherryIcon->isSelected=false;
                  ground->clickBlock=false;
 
-               }
+                 }
     }
     }
+
 }
 
 void Controller::checkNutIcon()

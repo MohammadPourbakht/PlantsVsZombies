@@ -17,7 +17,7 @@ private:
     QMediaPlayer * cherryBombPlayer;
 public:
     explicit CherryBomb(QTimer *cherrytTimer , QGraphicsItem *parent = nullptr);
-
+int gettimeIntervals();
 signals:
 
 public slots:

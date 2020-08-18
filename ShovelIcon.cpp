@@ -16,3 +16,8 @@ ShovelIcon::ShovelIcon(QGraphicsScene *shovelIconScene) : shovelIconScene{shovel
     setPos(730 , 11);
 
 }
+
+ShovelIcon::~ShovelIcon()
+{
+ delete shovelIconScene;
+}

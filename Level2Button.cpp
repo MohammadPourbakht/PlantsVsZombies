@@ -1,4 +1,5 @@
 #include "Level2Button.h"
+#include "View.h"
 
 Level2Button::Level2Button(QGraphicsScene *Scene) : level2Scene{Scene}
 {
@@ -23,7 +24,9 @@ void Level2Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     clickl2 = true;
     level2ButtonMusic->play();
-    // go level2...
+
+    auto myV = new View(2,2);
+    myV->show();
 }
 
 Level2Button::~Level2Button()

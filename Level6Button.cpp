@@ -1,4 +1,5 @@
 #include "Level6Button.h"
+#include "View.h"
 
 Level6Button::Level6Button(QGraphicsScene *Scene)  : level6Scene{Scene}
 {
@@ -24,7 +25,9 @@ void Level6Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     clickl6 = true;
     level6ButtonMusic->play();
-    // go level3...
+
+    auto myV = new View(3,6);
+    myV->show();
 }
 
 Level6Button::~Level6Button()

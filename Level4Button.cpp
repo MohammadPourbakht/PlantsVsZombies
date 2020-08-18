@@ -1,4 +1,5 @@
 #include "Level4Button.h"
+#include "View.h"
 
 Level4Button::Level4Button(QGraphicsScene *Scene)  : level4Scene{Scene}
 {
@@ -24,7 +25,9 @@ void Level4Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     clickl4 = true;
     level4ButtonMusic->play();
-    // go level3...
+
+    auto myV = new View(3,4);
+    myV->show();
 }
 
 

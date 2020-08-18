@@ -25,7 +25,7 @@ void Level3Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
     clickl3 = true;
     level3ButtonMusic->play();
 
-    auto myV = new View(2);
+    auto myV = new View(2,3);
     myV->show();
 }
 

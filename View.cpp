@@ -73,6 +73,11 @@ void View::setBackground()
 
 void View::schedule()
 {
+
+    if(seconds % 10 == 0){
+        viewController->addSun();
+    }
+
     ++seconds;
 
 
@@ -234,11 +239,6 @@ void View::schedule()
                 viewController->addZombie( 12 , 15 , true,row3);
 
             }}
-
-
-    if(seconds % 10 == 0){
-        viewController->addSun();
-    }
 
     if(backgroundMusic->state() == QMediaPlayer::StoppedState){
                 backgroundMusic->play();

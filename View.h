@@ -7,6 +7,7 @@
 #include <QTimer>
 #include <QMediaPlayer>
 #include "Controller.h"
+#include "MenuButton.h"
 
 
 class View : public QGraphicsView
@@ -22,7 +23,7 @@ private:
     int season ;
     int level;
     QMediaPlayer * winMusic;
-
+    MenuButton * menuB;
 public:
     explicit View(int season , int level);
     ~View();

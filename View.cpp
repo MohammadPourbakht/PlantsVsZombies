@@ -266,6 +266,8 @@ void View::schedule()
          gameover->setPixmap(QPixmap(":/images/Un2.png"));
          viewController->scene->addItem(gameover);
          gameover->setPos(0,0);
+
+         menuB = new MenuButton(viewController->scene);
        }
 
         //win page
@@ -278,10 +280,13 @@ void View::schedule()
               win->setPixmap(QPixmap(":/images/win.png"));
               viewController->scene->addItem(win);
               win->setPos(0,0);
-            }
+               menuB = new MenuButton(viewController->scene);
+              }
 
-       viewController->planting(season);
 
+
+
+         viewController->planting(season);
 
 
 }

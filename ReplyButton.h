@@ -5,7 +5,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
 #include <QMediaPlayer>
-#include "View.h"
+
 
 
 class ReplyButton :public QGraphicsPixmapItem

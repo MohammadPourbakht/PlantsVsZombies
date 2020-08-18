@@ -59,6 +59,7 @@
         <file>win.png</file>
         <file>menu.png</file>
         <file>replay.png</file>
+        <file>next.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>GrasswalkPvZ1.mp3</file>

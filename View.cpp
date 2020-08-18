@@ -282,6 +282,9 @@ void View::schedule()
               viewController->scene->addItem(win);
               win->setPos(0,0);
                menuB = new MenuButton(viewController->scene);
+               if(level!=6){
+               nextB = new NextButton(viewController->scene , level);
+               }
               }
 
          viewController->planting(season);

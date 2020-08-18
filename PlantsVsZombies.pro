@@ -38,6 +38,7 @@ SOURCES += \
     LoadingRect.cpp \
     Menu.cpp \
     MenuButton.cpp \
+    NextButton.cpp \
     NutIcon.cpp \
     Plant.cpp \
     PlayButton.cpp \
@@ -70,6 +71,7 @@ HEADERS += \
     LoadingRect.h \
     Menu.h \
     MenuButton.h \
+    NextButton.h \
     NutIcon.h \
     Plant.h \
     PlayButton.h \

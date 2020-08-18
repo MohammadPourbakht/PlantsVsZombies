@@ -78,6 +78,7 @@ void Zombie::moveToLeft()
     QList<QGraphicsItem *> collidingObjects = collidingItems();
     //remove and delete collidingItem if it was a plant
     for(size_t i{0} ; i<collidingObjects.size();++i){
+         //zombie natoone gilas va balut ro bokhore
       if(typeid(*(collidingObjects)[i])!=typeid (Nut) && typeid(*(collidingObjects)[i])!=typeid (CherryBomb)){
         Plant* plant = dynamic_cast<Plant*>(collidingObjects[i]);
         if(plant){

@@ -26,6 +26,7 @@ CONFIG += c++11
 
 SOURCES += \
     Bullet.cpp \
+    CherryIcon.cpp \
     GroundRect.cpp \
     Level1Button.cpp \
     Level2Button.cpp \
@@ -54,6 +55,7 @@ SOURCES += \
 
 HEADERS += \
     Bullet.h \
+    CherryIcon.h \
     GroundRect.h \
     Level1Button.h \
     Level2Button.h \
